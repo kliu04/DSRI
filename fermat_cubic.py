@@ -26,6 +26,6 @@ fig.update_layout(
 # Save plot as HTML file
 fig.write_html(
     "fermat_cubic_plot.html",
-    full_html=True,
+    full_html=False,
 )
 fig.show()
