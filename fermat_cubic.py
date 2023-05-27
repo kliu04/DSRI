@@ -26,8 +26,6 @@ fig.update_layout(
 # Save plot as HTML file
 fig.write_html(
     "fermat_cubic_plot.html",
-    include_plotlyjs="cdn",
-    include_mathjax="cdn",
     full_html=False,
 )
 fig.show()
