@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-
+from pathlib import Path
 import plotly.graph_objects as go
 
 plt.style.use("_mpl-gallery")
@@ -25,7 +25,7 @@ fig.update_layout(
 
 # Save plot as HTML file
 fig.write_html(
-    "fermat_cubic_plot.html",
+    Path(__file__).stem + "_plot.html",
     full_html=False,
 )
 fig.show()
