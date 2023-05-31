@@ -6,8 +6,8 @@ import plotly.graph_objects as go
 plt.style.use("_mpl-gallery")
 
 # Make data
-X = np.arange(-5, 5, 0.25)
-Y = np.arange(-5, 5, 0.25)
+X = np.arange(-5, 5, 0.1)
+Y = np.arange(-5, 5, 0.1)
 X, Y = np.meshgrid(X, Y)
 Z = np.cbrt(-(X**3) - Y**3 + 1)
 
