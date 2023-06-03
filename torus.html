@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torus</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            chtml: { displayAlign: 'left' }
+        };
+    </script>
+</head>
+<body>
+    <h1>Torus</h1>
+    <a href="index.html">Back to Index</a>
+    <p>Parametric Equation: \[
+        \begin{align}
+        x &= (R + r \cos \theta)\cos \phi\\
+        y &= (R + r \cos \theta)\sin \phi\\
+        z &= r \sin \theta
+        \end{align}
+        \] where \(\theta, \phi \in [0, 2\pi)\), \(R\) is the distance from the center of the tube to the center of the torus, and \(r\) is the radius of the tube.
+    </p>
+    <iframe src="torus_plot.html" frameborder="1" sandbox="allow-scripts" height="1000" width="1200"></iframe>
+</body>
+</html>

@@ -1,17 +1,15 @@
-import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
 import plotly.graph_objects as go
 
-plt.style.use("_mpl-gallery")
 
 # Make data
-X = np.arange(-5, 5, 0.25)
-Y = np.arange(-5, 5, 0.25)
-X, Y = np.meshgrid(X, Y)
-Z = np.cbrt(-(X**3) - Y**3 + 1)
+x = np.arange(-5, 5, 0.1)
+y = np.arange(-5, 5, 0.1)
+x, y = np.meshgrid(x, y)
+z = np.cbrt(-(x**3) - y**3 + 1)
 
-fig = go.Figure(data=[go.Surface(x=X, y=Y, z=Z)])
+fig = go.Figure(data=[go.Surface(x=x, y=y, z=z)])
 
 # Set layout and axis labels
 fig.update_layout(
