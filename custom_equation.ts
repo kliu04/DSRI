@@ -1,6 +1,9 @@
 function handleSubmit(event : Event)
 {
+    // base string
     let uri : string = "https://c3d.libretexts.org/CalcPlot3D/index.html?type=";
+
+    // check what kind of equation it is
     if (z.checked)
     {
         uri += "z;z=" + encodeURI(equation_input.value);
@@ -14,22 +17,30 @@ function handleSubmit(event : Event)
     {
         uri += "implicit;equation=" + encodeURI(equation_input.value.replace("=", "~")) + ";cubes=16;visible=true;";
     }
-    equation_input.value = "";
-    console.log(uri);
-    event.preventDefault();
 
+    // clear the text submission box
+    equation_input.value = "";
+
+    // make new iframe to open calcplot3d
     let iframe = document.createElement("iframe");
     iframe.src = uri;
     iframe.width = "1200";
     iframe.height = "1000";
 
+    // add it to the HTML and clear existing frames (if any)
     const node : HTMLElement = document.getElementById("iframe")!;
     node.innerHTML = "";
     node.appendChild(iframe);
+
+    // stop page refresh
+    event.preventDefault();
+
 }
 
 function changePlaceholder() {
 
+    // format for equations
+    // TODO: more robust syntax explanations
     if (z.checked)
     {
         equation_input.placeholder = "z=";
@@ -45,6 +56,8 @@ function changePlaceholder() {
         equation_input.placeholder = "Select an equation type";
     }
 }
+
+// HTML elements on page
 let z : HTMLInputElement = <HTMLInputElement> document.getElementById("z")!;
 let parametric : HTMLInputElement = <HTMLInputElement> document.getElementById("parametric")!;
 let implicit : HTMLInputElement = <HTMLInputElement> document.getElementById("implicit")!;
