@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Equation</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            chtml: { displayAlign: 'left' }
+        };
+    </script>
+    <script src="custom_equation.js" defer></script>
+</head>
+<body>
+    <h1>Custom Equation</h1>
+    <fieldset onclick="changePlaceholder()">
+        <legend>Select the equation type:</legend>
+        <input type="radio" name="eqn-type" id="z">
+        <label for="z">\(z = f(x, y)\)</label>
+        <input type="radio" name="eqn-type" id="parametric">
+        <label for="parametric">Parametric</label>
+        <input type="radio" name="eqn-type" id="implicit">
+        <label for="implicit">Implicit</label>
+    </fieldset>
+    <br>
+    <form id="equation-form">
+        <label for="equation">Enter your equation:</label>
+        <input type="text" id="equation" placeholder="Select an equation type">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="iframe"></div>
+</body>
+</html>
