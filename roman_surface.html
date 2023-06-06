@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Surface</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            chtml: { displayAlign: 'left' }
+        };
+    </script>
+</head>
+<body>
+    <h1>Roman Surface</h1>
+    <a href="index.html">Back to Index</a>
+    <p>Parametric Equation: \[
+        \begin{align}
+        x &= a^2\cos(\theta)\cos(\phi)\sin(\phi)\\
+        y &= a^2\sin(\theta)\cos(\phi)\sin(\phi)\\
+        z &= a^2\cos(\theta)\sin(\theta)\sin^2(\phi)\\
+        \end{align}
+        \]
+
+        Implicit Equation: \(x^2y^2+y^2z^2+z^2x^2-a^2xyz\)
+
+        where \(a\) is a parameter.
+    </p>
+    <ul>
+        <li>Degree: \(4\)</li>
+        <li>Delta Invariant: \(3\)</li>
+        <li>Milnor Number: \(1\)</li>
+        <li>Tjurina Number: \(3\)</li>
+        <li>Branching Number: \(6\)</li>
+        <li>Degree: \(3\)</li>
+        <li>Genus: \(0\)</li>
+        <li>Multiplicities: \(\)</li>
+        <li>Singularities: \(\)</li>
+    </ul>
+    <iframe src="roman_surface_plot.html" frameborder="1" sandbox="allow-scripts" height="1000" width="1200"></iframe>
+</body>
+</html>
