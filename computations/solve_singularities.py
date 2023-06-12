@@ -1,14 +1,13 @@
 from sympy import solve
 from sympy.abc import x, y, z
-
 from pathlib import Path
 
 
 def main():
     # TODO: fix for server directory
-    path = Path("solve_singularities")
+    path = Path("computations")
     sols = []
-    with open(path / "file.txt", "r", encoding="utf-8") as f:
+    with open(path / "sings.txt", "r", encoding="utf-8") as f:
         for line in f:
             # Get rid of useless characters
             line = line.strip("\n")
@@ -18,16 +17,13 @@ def main():
             line = line.replace("^", "**")
 
             tokens = line.split(",")
-
             if len(tokens) == 2:
-                if "x" not in tokens:
+                if "x" not in line:
                     missing = x
-                elif "y" not in tokens:
+                elif "y" not in line:
                     missing = y
-                elif "z" not in tokens:
+                elif "z" not in line:
                     missing = z
-                else:
-                    raise NotImplementedError
 
                 system = []
                 system.append(eval(tokens[0]))
@@ -58,13 +54,10 @@ def main():
                     )
                 )
 
-            else:
-                raise NotImplementedError
-
     # flatten list
     sols = [item for sublist in sols for item in sublist]
 
-    with open(path / "solutions.txt", "w", encoding="utf-8") as f:
+    with open(path / "sings_solution.txt", "w", encoding="utf-8") as f:
         # for item in sols:
         #     sol = []
         #     sol.append(item[x])
