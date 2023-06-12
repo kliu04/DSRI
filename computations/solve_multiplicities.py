@@ -5,7 +5,7 @@ from pathlib import Path
 
 def main():
     # TODO: fix for server directory
-    path = Path("computations")
+    path = Path().resolve()
     sols = []
     eqn = ""
     with open(path / "mults.txt", "r", encoding="utf-8") as f:
@@ -56,9 +56,22 @@ def main():
                     list({w, x, y, z} - missing),
                     dict=True,
                 )
+            elif len(tokens) == 4:
+                system = []
+                system.append(eval(tokens[0]))
+                system.append(eval(tokens[1]))
+                system.append(eval(tokens[2]))
+                system.append(eval(tokens[3]))
+
+                sol = solve(
+                    system,
+                    [w, x, y, z],
+                    dict=True,
+                )
 
             for item in missing:
-                sol[0][item] = 1
+                for j in range(len(sol)):
+                    sol[j][item] = 1
             sols.append(sol)
 
     # flatten list

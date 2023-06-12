@@ -5,7 +5,7 @@ from pathlib import Path
 
 def main():
     # TODO: fix for server directory
-    path = Path("computations")
+    path = Path().resolve()
     sols = []
     with open(path / "sings.txt", "r", encoding="utf-8") as f:
         for line in f:
