@@ -1,9 +1,11 @@
 <?php
-if ($_GET['run']) {
-  # This code will run if ?run=true is set.
-  echo shell_exec("bash run.sh x^2+y^2+z^2-1");
-}
-?>
+// outputs the username that owns the running php/httpd process
+// (on a system with the "whoami" executable in the path)
+$output=null;
+$retval=null;
+exec('M2 --script solve_all.m2 x^2+y^2+z^2 > solutions.txt', $output, $retval);
+echo "Returned with status $retval and output:\n";
+print_r($output);
 
-<!-- This link will add ?run=true to your URL, myfilename.php?run=true -->
-<a href="?run=true">Click Me!</a>
+debug_print_backtrace()
+?>
