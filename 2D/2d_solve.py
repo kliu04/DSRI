@@ -71,7 +71,7 @@ def main():
                 sol[1] = 1
             elif sol[0] != 0:
                 # should always trigger because (0, 0, 0) is imposible
-                v[x] = 1
+                sol[0] = 1
             else:
                 raise ValueError
             sols[i] = sol
