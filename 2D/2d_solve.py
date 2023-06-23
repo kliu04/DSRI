@@ -1,6 +1,7 @@
 from sympy import solve, im, poly, expand, sqrt
 from sympy.abc import x, y, z, I
 from pathlib import Path
+from sympy.parsing.sympy_parser import parse_expr
 
 
 def main():
@@ -33,7 +34,7 @@ def main():
 
             system = []
             for token in tokens:
-                system.append(eval(token))
+                system.append(parse_expr(token))
 
             sol = solve(
                 system,

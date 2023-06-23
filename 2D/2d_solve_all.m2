@@ -33,6 +33,7 @@ F = homogenize(f, z);
 p = sub(F, x=>1);
 q = sub(F, y=>1);
 r = sub(F, z=>1);
+s = sub(F, z=>0);
 
 file = openOut "2d_to_solve.txt";
 file << toString(F) << endl;
@@ -62,3 +63,6 @@ for i from 0 to #pd - 1 do
     file << toString (pd#i)_* << endl;
 file << close;
 
+file = openOut "2d_pts_infty.txt"
+file << toString(s) << endl;
+file << close;
