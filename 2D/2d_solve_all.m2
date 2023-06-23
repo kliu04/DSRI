@@ -28,7 +28,7 @@ for i from 0 to #apply(pd, degree) - 1 do
 
 -- Singular Points
 T = QQ[x,y,z];
-f = substitute(f, T)
+f = substitute(f, T);
 F = homogenize(f, z);
 p = sub(F, x=>1);
 q = sub(F, y=>1);
@@ -61,24 +61,4 @@ pd = primaryDecomposition radical ((ideal jacobian r) + ideal r);
 for i from 0 to #pd - 1 do
     file << toString (pd#i)_* << endl;
 file << close;
-
--- -- Multiplicities
--- -- alg inccorect, loop through each singular point
--- F = homogenize(f, z);
--- p = sub(F, x=>1);
--- q = sub(F, y=>1);
--- r = sub(F, z=>1);
--- file = openOut "2d_mults.txt";
--- file << toString F << endl;
--- pd = primaryDecomposition(ideal jacobian p + p);
--- for i from 0 to #pd - 1 do
---     file << toString (pd#i)_* << endl;
--- pd = primaryDecomposition(ideal jacobian q + q);
--- for i from 0 to #pd - 1 do
---     file << toString (pd#i)_* << endl;
--- pd = primaryDecomposition(ideal jacobian r + r);
--- for i from 0 to #pd - 1 do
---     file << toString (pd#i)_* << endl;
--- file << close;
-
 
