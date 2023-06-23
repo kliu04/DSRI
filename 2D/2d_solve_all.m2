@@ -1,17 +1,16 @@
 -- Setup
-S = QQ[x,y,z];
+S = QQ[x,y];
 f = value scriptCommandLine#1;
 partials = jacobian f;
 
 -- Degree
-print("Degree:");
+print ("Degree:");
 print (degree f)#0;
 
 -- Milnor
 singularities = ideal partials;
 pd = primaryDecomposition singularities;
 onTheCurve = i -> ((i+ideal f) != promote(ideal 1, S));
-L = {}
 print("Milnor:");
 
 -- use fundamental theorem of algebra to avoid solving
@@ -28,6 +27,8 @@ for i from 0 to #apply(pd, degree) - 1 do
     print ((apply(pd, degree))#i, (apply(pd, radical))#i);
 
 -- Singular Points
+Q = QQ[x,y,z];
+f = substitute(f, Q)
 F = homogenize(f, z);
 p = sub(F, x=>1);
 q = sub(F, y=>1);

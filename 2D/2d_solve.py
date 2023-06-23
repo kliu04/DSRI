@@ -48,6 +48,16 @@ def main():
         # turn dicts to tuples
         f.write("Singularities:\n")
         for i, v in enumerate(sols):
+            if v[z] != 0:
+                v[x] /= v[z]
+                v[y] /= v[z]
+                v[z] = 1
+            elif v[y] != 0:
+                v[x] /= v[y]
+                v[y] = 1
+            else:
+                # Sing is of form (x, 0, 0)
+                v[x] = 1
             sol = (v[x], v[y], v[z])
             sols[i] = sol
 
@@ -59,22 +69,6 @@ def main():
 
         # Multiplicities
         mults = []
-
-        for i, v in enumerate(sols):
-            sol = list(v)
-            if sol[2] != 0:
-                sol[0] /= sol[2]
-                sol[1] /= sol[2]
-                sol[2] = 1
-            elif sol[1] != 0:
-                sol[0] /= sol[1]
-                sol[1] = 1
-            elif sol[0] != 0:
-                # should always trigger because (0, 0, 0) is imposible
-                sol[0] = 1
-            else:
-                raise ValueError
-            sols[i] = sol
 
         for sol in sols:
             # shift solution
@@ -123,7 +117,7 @@ def main():
                 total_degree = 0
                 # degree of current term
                 degrees = term[0]
-                # ignore constant term
+                # ignore cnst term
                 if not all(degree == 0 for degree in degrees):
                     # degree of each variable
                     for d_v in degrees:
