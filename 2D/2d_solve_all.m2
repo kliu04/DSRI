@@ -27,8 +27,8 @@ for i from 0 to #apply(pd, degree) - 1 do
     print ((apply(pd, degree))#i, (apply(pd, radical))#i);
 
 -- Singular Points
-Q = QQ[x,y,z];
-f = substitute(f, Q)
+T = QQ[x,y,z];
+f = substitute(f, T)
 F = homogenize(f, z);
 p = sub(F, x=>1);
 q = sub(F, y=>1);
