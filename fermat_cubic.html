@@ -30,7 +30,7 @@
       };
     </script>
   </head>
-  <body>
+  <body style="height: 100vh">
     <nav class="navbar navbar-expand-lg sticky-top bg-body-secondary">
       <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">Surfaces</span>
@@ -65,12 +65,12 @@
         </div>
       </div>
     </nav>
-    <h1 class="mx-auto">Fermat Cubic</h1>
-    <div class="container-fluid">
+    <div class="container-fluid min-vh-100 vh-100 ml">
+      <h1 class="mx-auto mt-2">Fermat Cubic</h1>
       <div class="row">
-        <div class="col-sm-6">
-          <p>Algebraic Equation: \(x^3 + y^3 + z^3 - 1 = 0\)</p>
+        <div class="col-lg-6">
           <ul>
+            <li>Algebraic Equation: \(x^3 + y^3 + z^3 - 1 = 0\)</li>
             <li>Degree: \(3\)</li>
             <li>Milnor Number: \(8\)</li>
             <li>Tjurina Number: \(0\)</li>
@@ -78,12 +78,19 @@
             <li>Multiplicities: None</li>
             <li>Delta Invariant: \(0\)</li>
           </ul>
+          <h3>External Links:</h3>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href="http://wikipedia.com">Wikipedia</a>
+            </li>
+          </ul>
         </div>
-        <div class="col-sm-6">
+        <div class="col-lg-6">
           <iframe
-            src="fermat_cubic_plot.html"
+            src="LICENSE"
             frameborder="1"
             sandbox="allow-scripts"
+            class="w-100 h-100"
           ></iframe>
         </div>
       </div>
