@@ -4,7 +4,7 @@ from sympy import solve, Symbol
 def main():
     x = Symbol("x", real=True)
     y = Symbol("y", real=True)
-    f = x**3 + x * y**2
+    f = x**2
     sols = solve(f, dict=True)
     sols = [sol for sol in sols if sol[x].is_real]
     for sol in sols:
