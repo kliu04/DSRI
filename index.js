@@ -16,7 +16,9 @@ document.getElementById("btnSwitch").addEventListener("click", () => {
 
   if (localStorage.getItem("mode") === "dark") {
     document.documentElement.setAttribute("data-bs-theme", "light");
+    localStorage.setItem("mode", "light");
   } else {
     document.documentElement.setAttribute("data-bs-theme", "dark");
+    localStorage.setItem("mode", "dark");
   }
 });
