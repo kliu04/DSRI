@@ -4,30 +4,27 @@ from multiprocessing import Pool
 import sys
 import parse
 import json
-import os
 
 URL = "https://people.math.carleton.ca/~cingalls/studentProjects/Katie's%20Site/html/All%20Curves.html"
 BASE = "https://people.math.carleton.ca/~cingalls/studentProjects/Katie's%20Site/html/"
 
 
-def parse_sublink(link: str):
+def parse_sublink(link: str) -> json:
     page = requests.Session().get(link)
     soup = BeautifulSoup(page.text, "lxml")
     data = {}
+    text = soup.get_text()
     eqn = (
-        soup.get_text()[page.text.find("Equation:") + 10 : page.text.find("Degree:")]
+        text[text.find("Equation:") + 10 : text.find("Degree:")]
         .strip()
         .replace("\n", "")
         .replace(" = 0", "")
     )
-    # Hacky fix
-    data["title"] = soup.title.string.replace("\u2019", "'").replace("\\", "")
-    # eqn = parse.parse(eqn)
-    print(eqn)
+    eqn = parse.parse(eqn)
+    data["title"] = soup.title.string
     data["eqn"] = eqn
-    json_data = json.dumps(data)
 
-    return json_data
+    return json.dumps(data)
 
 
 def main():
