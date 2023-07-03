@@ -2,9 +2,7 @@ import sys
 import pyperclip
 
 
-def main():
-    raw = sys.argv[1]
-    # raw = "x6+y6+3x4y2-3x4+3x2y4-3y4+21x2y2+3x2+3y2-1"
+def parse(raw: str) -> str:
     formatted = ""
 
     for index, char in enumerate(raw):
@@ -24,6 +22,11 @@ def main():
     formatted = formatted.replace("a", "101")
     formatted = formatted.replace("b", "97")
 
+    return formatted
+
+
+def main():
+    formatted = parse(sys.argv[1])
     print(formatted)
     pyperclip.copy(formatted)
 
