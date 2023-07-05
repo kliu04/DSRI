@@ -44,7 +44,7 @@ def run_solvers(data: dict) -> dict:
             f"bash {path} {eqn}",
             capture_output=True,
             shell=True,
-            timeout=30,
+            # timeout=30,
             text=True,
         ).stdout
         output = output.strip()
@@ -74,7 +74,7 @@ def parse_sublink(link: str) -> dict:
     eqn = text[text.find("Equation:") + 10 : text.find("Degree:")].replace("\n", "")
     eqn = eqn[: eqn.rfind("=")].strip()
     eqn = parse.parse(eqn)
-    data["title"] = soup.title.string
+    data["title"] = soup.title.string.replace("\u2019", "'")
     data["eqn"] = eqn
 
     return run_solvers(data)

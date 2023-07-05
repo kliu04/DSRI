@@ -7,6 +7,10 @@ partials = jacobian f;
 -- print ("Degree:");
 print (degree f)#0;
 
+-- Arithmetic Genus (need a wrapper or add to file milnor nums)
+-- arithGenus = binomial((degree f)#0 - 1, 2);
+-- print(arithGenus);
+
 -- Milnor
 singularities = ideal partials;
 pd = primaryDecomposition singularities;
