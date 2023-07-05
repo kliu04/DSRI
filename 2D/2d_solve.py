@@ -47,7 +47,9 @@ def main():
 
     with open(path / "2d_solutions.txt", "a", encoding="utf-8") as f:
         # turn dicts to tuples
-        f.write("Singularities:\n")
+        # f.write("Singularities:\n")
+        # print("Singularities:")
+        output = []
         for i, v in enumerate(sols):
             if v[z] != 0:
                 v[x] /= v[z]
@@ -66,7 +68,10 @@ def main():
         sols = list(dict.fromkeys(sols))
 
         for sol in sols:
-            f.write(str(sol) + "\n")
+            # f.write(str(sol) + "\n")
+            output.append(list(sol))
+            # print(str(sol))
+        print(output)
 
         # Multiplicities
         mults = []
@@ -74,61 +79,72 @@ def main():
         for sol in sols:
             # shift solution
             shifted = ""
-            if im(sol[0]) == 0:
-                if sol[0] >= 0:
-                    shifted = eqn.replace("x", "(x-" + str(sol[0]) + ")")
-                else:
-                    shifted = eqn.replace("x", "(x+" + str(-1 * sol[0]) + ")")
-            else:
-                if im(sol[0]) >= 0:
-                    shifted = eqn.replace("x", "(x-" + str(sol[0]) + ")")
-                else:
-                    shifted = eqn.replace("x", "(x+" + str(-1 * sol[0]) + ")")
-            if im(sol[1]) == 0:
-                if sol[1] >= 0:
-                    shifted = shifted.replace("y", "(y-" + str(sol[1]) + ")")
-                else:
-                    shifted = shifted.replace("y", "(y+" + str(-1 * sol[1]) + ")")
-            else:
-                if im(sol[1]) >= 0:
-                    shifted = shifted.replace("y", "(y-" + str(sol[1]) + ")")
-                else:
-                    shifted = shifted.replace("y", "(y+" + str(-1 * sol[1]) + ")")
-            if im(sol[2]) == 0:
-                if sol[2] >= 0:
-                    shifted = shifted.replace("z", "(z-" + str(sol[2]) + ")")
-                else:
-                    shifted = shifted.replace("z", "(z+" + str(-1 * sol[2]) + ")")
-            else:
-                if im(sol[2]) >= 0:
-                    shifted = shifted.replace("z", "(z-" + str(sol[2]) + ")")
-                else:
-                    shifted = shifted.replace("z", "(z+" + str(-1 * sol[2]) + ")")
+            try:
+                # rework this code
+                shifted = eqn.replace("x", "(x-" + str(sol[0]) + ")")
+                shifted = shifted.replace("y", "(y-" + str(sol[1]) + ")")
+                shifted = shifted.replace("z", "(z-" + str(sol[2]) + ")")
 
-            shifted = shifted.replace("^", "**")
+                # if im(sol[0]) == 0:
+                #     if sol[0] >= 0:
+                #         shifted = eqn.replace("x", "(x-" + str(sol[0]) + ")")
+                #     else:
+                #         shifted = eqn.replace("x", "(x+" + str(-1 * sol[0]) + ")")
+                # else:
+                #     if im(sol[0]) >= 0:
+                #         shifted = eqn.replace("x", "(x-" + str(sol[0]) + ")")
+                #     else:
+                #         shifted = eqn.replace("x", "(x+" + str(-1 * sol[0]) + ")")
+                # if im(sol[1]) == 0:
+                #     if sol[1] >= 0:
+                #         shifted = shifted.replace("y", "(y-" + str(sol[1]) + ")")
+                #     else:
+                #         shifted = shifted.replace("y", "(y+" + str(-1 * sol[1]) + ")")
+                # else:
+                #     if im(sol[1]) >= 0:
+                #         shifted = shifted.replace("y", "(y-" + str(sol[1]) + ")")
+                #     else:
+                #         shifted = shifted.replace("y", "(y+" + str(-1 * sol[1]) + ")")
+                # if im(sol[2]) == 0:
+                #     if sol[2] >= 0:
+                #         shifted = shifted.replace("z", "(z-" + str(sol[2]) + ")")
+                #     else:
+                #         shifted = shifted.replace("z", "(z+" + str(-1 * sol[2]) + ")")
+                # else:
+                #     if im(sol[2]) >= 0:
+                #         shifted = shifted.replace("z", "(z-" + str(sol[2]) + ")")
+                #     else:
+                #         shifted = shifted.replace("z", "(z+" + str(-1 * sol[2]) + ")")
 
-            # Get terms of polynominal
-            # print(poly(expand(shifted)))
-            # print(poly(expand(shifted)).terms())
+                shifted = shifted.replace("^", "**")
+                # Get terms of polynominal
+                # print(poly(expand(shifted)))
+                # print(poly(expand(shifted)).terms())
 
-            # degree of all terms
-            degree_list = []
-            # cannot break as planned here since terms are not sorted by degree but by variable
-            for term in reversed(poly(expand(shifted)).terms()):
-                total_degree = 0
-                # degree of current term
-                degrees = term[0]
-                # ignore cnst term
-                if not all(degree == 0 for degree in degrees):
+                # degree of all terms
+                degree_list = []
+                # cannot break as planned here since terms are not sorted by degree but by variable
+                for term in reversed(poly(expand(shifted)).terms()):
+                    total_degree = 0
+                    # degree of current term
+                    degrees = term[0]
                     # degree of each variable
                     for d_v in degrees:
                         total_degree += d_v
-                degree_list.append(total_degree)
-            mults.append(min(degree_list))
+                    # ignore cnst term
+                    if total_degree == 0:
+                        continue
+                    degree_list.append(total_degree)
+                mults.append(min(degree_list))
+            except:
+                print(sol, "Error!!!")
 
-        f.write("Multiplicities:\n")
-        f.write(str(mults))
-        f.write("\n")
+        # f.write("Multiplicities:\n")
+        # f.write(str(mults))
+        # print("Multiplicities:")
+        print(str(mults))
+
+        # f.write("\n")
 
 
 if __name__ == "__main__":
