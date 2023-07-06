@@ -97,7 +97,7 @@ def main():
         all_curves.append(it)
     all_curves = json.dumps(all_curves, indent=4)
 
-    with open("parsed_data.txt", "w") as f:
+    with open("parsed_data.json", "w") as f:
         f.write(all_curves)
 
 

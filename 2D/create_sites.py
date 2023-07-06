@@ -4,7 +4,7 @@ import json
 def main():
     curves = []
     template = ""
-    with open("parsed_data.txt", "r") as f:
+    with open("parsed_data.json", "r") as f:
         curves = json.load(f)
     with open("2D_sites/template.txt", "r") as f:
         template = f.read()
