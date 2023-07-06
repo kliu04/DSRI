@@ -33,7 +33,7 @@ def main():
     index = 0
     for i, v in enumerate(template):
         if '<tbody class="table-group-divider">' in v:
-            index = i
+            index = i + 1
             break
     for i, v in enumerate(curves):
         try:
@@ -50,7 +50,7 @@ def main():
                 index + 5 * i + 3,
                 "            <td>\(%s\)</td>\n" % v["eqn"].replace("*", ""),
             )
-            template.insert(index + 5 * i + 4, "          <tr>\n")
+            template.insert(index + 5 * i + 4, "          </tr>\n")
         except:
             continue
     with open("2D_sites/main_page.html", "w") as f:
