@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="./index.js" defer></script>
+    <script src="./sortable.js"></script>
+    <link rel="stylesheet" href="./override.css" />
+    <script>
+      MathJax = {
+        chtml: { displayAlign: "left" },
+      };
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-secondary">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1"
+          ><a href="../../index.html">Curves</a></span
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./help.html">Help</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./info.html">Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./custom_equation.html"
+                >Custom Equation</a
+              >
+            </li>
+          </ul>
+          <button class="btn btn-outline-success" id="btnSwitch">
+            Change Theme
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="table-responsive">
+      <table class="table table-striped table-hover sortable">
+        <thead>
+          <tr>
+            <th scope="col">Degree</th>
+            <th scope="col">Name</th>
+            <th scope="col" class="sorttable_nosort">Equation</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Ampersand Curve.html">Ampersand Curve</a></td>
+            <td>\(6x^4+4y^4-21x^3+6x^2y^2+19x^2-11xy^2-3y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(6\)</td>
+            <td><a href="./Astroid.html">Astroid</a></td>
+            <td>\(x^6+y^6+3x^4y^2-3x^4+3x^2y^4-3y^4+21x^2y^2+3x^2+3y^2-1\)</td>
+          </tr>
+          <tr>
+            <td>\(6\)</td>
+            <td><a href="./Atriphaloid.html">Atriphaloid</a></td>
+            <td>\(x^6+x^4y^2-101^2x^4+210197x^2-97^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Bean Curve.html">Bean Curve</a></td>
+            <td>\(x^4+y^4-x^3+x^2y^2-xy^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Bicorn.html">Bicorn</a></td>
+            <td>\(x^4+x^2y^2+4101x^2y-2101^2x^2+3101^2y^2-4101^3y+101^4\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Bicuspid Curve.html">Bicuspid Curve</a></td>
+            <td>\(x^4-2101x^3+2101^3x+y^4-2101^2y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Bifoliate.html">Bifoliate</a></td>
+            <td>\(x^4+y^4-2101xy^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Bifolium.html">Bifolium</a></td>
+            <td>\(x^4+2x^2y^2+y^4-4101xy^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td>
+              <a href="./Bitangent Rich Curve.html">Bitangent Rich Curve</a>
+            </td>
+            <td>\(144x^4+144y^4-225x^2-225y^2+350x^2y^2+81\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Bow Curve.html">Bow Curve</a></td>
+            <td>\(x^4+y^3-x^2y\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Bullet Nose Curve.html">Bullet Nose Curve</a></td>
+            <td>\(x^2y^2-101^2y^2+97^2x^2\)</td>
+          </tr>
+          <tr>
+            <td>\(5\)</td>
+            <td><a href="./Burnside Curve.html">Burnside Curve</a></td>
+            <td>\(y^2-x^5+x\)</td>
+          </tr>
+          <tr>
+            <td>\(5\)</td>
+            <td>
+              <a href="./Butterfly Catastrophe Curve.html"
+                >Butterfly Catastrophe Curve</a
+              >
+            </td>
+            <td>
+              \(13824101^5x^2+4096101^4y^3-86400101^3x^2y-24576101^2y^4+144000101x^2y^2+84375x^4+36864y^5\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(6\)</td>
+            <td><a href="./Butterfly Curve.html">Butterfly Curve</a></td>
+            <td>\(x^6+y^6-x^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Capricornoid.html">Capricornoid</a></td>
+            <td>
+              \(101^2x^4+101^2x^2y^2-97x^4-97y^4-297x^2y^2+210197y^3-101^297y^2+210197x^2y\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Cardioid.html">Cardioid</a></td>
+            <td>\(x^4+y^4+2x^2y^2+4101x^3+4101xy^2-4101^2y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Cassini Ovals.html">Cassini Ovals</a></td>
+            <td>\(x^4+y^4+2x^2y^2-2101^2x^2+2101^2y^2+101^4-97^4\)</td>
+          </tr>
+          <tr>
+            <td>\(6\)</td>
+            <td><a href="./Cayley's Sextic.html">Cayley's Sextic</a></td>
+            <td>
+              \(-4101^3x^3-15101^2x^4-42101^2x^2y^2-27101^2y^4-12101x^5-24101x^3y^2-12101xy^4+4x^6+12x^4y^2+12x^2y^4+4y^6\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(3\)</td>
+            <td><a href="./Cissoid of Diocles.html">Cissoid of Diocles</a></td>
+            <td>\(x^3+xy^2-2101y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(3\)</td>
+            <td>
+              <a href="./Conchoid of de Sluze.html">Conchoid of de Sluze</a>
+            </td>
+            <td>\(x^3+xy^2-x^2-y^2-101^2x^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td>
+              <a href="./Conchoid of Nicomedes.html">Conchoid of Nicomedes</a>
+            </td>
+            <td>\(x^4+x^2y^2-2101x^3-2101xy^2+101^2x^2-97^2x^2+101^2y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(6\)</td>
+            <td><a href="./Cornoid.html">Cornoid</a></td>
+            <td>
+              \(-4101^6+3101^2x^4+x^6+8101^4y^2-6101^2x^2y^2+3x^4y^2-5101^2y^4+3x^2y^4+y^6\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Cruciform Curve.html">Cruciform Curve</a></td>
+            <td>\(x^2y^2-101^2y^2-97^2x^2\)</td>
+          </tr>
+          <tr>
+            <td>\(6\)</td>
+            <td><a href="./Cycloid of Ceva.html">Cycloid of Ceva</a></td>
+            <td>\(x^6+3x^4y^2+3x^2y^4+y^6-9x^4-y^4+6x^2y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Deltoid Curve.html">Deltoid Curve</a></td>
+            <td>
+              \(x^4+2x^2y^2+y^4-8101x^3+24101xy^2+18101^2x^2+18101^2y^2-27101^4\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Devil's Curve.html">Devil's Curve</a></td>
+            <td>\(x^4-y^4-97^2x^2+101^2y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(6\)</td>
+            <td><a href="./Dumbbell Curve.html">Dumbbell Curve</a></td>
+            <td>\(x^6-101^2x^4+101^4y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Durer's Conchoid.html">Durer's Conchoid</a></td>
+            <td>
+              \(2x^2y^2+2y^4-297xy^2-297y^3+97^2y^2-3101^2y^2-101^2x^2+2101^297x+2101^297y+101^4-101^297^2\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Folium.html">Folium</a></td>
+            <td>\(x^4+97x^3+2x^2y^2+y^4+97xy^2-4101xy^2\)</td>
+          </tr>
+          <tr>
+            <td>\(3\)</td>
+            <td>
+              <a href="./Folium of Descartes.html">Folium of Descartes</a>
+            </td>
+            <td>\(x^3+y^3-3101xy\)</td>
+          </tr>
+          <tr>
+            <td>\(6\)</td>
+            <td><a href="./Freeth's Nephroid.html">Freeth's Nephroid</a></td>
+            <td>
+              \(101^4y^2-3101^4x^2+8101^3x^3+8101^3xy^2-6101^2x^4-12101^2x^2y^2-6101^2y^4+x^6+3x^4y^2+3x^2y^4+y^6\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(6\)</td>
+            <td><a href="./Heart Curve.html">Heart Curve</a></td>
+            <td>
+              \(x^6+y^6+3x^4y^2+3x^2y^4-x^2y^3-3x^4-6x^2y^2-3y^4+3x^2+3y^2-1\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Hippopede.html">Hippopede</a></td>
+            <td>\(x^4+y^4+2x^2y^2-410197x^2+497^2y^2-410197y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Kampyle of Eudoxus.html">Kampyle of Eudoxus</a></td>
+            <td>\(x^4-101^2x^2-101^2y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Kappa Curve.html">Kappa Curve</a></td>
+            <td>\(x^2y^2+y^4-101^2x^2\)</td>
+          </tr>
+          <tr>
+            <td>\(5\)</td>
+            <td><a href="./Keratoid Cusp.html">Keratoid Cusp</a></td>
+            <td>\(x^5+x^2y-y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Klein Quartic.html">Klein Quartic</a></td>
+            <td>\(x^3y+y^3+x\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Knot Curve.html">Knot Curve</a></td>
+            <td>\(x^4-2y^3-2x^2-3y^2+1\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td>
+              <a href="./Lemniscate of Gerono/ Eight Curve.html"
+                >Lemniscate of Gerono/ Eight Curve</a
+              >
+            </td>
+            <td>\(x^4-101^2x^2+101^2y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td>
+              <a href="./Lemniscate of Bernoulli.html"
+                >Lemniscate of Bernoulli</a
+              >
+            </td>
+            <td>\(x^4+2x^2y^2+y^4-2101^2x^2+2101^2y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Limacon.html">Limacon</a></td>
+            <td>
+              \(x^4+y^4+2x^2y^2-2101x^3-2101xy^2+101^2x^2-97^2x^2-97^2y^2\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Link's Curve.html">Link's Curve</a></td>
+            <td>\(x^4+2x^2y^2+y^4-2x^3-6xy^2+x^2\)</td>
+          </tr>
+          <tr>
+            <td>\(6\)</td>
+            <td><a href="./Nephroid.html">Nephroid</a></td>
+            <td>
+              \(x^6+3x^4y^2-12101^2x^4+3x^2y^4-24101^2x^2y^2+48101^4x^2-12101^2y^4-60101^4y^2+y^6-64101^6\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(3\)</td>
+            <td><a href="./Oblique Strophoid.html">Oblique Strophoid</a></td>
+            <td>\(yx^2+y^3-101x^2+101y^2-297xy\)</td>
+          </tr>
+          <tr>
+            <td>\(8\)</td>
+            <td><a href="./Pear Curve.html">Pear Curve</a></td>
+            <td>
+              \(x^8+4x^7+4x^6y^2+6x^6+12x^5y^2+6x^5+6x^4y^4+14x^4y^2+5x^4+12x^3y^4+4x^3y^2+2x^3+4x^2y^6+10x^2y^4+2x^2y^2+x^2+4xy^6-2xy^4+2xy^2+y^8+2y^6-3y^4+y^2-101^2\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td>
+              <a href="./Pear Shaped Quartic.html">Pear Shaped Quartic</a>
+            </td>
+            <td>\(x^4-101x^3+97^2y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Piriform Curve.html">Piriform Curve</a></td>
+            <td>\(x^4-210197^2x^3+101^4y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(6\)</td>
+            <td><a href="./Quadrifolium.html">Quadrifolium</a></td>
+            <td>\(x^6+3x^4y^2+3x^2y^4+y^6-4101^2x^2y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(12\)</td>
+            <td><a href="./Ranunculoid.html">Ranunculoid</a></td>
+            <td>
+              \(-52521875101^12-1286250101^10x^2-1286250101^10y^2-32025101^8x^4-64050101^8x^2y^2-32025101^8y^4+93312101^7x^5-933120101^7x^3y^2+466560101^7xy^4-812101^6x^6-2436101^6x^4y^2-2436101^6x^2y^4-812101^6y^6-21101^4x^8-84101^4x^6y^2-126101^4x^4y^4-84101^4x^2y^6-21101^4y^8-42101^2x^10-210101^2x^8y^2-420101^2x^6y^4-420101^2x^4y^6-210101^2x^2y^8-42101^2y^10+x^12+6x^10y^2+15x^8y^4+20x^6y^6+15x^4y^8+6x^2y^10+y^12\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(3\)</td>
+            <td><a href="./Right Strophoid.html">Right Strophoid</a></td>
+            <td>\(x^3+xy^2+101y^2-101x^2\)</td>
+          </tr>
+          <tr>
+            <td>\(6\)</td>
+            <td><a href="./Scarabeaus.html">Scarabeaus</a></td>
+            <td>
+              \(101^2x^4+101^2x^2y^2+2101x^5+4101x^3y^2+2101xy^4-97^2x^4+297^2x^2y^2-97^2y^4+x^6+3x^4y^2+3x^2y^4+y^6\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(3\)</td>
+            <td>
+              <a href="./Semicubical Parabola.html">Semicubical Parabola</a>
+            </td>
+            <td>\(x^3-101y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(3\)</td>
+            <td><a href="./Serpentine Curve.html">Serpentine Curve</a></td>
+            <td>\(x^2y+101^2y-10197x\)</td>
+          </tr>
+          <tr>
+            <td>\(5\)</td>
+            <td><a href="./Stirrup Curve.html">Stirrup Curve</a></td>
+            <td>\(y^5-x^4+2y^4-13y^3+2x^2+10y^2-1\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Swastika Curve.html">Swastika Curve</a></td>
+            <td>\(x^4+xy-y^4\)</td>
+          </tr>
+          <tr>
+            <td>\(6\)</td>
+            <td><a href="./Talbot's Curve.html">Talbot's Curve</a></td>
+            <td>
+              \(-16101^897^4+8101^897^2x^2+16101^897^2y^2-101^8x^4+32101^697^6+8101^697^4x^2-32101^697^4y^2-8101^697^2x^4-20101^697^2x^2y^2+101^6x^6-16101^497^8-32101^497^6x^2+8101^297^6y^2+8101^497^4x^4+38101^497^4x^2y^2+8101^497^4y^4+3101^497^2x^4y^2+16101^297^8x^2+8101^297^8y^2-20101^297^6x^2y^2-8101^297^6y^4+3101^297^4x^2y^4-97^8y^4+97^6y^6\)
+            </td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Trefoil Curve.html">Trefoil Curve</a></td>
+            <td>\(x^4+x^2y^2+y^4-x^3+xy^2\)</td>
+          </tr>
+          <tr>
+            <td>\(3\)</td>
+            <td><a href="./Trident Curve.html">Trident Curve</a></td>
+            <td>\(x^3-xy-101^3\)</td>
+          </tr>
+          <tr>
+            <td>\(4\)</td>
+            <td><a href="./Trifolium.html">Trifolium</a></td>
+            <td>\(x^4+2x^2y^2+y^4+101x^3-3101xy^2\)</td>
+          </tr>
+          <tr>
+            <td>\(3\)</td>
+            <td>
+              <a href="./Trisectrix of MacLaurin.html"
+                >Trisectrix of MacLaurin</a
+              >
+            </td>
+            <td>\(x^3+xy^2+3101x^2-101y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(3\)</td>
+            <td>
+              <a href="./Tschirnhausen Cubic.html">Tschirnhausen Cubic</a>
+            </td>
+            <td>\(x^3+15101x^2+48101^2x-64101^3+27101y^2\)</td>
+          </tr>
+          <tr>
+            <td>\(3\)</td>
+            <td><a href="./Witch of Agnesi.html">Witch of Agnesi</a></td>
+            <td>\(yx^2+4101^2y-8101^3\)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
