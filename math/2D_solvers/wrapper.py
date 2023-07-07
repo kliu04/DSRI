@@ -2,7 +2,10 @@ import sys
 import subprocess
 import solve_b
 import json
-from surfaces-test.2D.scraper.parse.py import par
+
+sys.path.insert(0, "DSRI/2D/scraper/parse.py")
+print(sys.path)
+import parse
 
 
 def solve(eqn: str) -> str:
@@ -42,7 +45,7 @@ def main():
         if "^" in eqn:
             print(solve(eqn))
         else:
-            prui
+            pr
     except IndexError:
         print("Enter the equation to solve invariants for.")
 
