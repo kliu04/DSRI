@@ -3,6 +3,9 @@ import pyperclip
 
 
 def parse(raw: str) -> str:
+    """Parses an equation from Katie's website
+    (https://people.math.carleton.ca/~cingalls/studentProjects/Katie's%20Site/html/All%20Curves.html)
+    into a format suitable for Macaulay2"""
     formatted = ""
 
     for index, char in enumerate(raw):

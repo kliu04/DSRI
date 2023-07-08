@@ -1,170 +1,99 @@
-from sympy import solve, im, poly, expand, sqrt
+from sympy import solve, im, poly, expand, sqrt, binomial
 from sympy.abc import x, y, z, I
-from pathlib import Path
 from sympy.parsing.sympy_parser import parse_expr
 
 
-def main():
-    path = Path().resolve()
+def solve_singularities(points: list) -> list:
+    """Given a list of points of the singular location, returns the cartesian co-ordinate of each point."""
     sols = []
-    h_eqn = ""
-    with open(path / "2d_to_solve.txt", "r", encoding="utf-8") as f:
-        for line in f:
-            # Get rid of formatting characters
-            line = line.strip("\n")
-            line = line.replace("{", "")
-            line = line.replace("}", "")
-            line = line.replace(" ", "")
-            line = line.replace("^", "**")
+    for item in points:
+        missing = {x, y, z}
+        system = []
+        for var in item:
+            if "x" in var:
+                missing.remove(x)
+            elif "y" in var:
+                missing.remove(y)
+            elif "z" in var:
+                missing.remove(z)
+            var = var.replace("^", "**")
+            system.append(parse_expr(var))
+        sol = solve(system, dict=True)
 
-            tokens = line.split(",")
+        for var in missing:
+            for j in range(len(sol)):
+                sol[j][var] = 1
+                sols.append(sol[j])
 
-            if len(tokens) == 1:
-                h_eqn = line.replace("**", "^")
+    for i, v in enumerate(sols):
+        if v[z] != 0:
+            v[x] /= v[z]
+            v[y] /= v[z]
+            v[z] = 1
+        elif v[y] != 0:
+            v[x] /= v[y]
+            v[y] = 1
+        else:
+            # Sing is of form (x, 0, 0)
+            v[x] = 1
+
+        sols[i] = (v[x], v[y], v[z])
+    # remove duplicate solutions
+    sols = list(dict.fromkeys(sols))
+    return sols
+
+
+def solve_multiplicities(homogenized: str, points: list) -> list:
+    """Given the homogenized equation and a list of singular co-ordinates return the multiplicity at each point"""
+    mults = []
+    for sol in points:
+        shifted = homogenized
+        min_degree = float("inf")
+        # shift the homogenized equation by the solution
+        shifted = shifted.replace("x", "(x-" + str(sol[0]) + ")")
+        shifted = shifted.replace("y", "(y-" + str(sol[1]) + ")")
+        shifted = shifted.replace("z", "(z-" + str(sol[2]) + ")")
+        # expand generated polynominal
+        for term in poly(expand(shifted)).terms():
+            # tuple representing (deg(x), deg(y), deg(z)) per term
+            all_degrees = term[0]
+
+            term_degree = sum(all_degrees)
+
+            if term_degree == 0:
+                # skip constant terms
                 continue
 
-            missing = set()
-            if "x" not in line:
-                missing.add(x)
-            if "y" not in line:
-                missing.add(y)
-            if "z" not in line:
-                missing.add(z)
+            # Get new minimum
+            if term_degree < min_degree:
+                min_degree = term_degree
 
-            system = []
-            for token in tokens:
-                system.append(parse_expr(token))
-
-            sol = solve(
-                system,
-                dict=True,
-            )
-            for item in missing:
-                for j in range(len(sol)):
-                    sol[j][item] = 1
-                    sols.append(sol[j])
-
-    with open(path / "2d_solutions.txt", "a", encoding="utf-8") as f:
-        # turn dicts to tuples
-        # f.write("Singularities:\n")
-        # print("Singularities:")
-        output = []
-        for i, v in enumerate(sols):
-            if v[z] != 0:
-                v[x] /= v[z]
-                v[y] /= v[z]
-                v[z] = 1
-            elif v[y] != 0:
-                v[x] /= v[y]
-                v[y] = 1
-            else:
-                # Sing is of form (x, 0, 0)
-                v[x] = 1
-            sol = (v[x], v[y], v[z])
-            sols[i] = sol
-
-        # Remove duplicates
-        sols = list(dict.fromkeys(sols))
-
-        for sol in sols:
-            # f.write(str(sol) + "\n")
-            output.append(list(sol))
-            # print(str(sol))
-        print(output)
-
-        # Multiplicities
-        mults = []
-
-        for sol in sols:
-            # shift solution
-            shifted = ""
-            try:
-                # rework this code
-                shifted = h_eqn.replace("x", "(x-" + str(sol[0]) + ")")
-                shifted = shifted.replace("y", "(y-" + str(sol[1]) + ")")
-                shifted = shifted.replace("z", "(z-" + str(sol[2]) + ")")
-
-                # if im(sol[0]) == 0:
-                #     if sol[0] >= 0:
-                #         shifted = eqn.replace("x", "(x-" + str(sol[0]) + ")")
-                #     else:
-                #         shifted = eqn.replace("x", "(x+" + str(-1 * sol[0]) + ")")
-                # else:
-                #     if im(sol[0]) >= 0:
-                #         shifted = eqn.replace("x", "(x-" + str(sol[0]) + ")")
-                #     else:
-                #         shifted = eqn.replace("x", "(x+" + str(-1 * sol[0]) + ")")
-                # if im(sol[1]) == 0:
-                #     if sol[1] >= 0:
-                #         shifted = shifted.replace("y", "(y-" + str(sol[1]) + ")")
-                #     else:
-                #         shifted = shifted.replace("y", "(y+" + str(-1 * sol[1]) + ")")
-                # else:
-                #     if im(sol[1]) >= 0:
-                #         shifted = shifted.replace("y", "(y-" + str(sol[1]) + ")")
-                #     else:
-                #         shifted = shifted.replace("y", "(y+" + str(-1 * sol[1]) + ")")
-                # if im(sol[2]) == 0:
-                #     if sol[2] >= 0:
-                #         shifted = shifted.replace("z", "(z-" + str(sol[2]) + ")")
-                #     else:
-                #         shifted = shifted.replace("z", "(z+" + str(-1 * sol[2]) + ")")
-                # else:
-                #     if im(sol[2]) >= 0:
-                #         shifted = shifted.replace("z", "(z-" + str(sol[2]) + ")")
-                #     else:
-                #         shifted = shifted.replace("z", "(z+" + str(-1 * sol[2]) + ")")
-
-                shifted = shifted.replace("^", "**")
-                # Get terms of polynominal
-                # print(poly(expand(shifted)))
-                # print(poly(expand(shifted)).terms())
-
-                # degree of all terms
-                degree_list = []
-                # cannot break as planned here since terms are not sorted by degree but by variable
-                for term in reversed(poly(expand(shifted)).terms()):
-                    total_degree = 0
-                    # degree of current term
-                    degrees = term[0]
-                    # degree of each variable
-                    for d_v in degrees:
-                        total_degree += d_v
-                    # ignore cnst term
-                    if total_degree == 0:
-                        continue
-                    degree_list.append(total_degree)
-                mults.append(min(degree_list))
-            except:
-                print(sol, "Error!!!")
-
-        # f.write("Multiplicities:\n")
-        # f.write(str(mults))
-        # print("Multiplicities:")
-        print(str(mults))
-
-        # f.write("\n")
+        mults.append(min_degree)
+    return mults
 
 
-if __name__ == "__main__":
-    main()
+def solve_arith_genus(degree: int) -> int:
+    """Using formula described here: https://en.wikipedia.org/wiki/Genus%E2%80%93degree_formula"""
+    return binomial(degree - 1, 2)
 
 
-def solve_singularities(homogenized: str, points: list) -> list:
-    pass
+def solve_delta(mults: list) -> list:
+    """Calculate delta invariant for each multiplicity"""
+    delta = []
+    for m in mults:
+        delta.append(int(0.5 * m * (m - 1)))
+    return delta
 
 
-def solve_multiplicities(eqn: str) -> list:
-    pass
+def solve_geo_genus(arith_genus: int, delta: list) -> int:
+    """Calculate arithmetic genus"""
+    delta = sum(delta)
+    return arith_genus - delta
 
 
-def solve_arith_genus(eqn: str, milnor: int) -> int:
-    pass
-
-
-def solve_geo_genus(eqn: str) -> int:
-    pass
-
-
-def solve_branching(eqn: str) -> list:
-    pass
+def solve_branching(milnor: list, delta: list) -> list:
+    """Using Milnor-Jung formula"""
+    branching = []
+    for i in range(len(milnor)):
+        branching.append(2 * delta[i] + 1 - milnor[i])
+    return branching

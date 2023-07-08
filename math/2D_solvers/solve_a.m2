@@ -50,7 +50,7 @@ s = sub(F, z=>0);
 -- file = openOut "2d_to_solve.txt";
 -- file << toString(F) << endl;
 print(toString(F));
-L = {}
+L = []
 singularities = ideal jacobian p + ideal p;
 pd = primaryDecomposition(singularities);
 for i from 0 to #pd - 1 do
