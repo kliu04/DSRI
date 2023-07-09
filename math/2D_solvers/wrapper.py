@@ -23,7 +23,7 @@ def parse_singular_points(s: str) -> list:
     return s
 
 
-def solve(eqn: str) -> str:
+def solve(eqn: str) -> dict:
     """Solve for invariants of a 2D curve given as argument."""
     data = {}
     try:
@@ -44,8 +44,12 @@ def solve(eqn: str) -> str:
     data["eqn"] = eqn
     data["degree"] = int(output[0])
     # No Milnor or Tjurina (returns vector []) => Milnor/Tjurina number is 0
-    data["milnor"] = eval(output[1]) if len(output[1]) > 2 else 0
-    data["tjurina"] = eval(output[2]) if len(output[2]) > 2 else 0
+    data["milnor"] = eval(output[1])
+    if data["milnor"] == []:
+        data["milnor"] = [0]
+    data["tjurina"] = eval(output[2])
+    if data["tjurina"] == []:
+        data["tjurina"] = [0]
     homogenized = output[3]
     singular_points = output[4]
     data["sings"] = solve_b.solve_singularities(parse_singular_points(singular_points))
