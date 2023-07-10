@@ -10,6 +10,7 @@ def add_braces_to_exponents(eqn: str) -> str:
         if v == "*":
             if eqn[i - 1].isalpha() or eqn[i + 1].isalpha():
                 parsed += "\cdot"
+                continue
         parsed += v
     eqn = parsed
     # index of all places to insert braces
