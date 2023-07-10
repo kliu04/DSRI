@@ -8,9 +8,9 @@ def add_braces_to_exponents(eqn: str) -> str:
     parsed = ""
     for i, v in enumerate(eqn):
         if v == "*":
-            if eqn[i - 1].isalpha() or eqn[i + 1].isalpha():
-                parsed += "\cdot"
-                continue
+            if eqn[i + 1].isnumeric():
+                parsed += "\cdot "
+            continue
         parsed += v
     eqn = parsed
     # index of all places to insert braces
@@ -66,18 +66,19 @@ def main():
         try:
             # replace template info ([[x]]) with json_data[x]
             for r in replace:
-                old = rf"[[ {r} ]]"
-                new = str(curve[r])
+                template = rf"[[ {r} ]]"
+                data = str(curve[r])
                 # Singularity conversion to get rid of string
                 if r == "sings":
-                    new = new.replace("'", "")
+                    data = data.replace("'", "")
                 # Eqn conversion
                 if r == "eqn":
-                    new = add_braces_to_exponents(new)
+                    data = add_braces_to_exponents(data)
+                    curve["eqn"] = data
                 # Lemniscate of Gerono/ Eight Curve
                 if r == "title":
                     curve["title"] = curve["title"].replace("/ ", "_")
-                site = site.replace(old, new)
+                site = site.replace(template, data)
             with open(rf"2D/{curve['title']}.html", "w") as f:
                 f.write(site)
         # some curves may not have all invariants for whatever reason
@@ -107,7 +108,7 @@ def main():
             )
             template.insert(
                 index + 5 * i + 3,
-                "            <td>\(%s\)</td>\n" % v["eqn"].replace("*", ""),
+                "            <td>\(%s\)</td>\n" % v["eqn"],
             )
             template.insert(index + 5 * i + 4, "          </tr>\n")
         except:
