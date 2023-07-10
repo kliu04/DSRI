@@ -2,8 +2,16 @@ import json
 
 
 def add_braces_to_exponents(eqn: str) -> str:
-    """Convert eqn string to have braces for exponents (e.g., 5x^12 + 6y^3 -> 5x^{12} + 6y^{3})"""
-    eqn = eqn.replace("*", "")
+    """Convert eqn string to have braces for exponents (e.g., 5*6^2*x^12 + 6*y^3 -> 5 \cdot 6^{2}x^{12} + 6y^{3})"""
+
+    # remove excess multiplication signs
+    parsed = ""
+    for i, v in enumerate(eqn):
+        if v == "*":
+            if eqn[i - 1].isalpha() or eqn[i + 1].isalpha():
+                parsed += "\cdot"
+        parsed += v
+    eqn = parsed
     # index of all places to insert braces
     lis = []
     flag = False
@@ -57,22 +65,25 @@ def main():
         try:
             # replace template info ([[x]]) with json_data[x]
             for r in replace:
-                # use raw string here since some curves have / in name (path seperator)
                 old = rf"[[ {r} ]]"
                 new = str(curve[r])
-                # Singularity conversion
-                new = new.replace("'", "")
+                # Singularity conversion to get rid of string
+                if r == "sings":
+                    new = new.replace("'", "")
                 # Eqn conversion
                 if r == "eqn":
                     new = add_braces_to_exponents(new)
+                # Lemniscate of Gerono/ Eight Curve
+                if r == "title":
+                    curve["title"] = curve["title"].replace("/ ", "_")
                 site = site.replace(old, new)
-            with open("2D/" + curve["title"] + ".html", "w") as f:
+            with open(rf"2D/{curve['title']}.html", "w") as f:
                 f.write(site)
         # some curves may not have all invariants for whatever reason
         except KeyError:
             pass
-        except:
-            print("Error!!!", curve)
+        except Exception as e:
+            print("Error!!!", curve, e)
 
     # make main index page
     with open("2D/scraper/index_template.txt", "r") as f:
