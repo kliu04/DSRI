@@ -25,7 +25,7 @@ fig.update_layout(
 
 # Save plot as HTML file
 fig.write_html(
-    Path(__file__).stem + "_plot.html",
+    rf"3D/plotly_plots/{Path(__file__).stem}_plot.html",
     full_html=False,
 )
-fig.show()
+# fig.show()
