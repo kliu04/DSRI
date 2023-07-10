@@ -16,11 +16,26 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+      integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn"
+      crossorigin="anonymous"
+    />
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
     <script
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0-alpha.1/es5/tex-mml-chtml.js"
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"
+      integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx"
+      crossorigin="anonymous"
+    ></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+      integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
     ></script>
     <script src="../static/index.js" defer></script>
     <link rel="stylesheet" href="../static/override.css" />
@@ -65,11 +80,11 @@
       <div class="row">
         <div class="col-lg-6 col-md-12 mb-4">
           <ul>
-            <li>Algebraic Equation: \[y^{5}-x^{4}+2y^{4}-13y^{3}+2x^{2}+10y^{2}-1\]</li>
+            <li>Algebraic Equation: \(y^{5}-x^{4}+2y^{4}-13y^{3}+2x^{2}+10y^{2}-1\)</li>
             <li>Degree: \(5\)</li>
             <li>Milnor Number: \([1, 1]\)</li>
             <li>Tjurina Number: \([1, 1]\)</li>
-            <li>Singularities: \[[[1, 0, 1], [-1, 0, 1]]\]</li>
+            <li>Singularities: \([[1, 0, 1], [-1, 0, 1]]\)</li>
             <li>Multiplicities: \([2, 2]\)</li>
             <li>Arithmetic Genus: \(6\)</li>
             <li>Geometric Genus: \(4\)</li>

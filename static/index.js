@@ -13,20 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     document.documentElement.setAttribute("data-bs-theme", "light");
   }
-
-  window.MathJax = {
-    output: {
-      displayAlign: "left",
-      font: "mathjax-tex",
-      displayOverflow: "linebreak",
-      linebreaks: {
-        inline: true,
-        width: "100%",
-        lineleading: 0.2,
-        LinebreakVisitor: null,
-      },
-    },
-  };
 });
 
 document.getElementById("btnSwitch").addEventListener("click", () => {
