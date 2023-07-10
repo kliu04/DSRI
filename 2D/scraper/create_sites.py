@@ -1,15 +1,17 @@
 import json
 
 
-def add_braces_to_exponents(eqn: str) -> str:
-    """Convert eqn string to have braces for exponents (e.g., 5*6^2*x^12 + 6*y^3 -> 5 \cdot 6^{2}x^{12} + 6y^{3})"""
-
+def parse_for_latex(eqn: str) -> str:
+    """Convert string to be properly formatted for latex (e.g., 5*6^2*x^12 + 6*y^3 -> 5 \cdot 6^{2}x^{12} + 6y^{3})"""
+    # eqn = eqn.replace("sqrt", "\sqrt")
+    # eqn = eqn.replace("I", "i")
+    # eqn = eqn.replace("**", "^")
     # remove excess multiplication signs
     parsed = ""
     for i, v in enumerate(eqn):
         if v == "*":
             if eqn[i + 1].isnumeric():
-                parsed += "\cdot "
+                parsed += " \cdot "
             continue
         parsed += v
     eqn = parsed
@@ -56,7 +58,7 @@ def main():
             "degree",
             "milnor",
             "tjurina",
-            "sings",
+            "sings_latex",
             "mults",
             "arith_genus",
             "delta",
@@ -71,9 +73,10 @@ def main():
                 # Singularity conversion to get rid of string
                 if r == "sings":
                     data = data.replace("'", "")
+                    # data = parse_for_latex(data)
                 # Eqn conversion
                 if r == "eqn":
-                    data = add_braces_to_exponents(data)
+                    data = parse_for_latex(data)
                     curve["eqn"] = data
                 # Lemniscate of Gerono/ Eight Curve
                 if r == "title":
