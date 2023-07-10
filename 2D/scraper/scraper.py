@@ -31,7 +31,6 @@ def parse_sublink(link: str) -> dict:
     eqn = parse.parse(eqn)
     data["title"] = soup.title.string.replace("\u2019", "'")
     data["eqn"] = eqn
-
     return run_solvers(data)
 
 
