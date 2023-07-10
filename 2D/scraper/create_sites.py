@@ -66,7 +66,7 @@ def main():
         try:
             # replace template info ([[x]]) with json_data[x]
             for r in replace:
-                template = rf"[[ {r} ]]"
+                field = rf"[[ {r} ]]"
                 data = str(curve[r])
                 # Singularity conversion to get rid of string
                 if r == "sings":
@@ -78,7 +78,7 @@ def main():
                 # Lemniscate of Gerono/ Eight Curve
                 if r == "title":
                     curve["title"] = curve["title"].replace("/ ", "_")
-                site = site.replace(template, data)
+                site = site.replace(field, data)
             with open(rf"2D/{curve['title']}.html", "w") as f:
                 f.write(site)
         # some curves may not have all invariants for whatever reason
@@ -90,7 +90,6 @@ def main():
     # make main index page
     with open("2D/scraper/index_template.txt", "r") as f:
         template = f.readlines()
-    index = 0
     for i, v in enumerate(template):
         if '<tbody class="table-group-divider">' in v:
             index = i + 1
