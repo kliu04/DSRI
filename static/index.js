@@ -1,14 +1,14 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // hold the dark/light mode status in client (default is dark)
-  let mode = localStorage.getItem("mode");
-  if (mode === null) {
-    localStorage.setItem("mode", "dark");
+  // hold the dark/light theme status in client (default is dark)
+  let theme = localStorage.getItem("theme");
+  if (theme === null) {
+    localStorage.setItem("theme", "dark");
   }
 
   // adjust appropriate css element on every page
-  if (localStorage.getItem("mode") === "dark") {
+  if (localStorage.getItem("theme") === "dark") {
     document.documentElement.setAttribute("data-bs-theme", "dark");
   } else {
     document.documentElement.setAttribute("data-bs-theme", "light");
@@ -17,11 +17,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("btnSwitch").addEventListener("click", () => {
   // switch the state
-  if (localStorage.getItem("mode") === "dark") {
+  if (localStorage.getItem("theme") === "dark") {
     document.documentElement.setAttribute("data-bs-theme", "light");
-    localStorage.setItem("mode", "light");
+    localStorage.setItem("theme", "light");
   } else {
     document.documentElement.setAttribute("data-bs-theme", "dark");
-    localStorage.setItem("mode", "dark");
+    localStorage.setItem("theme", "dark");
   }
 });
+
+MathJax = {
+  output: {
+    displayAlign: "left",
+    font: "mathjax-tex",
+    displayOverflow: "overflow",
+  },
+};
