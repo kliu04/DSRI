@@ -4,7 +4,6 @@ from multiprocessing import Pool
 import sys
 import parse
 import json
-import math
 
 URL = "https://people.math.carleton.ca/~cingalls/studentProjects/Katie's%20Site/html/All%20Curves.html"
 BASE = "https://people.math.carleton.ca/~cingalls/studentProjects/Katie's%20Site/html/"
@@ -16,8 +15,6 @@ import wrapper
 
 def run_solvers(data: dict) -> dict:
     eqn = data["eqn"]
-    # print(eqn)
-    # print(data | wrapper.solve(eqn))
     return data | wrapper.solve(eqn)
 
 

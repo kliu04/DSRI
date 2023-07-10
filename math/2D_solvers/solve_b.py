@@ -1,24 +1,23 @@
-from sympy import solve, im, poly, expand, sqrt, binomial
+from sympy import solve, poly, expand, sqrt, latex
 from sympy.abc import x, y, z, I
 from sympy.parsing.sympy_parser import parse_expr
 
 
 def solve_singularities(points: list) -> list:
     """Given a list of points of the singular location, returns the cartesian co-ordinate of each point."""
+    points = points.replace("^", "**")
+    points = parse_expr(points)
     sols = []
     for item in points:
         missing = {x, y, z}
-        system = []
         for var in item:
-            if "x" in var:
+            if x in var.free_symbols:
                 missing.discard(x)
-            if "y" in var:
+            if y in var.free_symbols:
                 missing.discard(y)
-            if "z" in var:
+            if z in var.free_symbols:
                 missing.discard(z)
-            var = var.replace("^", "**")
-            system.append(parse_expr(var))
-        sol = solve(system, dict=True)
+        sol = solve(item, dict=True)
 
         for var in missing:
             for j in range(len(sol)):
@@ -38,10 +37,11 @@ def solve_singularities(points: list) -> list:
             v[x] = 1
 
         # Have to change type to string to avoid issues with I or sqrt later
-        sols[i] = (str(v[x]), str(v[y]), str(v[z]))
+        sols[i] = (v[x], v[y], v[z])
     # remove duplicate solutions
     sols = list(dict.fromkeys(sols))
-    return sols
+    # return the latex as well for display
+    return sols, latex(sols)
 
 
 def solve_multiplicities(homogenized: str, points: list) -> list:
@@ -51,9 +51,9 @@ def solve_multiplicities(homogenized: str, points: list) -> list:
         shifted = homogenized
         min_degree = float("inf")
         # shift the homogenized equation by the solution
-        shifted = shifted.replace("x", "(x-" + sol[0] + ")")
-        shifted = shifted.replace("y", "(y-" + sol[1] + ")")
-        shifted = shifted.replace("z", "(z-" + sol[2] + ")")
+        shifted = shifted.replace("x", "(x-" + str(sol[0]) + ")")
+        shifted = shifted.replace("y", "(y-" + str(sol[1]) + ")")
+        shifted = shifted.replace("z", "(z-" + str(sol[2]) + ")")
         # expand generated polynominal
         for term in poly(expand(shifted)).terms():
             # tuple representing (deg(x), deg(y), deg(z)) per term

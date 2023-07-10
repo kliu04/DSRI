@@ -73,7 +73,6 @@ def main():
                 # Singularity conversion to get rid of string
                 if r == "sings":
                     data = data.replace("'", "")
-                    # data = parse_for_latex(data)
                 # Eqn conversion
                 if r == "eqn":
                     data = parse_for_latex(data)
