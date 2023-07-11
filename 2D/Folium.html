@@ -42,6 +42,7 @@
       integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
       crossorigin="anonymous"
     ></script>
+    <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
     <script src="../static/index.js" defer></script>
     <link rel="stylesheet" href="../static/override.css" />
   </head>
@@ -103,12 +104,19 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-6 col-md-12 d-flex justify-content-center vh-100">
-           <!-- <iframe
-            src=[[ plot ]]
-            sandbox="allow-scripts"
-          ></iframe>  -->
-        </div>
+        <div
+          class="col-lg-6 col-md-12 d-flex justify-content-center vh-100"
+          id="calculator"
+        ></div>
+        <script>
+          var elt = document.getElementById("calculator");
+          var calculator = Desmos.GraphingCalculator(elt, {
+            // keypad: false,
+          });
+          calculator.setExpression({
+            latex: String.raw`x^{4}+97x^{3}+2x^{2}y^{2}+y^{4}+97xy^{2}-4 \cdot 101xy^{2} = 0`,
+          });
+        </script>
       </div>
     </div>
   </body>

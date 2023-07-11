@@ -42,6 +42,7 @@
       integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
       crossorigin="anonymous"
     ></script>
+    <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
     <script src="../static/index.js" defer></script>
     <link rel="stylesheet" href="../static/override.css" />
   </head>
@@ -103,12 +104,19 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-6 col-md-12 d-flex justify-content-center vh-100">
-           <!-- <iframe
-            src=[[ plot ]]
-            sandbox="allow-scripts"
-          ></iframe>  -->
-        </div>
+        <div
+          class="col-lg-6 col-md-12 d-flex justify-content-center vh-100"
+          id="calculator"
+        ></div>
+        <script>
+          var elt = document.getElementById("calculator");
+          var calculator = Desmos.GraphingCalculator(elt, {
+            // keypad: false,
+          });
+          calculator.setExpression({
+            latex: String.raw`-16 \cdot 101^{8} \cdot 97^{4}+8 \cdot 101^{8} \cdot 97^{2}x^{2}+16 \cdot 101^{8} \cdot 97^{2}y^{2}-101^{8}x^{4}+32 \cdot 101^{6} \cdot 97^{6}+8 \cdot 101^{6} \cdot 97^{4}x^{2}-32 \cdot 101^{6} \cdot 97^{4}y^{2}-8 \cdot 101^{6} \cdot 97^{2}x^{4}-20 \cdot 101^{6} \cdot 97^{2}x^{2}y^{2}+101^{6}x^{6}-16 \cdot 101^{4} \cdot 97^{8}-32 \cdot 101^{4} \cdot 97^{6}x^{2}+8 \cdot 101^{2} \cdot 97^{6}y^{2}+8 \cdot 101^{4} \cdot 97^{4}x^{4}+38 \cdot 101^{4} \cdot 97^{4}x^{2}y^{2}+8 \cdot 101^{4} \cdot 97^{4}y^{4}+3 \cdot 101^{4} \cdot 97^{2}x^{4}y^{2}+16 \cdot 101^{2} \cdot 97^{8}x^{2}+8 \cdot 101^{2} \cdot 97^{8}y^{2}-20 \cdot 101^{2} \cdot 97^{6}x^{2}y^{2}-8 \cdot 101^{2} \cdot 97^{6}y^{4}+3 \cdot 101^{2} \cdot 97^{4}x^{2}y^{4}-97^{8}y^{4}+97^{6}y^{6} = 0`,
+          });
+        </script>
       </div>
     </div>
   </body>
