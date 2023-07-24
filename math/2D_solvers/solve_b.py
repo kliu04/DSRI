@@ -89,7 +89,7 @@ def solve_milnor(degs: str, pd: str, sings: list) -> list:
             if sol in sings:
                 # print(sol, degs[i] / len(sols), ideal)
                 # TODO : fix not all sols valid
-                milnor.append(degs[i] / len(sols))
+                milnor.append(int(degs[i] / len(sols)))
     return milnor
 
 
@@ -111,7 +111,7 @@ def solve_tjurina(degs: str, pd: str, sings: list) -> list:
             if sol in sings:
                 # print(sol, degs[i] / len(sols), ideal)
                 # TODO : fix not all sols valid
-                tjurina.append(degs[i] / len(sols))
+                tjurina.append(int(degs[i] / len(sols)))
     return tjurina
 
 

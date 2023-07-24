@@ -47,12 +47,17 @@ def main():
     # 62 threads
     with Pool(62) as p:
         all_curves = p.map(parse_sublink, [BASE + sublink for sublink in links])
-
+    # all_curves = [str(curve) for curve in all_curves]
     # for it in map(parse_sublink, [BASE + sublink for sublink in links]):
     #     all_curves.append(it)
-
-    with open("2D/scraper/parsed_data.json", "w") as f:
-        json.dump(all_curves, f, indent=4)
+    try:
+        with open("2D/scraper/parsed_data.json", "w") as f:
+            json.dump(all_curves, f, indent=4)
+    except:
+        all_curves = [{key: str(val) for key, val in dict.items()} for dict in list]
+        print("hello")
+        with open("2D/scraper/parsed_data.json", "w") as f:
+            json.dump(all_curves, f, indent=4)
 
 
 if __name__ == "__main__":

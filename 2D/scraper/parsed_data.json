@@ -3,6 +3,12 @@
         "title": "Ampersand Curve",
         "eqn": "6*x^4+4*y^4-21*x^3+6*x^2*y^2+19*x^2-11*x*y^2-3*y^2",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( 1, \\  1, \\  1\\right), \\  \\left( 1, \\  -1, \\  1\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2,
+            2,
+            2
+        ],
         "milnor": [
             1,
             1,
@@ -12,12 +18,6 @@
             1,
             1,
             1
-        ],
-        "sings_latex": "\\left[ \\left( 1, \\  1, \\  1\\right), \\  \\left( 1, \\  -1, \\  1\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2,
-            2,
-            2
         ],
         "arith_genus": 3,
         "delta": [
@@ -26,34 +26,12 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            2,
-            2,
-            2
-        ]
+        "branching": 4
     },
     {
         "title": "Astroid",
         "eqn": "x^6+y^6+3*x^4*y^2-3*x^4+3*x^2*y^4-3*y^4+21*x^2*y^2+3*x^2+3*y^2-1",
         "degree": 6,
-        "milnor": [
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2
-        ],
-        "tjurina": [
-            2,
-            2,
-            2,
-            2,
-            2,
-            2
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( 1, \\  0, \\  1\\right), \\  \\left( -1, \\  0, \\  1\\right), \\  \\left( i, \\  i, \\  1\\right), \\  \\left( - i, \\  - i, \\  1\\right), \\  \\left( i, \\  - i, \\  1\\right), \\  \\left( - i, \\  i, \\  1\\right), \\  \\left( 0, \\  1, \\  1\\right), \\  \\left( 0, \\  -1, \\  1\\right)\\right]",
         "mults": [
             2,
@@ -67,6 +45,30 @@
             2,
             2
         ],
+        "milnor": [
+            2,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+        ],
+        "tjurina": [
+            2,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+        ],
         "arith_genus": 10,
         "delta": [
             1,
@@ -81,81 +83,70 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
+        "branching": 5
     },
     {
         "title": "Atriphaloid",
         "eqn": "x^6+x^4*y^2-101^2*x^4+2*101*97*x^2-97^2",
         "degree": 6,
-        "milnor": [
-            0
-        ],
-        "tjurina": [
-            0
-        ],
         "sings_latex": "\\left[ \\left( 0, \\  1, \\  0\\right)\\right]",
         "mults": [
             4
+        ],
+        "milnor": [
+            15
+        ],
+        "tjurina": [
+            14
         ],
         "arith_genus": 10,
         "delta": [
             6
         ],
         "geo_genus": 4,
-        "branching": [
-            13
-        ]
+        "branching": -2
     },
     {
         "title": "Bean Curve",
         "eqn": "x^4+y^4-x^3+x^2*y^2-x*y^2",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            3
+        ],
         "milnor": [
             4
         ],
         "tjurina": [
             4
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            3
         ],
         "arith_genus": 3,
         "delta": [
             3
         ],
         "geo_genus": 0,
-        "branching": [
-            3
-        ]
+        "branching": 3
     },
     {
         "title": "Bicorn",
         "eqn": "x^4+x^2*y^2+4*101*x^2*y-2*101^2*x^2+3*101^2*y^2-4*101^3*y+101^4",
         "degree": 4,
-        "milnor": [
-            2,
-            2
-        ],
-        "tjurina": [
-            2,
-            2
-        ],
         "sings_latex": "\\left[ \\left( 101, \\  0, \\  1\\right), \\  \\left( -101, \\  0, \\  1\\right), \\  \\left( 0, \\  1, \\  0\\right)\\right]",
         "mults": [
             2,
             2,
             2
         ],
+        "milnor": [
+            2,
+            2,
+            1
+        ],
+        "tjurina": [
+            2,
+            2,
+            1
+        ],
         "arith_genus": 3,
         "delta": [
             1,
@@ -163,25 +154,22 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            1,
-            1
-        ]
+        "branching": 2
     },
     {
         "title": "Bicuspid Curve",
         "eqn": "x^4-2*101*x^3+2*101^3*x+y^4-2*101^2*y^2",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( 101, \\  101, \\  1\\right), \\  \\left( 101, \\  -101, \\  1\\right)\\right]",
+        "mults": [
+            2,
+            2
+        ],
         "milnor": [
             2,
             2
         ],
         "tjurina": [
-            2,
-            2
-        ],
-        "sings_latex": "\\left[ \\left( 101, \\  101, \\  1\\right), \\  \\left( 101, \\  -101, \\  1\\right)\\right]",
-        "mults": [
             2,
             2
         ],
@@ -191,113 +179,104 @@
             1
         ],
         "geo_genus": 1,
-        "branching": [
-            1,
-            1
-        ]
+        "branching": 1
     },
     {
         "title": "Bifoliate",
         "eqn": "x^4+y^4-2*101*x*y^2",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            3
+        ],
         "milnor": [
             5
         ],
         "tjurina": [
             5
         ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            3
-        ],
         "arith_genus": 3,
         "delta": [
             3
         ],
         "geo_genus": 0,
-        "branching": [
-            2
-        ]
+        "branching": 2
     },
     {
         "title": "Bifolium",
         "eqn": "x^4+2*x^2*y^2+y^4-4*101*x*y^2",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            3
+        ],
         "milnor": [
             5
         ],
         "tjurina": [
             5
         ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            3
-        ],
         "arith_genus": 3,
         "delta": [
             3
         ],
         "geo_genus": 0,
-        "branching": [
-            2
-        ]
+        "branching": 2
     },
     {
         "title": "Bitangent Rich Curve",
         "eqn": "144*x^4+144*y^4-225*x^2-225*y^2+350*x^2*y^2+81",
         "degree": 4,
-        "milnor": [
-            0
-        ],
-        "tjurina": [
-            0
-        ],
         "sings_latex": "\\left[ \\right]",
         "mults": [],
+        "milnor": [],
+        "tjurina": [],
         "arith_genus": 3,
         "delta": [],
         "geo_genus": 3,
-        "branching": []
+        "branching": 1
     },
     {
         "title": "Bow Curve",
         "eqn": "x^4+y^3-x^2*y",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            3
+        ],
         "milnor": [
             4
         ],
         "tjurina": [
             4
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            3
         ],
         "arith_genus": 3,
         "delta": [
             3
         ],
         "geo_genus": 0,
-        "branching": [
-            3
-        ]
+        "branching": 3
     },
     {
         "title": "Bullet Nose Curve",
         "eqn": "x^2*y^2-101^2*y^2+97^2*x^2",
         "degree": 4,
-        "milnor": [
-            1
-        ],
-        "tjurina": [
-            1
-        ],
         "sings_latex": "\\left[ \\left( 1, \\  0, \\  0\\right), \\  \\left( 0, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
             2,
             2
         ],
+        "milnor": [
+            1,
+            1,
+            1
+        ],
+        "tjurina": [
+            1,
+            1,
+            1
+        ],
         "arith_genus": 3,
         "delta": [
             1,
@@ -305,51 +284,33 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            2
-        ]
+        "branching": 4
     },
     {
         "title": "Burnside Curve",
         "eqn": "y^2-x^5+x",
         "degree": 5,
-        "milnor": [
-            0
-        ],
-        "tjurina": [
-            0
-        ],
         "sings_latex": "\\left[ \\left( 0, \\  1, \\  0\\right)\\right]",
         "mults": [
             3
+        ],
+        "milnor": [
+            8
+        ],
+        "tjurina": [
+            8
         ],
         "arith_genus": 6,
         "delta": [
             3
         ],
         "geo_genus": 3,
-        "branching": [
-            7
-        ]
+        "branching": -1
     },
     {
         "title": "Butterfly Catastrophe Curve",
         "eqn": "13824*101^5*x^2+4096*101^4*y^3-86400*101^3*x^2*y-24576*101^2*y^4+144000*101*x^2*y^2+84375*x^4+36864*y^5",
         "degree": 5,
-        "milnor": [
-            2,
-            1,
-            4,
-            4,
-            2,
-            2
-        ],
-        "tjurina": [
-            2,
-            1,
-            4,
-            2
-        ],
         "sings_latex": "\\left[ \\left( \\frac{163216 \\sqrt{505} i}{125}, \\  \\frac{30603}{5}, \\  1\\right), \\  \\left( - \\frac{163216 \\sqrt{505} i}{125}, \\  \\frac{30603}{5}, \\  1\\right), \\  \\left( \\frac{163216 \\sqrt{3030} i}{1125}, \\  \\frac{40804}{15}, \\  1\\right), \\  \\left( - \\frac{163216 \\sqrt{3030} i}{1125}, \\  \\frac{40804}{15}, \\  1\\right), \\  \\left( 0, \\  \\frac{10201}{3}, \\  1\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
@@ -359,6 +320,22 @@
             2,
             2
         ],
+        "milnor": [
+            2,
+            1,
+            2,
+            2,
+            1,
+            1
+        ],
+        "tjurina": [
+            2,
+            1,
+            2,
+            2,
+            1,
+            1
+        ],
         "arith_genus": 6,
         "delta": [
             1,
@@ -369,42 +346,38 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            1,
-            2,
-            -1,
-            -1,
-            1,
-            1
-        ]
+        "branching": 4
     },
     {
         "title": "Butterfly Curve",
         "eqn": "x^6+y^6-x^2",
         "degree": 6,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2
+        ],
         "milnor": [
             5
         ],
         "tjurina": [
             5
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2
         ],
         "arith_genus": 10,
         "delta": [
             1
         ],
         "geo_genus": 9,
-        "branching": [
-            -2
-        ]
+        "branching": -2
     },
     {
         "title": "Capricornoid",
         "eqn": "101^2*x^4+101^2*x^2*y^2-97*x^4-97*y^4-2*97*x^2*y^2+2*101*97*y^3-101^2*97*y^2+2*101*97*x^2*y",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( 0, \\  101, \\  1\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2,
+            2
+        ],
         "milnor": [
             3,
             1
@@ -412,11 +385,6 @@
         "tjurina": [
             3,
             1
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  101, \\  1\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2,
-            2
         ],
         "arith_genus": 3,
         "delta": [
@@ -424,23 +392,24 @@
             1
         ],
         "geo_genus": 1,
-        "branching": [
-            0,
-            2
-        ]
+        "branching": 1
     },
     {
         "title": "Cardioid",
         "eqn": "x^4+y^4+2*x^2*y^2+4*101*x^3+4*101*x*y^2-4*101^2*y^2",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2,
+            2,
+            2
+        ],
         "milnor": [
+            2,
+            2,
             2
         ],
         "tjurina": [
-            2
-        ],
-        "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
             2,
             2,
             2
@@ -452,24 +421,24 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            1
-        ]
+        "branching": 1
     },
     {
         "title": "Cassini Ovals",
         "eqn": "x^4+y^4+2*x^2*y^2-2*101^2*x^2+2*101^2*y^2+101^4-97^4",
         "degree": 4,
-        "milnor": [
-            0
-        ],
-        "tjurina": [
-            0
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right)\\right]",
         "mults": [
             2,
             2
+        ],
+        "milnor": [
+            1,
+            1
+        ],
+        "tjurina": [
+            1,
+            1
         ],
         "arith_genus": 3,
         "delta": [
@@ -477,22 +446,12 @@
             1
         ],
         "geo_genus": 1,
-        "branching": [
-            3
-        ]
+        "branching": 3
     },
     {
         "title": "Cayley's Sextic",
         "eqn": "-4*101^3*x^3-15*101^2*x^4-42*101^2*x^2*y^2-27*101^2*y^4-12*101*x^5-24*101*x^3*y^2-12*101*x*y^4+4*x^6+12*x^4*y^2+12*x^2*y^4+4*y^6",
         "degree": 6,
-        "milnor": [
-            6,
-            1
-        ],
-        "tjurina": [
-            6,
-            1
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( - \\frac{101}{2}, \\  0, \\  1\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             3,
@@ -500,6 +459,18 @@
             2,
             3
         ],
+        "milnor": [
+            6,
+            1,
+            6,
+            6
+        ],
+        "tjurina": [
+            6,
+            1,
+            6,
+            6
+        ],
         "arith_genus": 10,
         "delta": [
             3,
@@ -508,23 +479,20 @@
             3
         ],
         "geo_genus": 0,
-        "branching": [
-            1,
-            6
-        ]
+        "branching": 2
     },
     {
         "title": "Cissoid of Diocles",
         "eqn": "x^3+x*y^2-2*101*y^2",
         "degree": 3,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2
+        ],
         "milnor": [
             2
         ],
         "tjurina": [
-            2
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
             2
         ],
         "arith_genus": 1,
@@ -532,47 +500,45 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            1
-        ]
+        "branching": 1
     },
     {
         "title": "Conchoid of de Sluze",
         "eqn": "x^3+x*y^2-x^2-y^2-101^2*x^2",
         "degree": 3,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2
+        ],
         "milnor": [
             1
         ],
         "tjurina": [
             1
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2
         ],
         "arith_genus": 1,
         "delta": [
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            2
-        ]
+        "branching": 2
     },
     {
         "title": "Conchoid of Nicomedes",
         "eqn": "x^4+x^2*y^2-2*101*x^3-2*101*x*y^2+101^2*x^2-97^2*x^2+101^2*y^2",
         "degree": 4,
-        "milnor": [
-            1
-        ],
-        "tjurina": [
-            1
-        ],
         "sings_latex": "\\left[ \\left( 0, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
             2
+        ],
+        "milnor": [
+            1,
+            3
+        ],
+        "tjurina": [
+            1,
+            3
         ],
         "arith_genus": 3,
         "delta": [
@@ -580,30 +546,34 @@
             1
         ],
         "geo_genus": 1,
-        "branching": [
-            2
-        ]
+        "branching": 1
     },
     {
         "title": "Cornoid",
         "eqn": "-4*101^6+3*101^2*x^4+x^6+8*101^4*y^2-6*101^2*x^2*y^2+3*x^4*y^2-5*101^2*y^4+3*x^2*y^4+y^6",
         "degree": 6,
-        "milnor": [
-            2,
-            2,
-            10,
-            10
-        ],
-        "tjurina": [
-            2,
-            10
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( 101 \\sqrt{2} i, \\  0, \\  1\\right), \\  \\left( - 101 \\sqrt{2} i, \\  0, \\  1\\right), \\  \\left( 0, \\  - 101 \\sqrt{2}, \\  1\\right), \\  \\left( 0, \\  101 \\sqrt{2}, \\  1\\right)\\right]",
         "mults": [
             2,
             2,
             2,
             2,
+            2,
+            2
+        ],
+        "milnor": [
+            1,
+            1,
+            5,
+            5,
+            2,
+            2
+        ],
+        "tjurina": [
+            1,
+            1,
+            5,
+            5,
             2,
             2
         ],
@@ -617,28 +587,27 @@
             1
         ],
         "geo_genus": 4,
-        "branching": [
-            1,
-            1,
-            -7,
-            -7
-        ]
+        "branching": -3
     },
     {
         "title": "Cruciform Curve",
         "eqn": "x^2*y^2-101^2*y^2-97^2*x^2",
         "degree": 4,
-        "milnor": [
-            1
-        ],
-        "tjurina": [
-            1
-        ],
         "sings_latex": "\\left[ \\left( 1, \\  0, \\  0\\right), \\  \\left( 0, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
             2,
             2
+        ],
+        "milnor": [
+            1,
+            1,
+            1
+        ],
+        "tjurina": [
+            1,
+            1,
+            1
         ],
         "arith_genus": 3,
         "delta": [
@@ -647,25 +616,27 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            2
-        ]
+        "branching": 4
     },
     {
         "title": "Cycloid of Ceva",
         "eqn": "x^6+3*x^4*y^2+3*x^2*y^4+y^6-9*x^4-y^4+6*x^2*y^2",
         "degree": 6,
-        "milnor": [
-            13
-        ],
-        "tjurina": [
-            12
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
             2,
             4
+        ],
+        "milnor": [
+            13,
+            2,
+            2
+        ],
+        "tjurina": [
+            12,
+            2,
+            2
         ],
         "arith_genus": 10,
         "delta": [
@@ -674,25 +645,24 @@
             6
         ],
         "geo_genus": 2,
-        "branching": [
-            -10
-        ]
+        "branching": 0
     },
     {
         "title": "Deltoid Curve",
         "eqn": "x^4+2*x^2*y^2+y^4-8*101*x^3+24*101*x*y^2+18*101^2*x^2+18*101^2*y^2-27*101^4",
         "degree": 4,
-        "milnor": [
-            2,
-            4,
-            4
-        ],
-        "tjurina": [
-            2,
-            4
-        ],
         "sings_latex": "\\left[ \\left( 303, \\  0, \\  1\\right), \\  \\left( - \\frac{303}{2}, \\  \\frac{303 \\sqrt{3}}{2}, \\  1\\right), \\  \\left( - \\frac{303}{2}, \\  - \\frac{303 \\sqrt{3}}{2}, \\  1\\right)\\right]",
         "mults": [
+            2,
+            2,
+            2
+        ],
+        "milnor": [
+            2,
+            2,
+            2
+        ],
+        "tjurina": [
             2,
             2,
             2
@@ -704,49 +674,45 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            1,
-            -1,
-            -1
-        ]
+        "branching": 1
     },
     {
         "title": "Devil's Curve",
         "eqn": "x^4-y^4-97^2*x^2+101^2*y^2",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2
+        ],
         "milnor": [
             1
         ],
         "tjurina": [
             1
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2
         ],
         "arith_genus": 3,
         "delta": [
             1
         ],
         "geo_genus": 2,
-        "branching": [
-            2
-        ]
+        "branching": 2
     },
     {
         "title": "Dumbbell Curve",
         "eqn": "x^6-101^2*x^4+101^4*y^2",
         "degree": 6,
-        "milnor": [
-            3
-        ],
-        "tjurina": [
-            3
-        ],
         "sings_latex": "\\left[ \\left( 0, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             4,
             2
+        ],
+        "milnor": [
+            3,
+            15
+        ],
+        "tjurina": [
+            3,
+            14
         ],
         "arith_genus": 10,
         "delta": [
@@ -754,21 +720,12 @@
             1
         ],
         "geo_genus": 3,
-        "branching": [
-            10
-        ]
+        "branching": -3
     },
     {
         "title": "Durer's Conchoid",
         "eqn": "2*x^2*y^2+2*y^4-2*97*x*y^2-2*97*y^3+97^2*y^2-3*101^2*y^2-101^2*x^2+2*101^2*97*x+2*101^2*97*y+101^4-101^2*97^2",
         "degree": 4,
-        "milnor": [
-            2,
-            2
-        ],
-        "tjurina": [
-            2
-        ],
         "sings_latex": "\\left[ \\left( 1, \\  0, \\  0\\right), \\  \\left( \\frac{1}{- \\frac{\\sqrt{10113}}{528} - \\frac{97}{528}}, \\  \\frac{- \\frac{9937}{528} - \\frac{97 \\sqrt{10113}}{528}}{- \\frac{\\sqrt{10113}}{528} - \\frac{97}{528}}, \\  1\\right), \\  \\left( \\frac{1}{- \\frac{97}{528} + \\frac{\\sqrt{10113}}{528}}, \\  \\frac{- \\frac{9937}{528} + \\frac{97 \\sqrt{10113}}{528}}{- \\frac{97}{528} + \\frac{\\sqrt{10113}}{528}}, \\  1\\right), \\  \\left( \\frac{- \\frac{29811}{20402} - \\frac{291 \\sqrt{10113}}{20402}}{- \\frac{3 \\sqrt{10113}}{20402} - \\frac{97}{20402}}, \\  \\frac{1}{- \\frac{3 \\sqrt{10113}}{20402} - \\frac{97}{20402}}, \\  1\\right), \\  \\left( \\frac{- \\frac{29811}{20402} + \\frac{291 \\sqrt{10113}}{20402}}{- \\frac{97}{20402} + \\frac{3 \\sqrt{10113}}{20402}}, \\  \\frac{1}{- \\frac{97}{20402} + \\frac{3 \\sqrt{10113}}{20402}}, \\  1\\right), \\  \\left( \\frac{291}{4} - \\frac{3 \\sqrt{10113}}{4}, \\  \\frac{97}{4} + \\frac{3 \\sqrt{10113}}{4}, \\  1\\right), \\  \\left( \\frac{291}{4} + \\frac{3 \\sqrt{10113}}{4}, \\  \\frac{97}{4} - \\frac{3 \\sqrt{10113}}{4}, \\  1\\right)\\right]",
         "mults": [
             2,
@@ -779,6 +736,16 @@
             2,
             2
         ],
+        "milnor": [
+            1,
+            1,
+            1
+        ],
+        "tjurina": [
+            1,
+            1,
+            1
+        ],
         "arith_genus": 3,
         "delta": [
             1,
@@ -790,69 +757,54 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            1,
-            -1
-        ]
+        "branching": 4
     },
     {
         "title": "Folium",
         "eqn": "x^4+97*x^3+2*x^2*y^2+y^4+97*x*y^2-4*101*x*y^2",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            3
+        ],
         "milnor": [
             4
         ],
         "tjurina": [
             4
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            3
         ],
         "arith_genus": 3,
         "delta": [
             3
         ],
         "geo_genus": 0,
-        "branching": [
-            3
-        ]
+        "branching": 3
     },
     {
         "title": "Folium of Descartes",
         "eqn": "x^3+y^3-3*101*x*y",
         "degree": 3,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2
+        ],
         "milnor": [
             1
         ],
         "tjurina": [
             1
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2
         ],
         "arith_genus": 1,
         "delta": [
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            2
-        ]
+        "branching": 2
     },
     {
         "title": "Freeth's Nephroid",
         "eqn": "101^4*y^2-3*101^4*x^2+8*101^3*x^3+8*101^3*x*y^2-6*101^2*x^4-12*101^2*x^2*y^2-6*101^2*y^4+x^6+3*x^4*y^2+3*x^2*y^4+y^6",
         "degree": 6,
-        "milnor": [
-            1,
-            4
-        ],
-        "tjurina": [
-            1,
-            4
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( 101, \\  0, \\  1\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             3,
@@ -860,6 +812,18 @@
             3,
             2
         ],
+        "milnor": [
+            1,
+            4,
+            6,
+            6
+        ],
+        "tjurina": [
+            1,
+            4,
+            6,
+            6
+        ],
         "arith_genus": 10,
         "delta": [
             3,
@@ -868,27 +832,12 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            6,
-            3
-        ]
+        "branching": 4
     },
     {
         "title": "Heart Curve",
         "eqn": "x^6+y^6+3*x^4*y^2+3*x^2*y^4-x^2*y^3-3*x^4-6*x^2*y^2-3*y^4+3*x^2+3*y^2-1",
         "degree": 6,
-        "milnor": [
-            4,
-            4,
-            2,
-            2
-        ],
-        "tjurina": [
-            4,
-            4,
-            2,
-            2
-        ],
         "sings_latex": "\\left[ \\left( 1, \\  0, \\  1\\right), \\  \\left( -1, \\  0, \\  1\\right), \\  \\left( 0, \\  1, \\  1\\right), \\  \\left( 0, \\  -1, \\  1\\right)\\right]",
         "mults": [
             3,
@@ -896,6 +845,18 @@
             2,
             2
         ],
+        "milnor": [
+            4,
+            4,
+            2,
+            2
+        ],
+        "tjurina": [
+            4,
+            4,
+            2,
+            2
+        ],
         "arith_genus": 10,
         "delta": [
             3,
@@ -904,28 +865,27 @@
             1
         ],
         "geo_genus": 2,
-        "branching": [
-            3,
-            3,
-            1,
-            1
-        ]
+        "branching": 5
     },
     {
         "title": "Hippopede",
         "eqn": "x^4+y^4+2*x^2*y^2-4*101*97*x^2+4*97^2*y^2-4*101*97*y^2",
         "degree": 4,
-        "milnor": [
-            1
-        ],
-        "tjurina": [
-            1
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
             2,
             2
+        ],
+        "milnor": [
+            1,
+            1,
+            1
+        ],
+        "tjurina": [
+            1,
+            1,
+            1
         ],
         "arith_genus": 3,
         "delta": [
@@ -934,24 +894,24 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            2
-        ]
+        "branching": 4
     },
     {
         "title": "Kampyle of Eudoxus",
         "eqn": "x^4-101^2*x^2-101^2*y^2",
         "degree": 4,
-        "milnor": [
-            1
-        ],
-        "tjurina": [
-            1
-        ],
         "sings_latex": "\\left[ \\left( 0, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
             2
+        ],
+        "milnor": [
+            1,
+            3
+        ],
+        "tjurina": [
+            1,
+            3
         ],
         "arith_genus": 3,
         "delta": [
@@ -959,24 +919,24 @@
             1
         ],
         "geo_genus": 1,
-        "branching": [
-            2
-        ]
+        "branching": 1
     },
     {
         "title": "Kappa Curve",
         "eqn": "x^2*y^2+y^4-101^2*x^2",
         "degree": 4,
-        "milnor": [
-            3
-        ],
-        "tjurina": [
-            3
-        ],
         "sings_latex": "\\left[ \\left( 1, \\  0, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
             2
+        ],
+        "milnor": [
+            3,
+            1
+        ],
+        "tjurina": [
+            3,
+            1
         ],
         "arith_genus": 3,
         "delta": [
@@ -984,24 +944,24 @@
             1
         ],
         "geo_genus": 1,
-        "branching": [
-            0
-        ]
+        "branching": 1
     },
     {
         "title": "Keratoid Cusp",
         "eqn": "x^5+x^2*y-y^2",
         "degree": 5,
-        "milnor": [
-            3
-        ],
-        "tjurina": [
-            3
-        ],
         "sings_latex": "\\left[ \\left( 0, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             3,
             2
+        ],
+        "milnor": [
+            3,
+            8
+        ],
+        "tjurina": [
+            3,
+            8
         ],
         "arith_genus": 6,
         "delta": [
@@ -1009,47 +969,41 @@
             1
         ],
         "geo_genus": 2,
-        "branching": [
-            4
-        ]
+        "branching": -2
     },
     {
         "title": "Klein Quartic",
         "eqn": "x^3*y+y^3+x",
         "degree": 4,
-        "milnor": [
-            0
-        ],
-        "tjurina": [
-            0
-        ],
         "sings_latex": "\\left[ \\right]",
         "mults": [],
+        "milnor": [],
+        "tjurina": [],
         "arith_genus": 3,
         "delta": [],
         "geo_genus": 3,
-        "branching": []
+        "branching": 1
     },
     {
         "title": "Knot Curve",
         "eqn": "x^4-2*y^3-2*x^2-3*y^2+1",
         "degree": 4,
-        "milnor": [
-            1,
-            1,
-            1
-        ],
-        "tjurina": [
-            1,
-            1,
-            1
-        ],
         "sings_latex": "\\left[ \\left( 1, \\  0, \\  1\\right), \\  \\left( -1, \\  0, \\  1\\right), \\  \\left( 0, \\  -1, \\  1\\right)\\right]",
         "mults": [
             2,
             2,
             2
         ],
+        "milnor": [
+            1,
+            1,
+            1
+        ],
+        "tjurina": [
+            1,
+            1,
+            1
+        ],
         "arith_genus": 3,
         "delta": [
             1,
@@ -1057,52 +1011,52 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            2,
-            2,
-            2
-        ]
+        "branching": 4
     },
     {
         "title": "Lemniscate of Gerono/ Eight Curve",
         "eqn": "x^4-101^2*x^2+101^2*y^2",
         "degree": 4,
-        "milnor": [
-            1
-        ],
-        "tjurina": [
-            1
-        ],
         "sings_latex": "\\left[ \\left( 0, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
             2
         ],
+        "milnor": [
+            1,
+            3
+        ],
+        "tjurina": [
+            1,
+            3
+        ],
         "arith_genus": 3,
         "delta": [
             1,
             1
         ],
         "geo_genus": 1,
-        "branching": [
-            2
-        ]
+        "branching": 1
     },
     {
         "title": "Lemniscate of Bernoulli",
         "eqn": "x^4+2*x^2*y^2+y^4-2*101^2*x^2+2*101^2*y^2",
         "degree": 4,
-        "milnor": [
-            1
-        ],
-        "tjurina": [
-            1
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
             2,
             2
+        ],
+        "milnor": [
+            1,
+            1,
+            1
+        ],
+        "tjurina": [
+            1,
+            1,
+            1
         ],
         "arith_genus": 3,
         "delta": [
@@ -1111,23 +1065,25 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            2
-        ]
+        "branching": 4
     },
     {
         "title": "Limacon",
         "eqn": "x^4+y^4+2*x^2*y^2-2*101*x^3-2*101*x*y^2+101^2*x^2-97^2*x^2-97^2*y^2",
         "degree": 4,
-        "milnor": [
-            1
-        ],
-        "tjurina": [
-            1
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
+            2,
+            2
+        ],
+        "milnor": [
+            1,
+            2,
+            2
+        ],
+        "tjurina": [
+            1,
             2,
             2
         ],
@@ -1138,14 +1094,17 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            2
-        ]
+        "branching": 2
     },
     {
         "title": "Link's Curve",
         "eqn": "x^4+2*x^2*y^2+y^4-2*x^3-6*x*y^2+x^2",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( 1, \\  0, \\  1\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2,
+            2
+        ],
         "milnor": [
             3,
             1
@@ -1153,11 +1112,6 @@
         "tjurina": [
             3,
             1
-        ],
-        "sings_latex": "\\left[ \\left( 1, \\  0, \\  1\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2,
-            2
         ],
         "arith_genus": 3,
         "delta": [
@@ -1165,26 +1119,12 @@
             1
         ],
         "geo_genus": 1,
-        "branching": [
-            0,
-            2
-        ]
+        "branching": 1
     },
     {
         "title": "Nephroid",
         "eqn": "x^6+3*x^4*y^2-12*101^2*x^4+3*x^2*y^4-24*101^2*x^2*y^2+48*101^4*x^2-12*101^2*y^4-60*101^4*y^2+y^6-64*101^6",
         "degree": 6,
-        "milnor": [
-            2,
-            2,
-            2,
-            2
-        ],
-        "tjurina": [
-            2,
-            2,
-            2
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( 202, \\  0, \\  1\\right), \\  \\left( -202, \\  0, \\  1\\right), \\  \\left( 0, \\  101 \\sqrt{2} i, \\  1\\right), \\  \\left( 0, \\  - 101 \\sqrt{2} i, \\  1\\right)\\right]",
         "mults": [
             3,
@@ -1194,6 +1134,22 @@
             2,
             2
         ],
+        "milnor": [
+            2,
+            2,
+            1,
+            1,
+            6,
+            6
+        ],
+        "tjurina": [
+            2,
+            2,
+            1,
+            1,
+            6,
+            6
+        ],
         "arith_genus": 10,
         "delta": [
             3,
@@ -1204,50 +1160,45 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            5,
-            5,
-            1,
-            1
-        ]
+        "branching": 3
     },
     {
         "title": "Oblique Strophoid",
         "eqn": "y*x^2+y^3-101*x^2+101*y^2-2*97*x*y",
         "degree": 3,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2
+        ],
         "milnor": [
             1
         ],
         "tjurina": [
             1
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2
         ],
         "arith_genus": 1,
         "delta": [
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            2
-        ]
+        "branching": 2
     },
     {
         "title": "Pear Curve",
         "eqn": "x^8+4*x^7+4*x^6*y^2+6*x^6+12*x^5*y^2+6*x^5+6*x^4*y^4+14*x^4*y^2+5*x^4+12*x^3*y^4+4*x^3*y^2+2*x^3+4*x^2*y^6+10*x^2*y^4+2*x^2*y^2+x^2+4*x*y^6-2*x*y^4+2*x*y^2+y^8+2*y^6-3*y^4+y^2-101^2",
         "degree": 8,
-        "milnor": [
-            0
-        ],
-        "tjurina": [
-            0
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right)\\right]",
         "mults": [
             4,
             4
+        ],
+        "milnor": [
+            9,
+            9
+        ],
+        "tjurina": [
+            9,
+            9
         ],
         "arith_genus": 21,
         "delta": [
@@ -1255,24 +1206,24 @@
             6
         ],
         "geo_genus": 9,
-        "branching": [
-            13
-        ]
+        "branching": 7
     },
     {
         "title": "Pear Shaped Quartic",
         "eqn": "x^4-101*x^3+97^2*y^2",
         "degree": 4,
-        "milnor": [
-            2
-        ],
-        "tjurina": [
-            2
-        ],
         "sings_latex": "\\left[ \\left( 0, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
             2
+        ],
+        "milnor": [
+            2,
+            3
+        ],
+        "tjurina": [
+            2,
+            3
         ],
         "arith_genus": 3,
         "delta": [
@@ -1280,24 +1231,24 @@
             1
         ],
         "geo_genus": 1,
-        "branching": [
-            1
-        ]
+        "branching": 0
     },
     {
         "title": "Piriform Curve",
         "eqn": "x^4-2*101*97^2*x^3+101^4*y^2",
         "degree": 4,
-        "milnor": [
-            2
-        ],
-        "tjurina": [
-            2
-        ],
         "sings_latex": "\\left[ \\left( 0, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
             2
+        ],
+        "milnor": [
+            2,
+            3
+        ],
+        "tjurina": [
+            2,
+            3
         ],
         "arith_genus": 3,
         "delta": [
@@ -1305,25 +1256,27 @@
             1
         ],
         "geo_genus": 1,
-        "branching": [
-            1
-        ]
+        "branching": 0
     },
     {
         "title": "Quadrifolium",
         "eqn": "x^6+3*x^4*y^2+3*x^2*y^4+y^6-4*101^2*x^2*y^2",
         "degree": 6,
-        "milnor": [
-            13
-        ],
-        "tjurina": [
-            12
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
             2,
             4
+        ],
+        "milnor": [
+            13,
+            2,
+            2
+        ],
+        "tjurina": [
+            12,
+            2,
+            2
         ],
         "arith_genus": 10,
         "delta": [
@@ -1332,47 +1285,12 @@
             6
         ],
         "geo_genus": 2,
-        "branching": [
-            -10
-        ]
+        "branching": 0
     },
     {
         "title": "Ranunculoid",
         "eqn": "-52521875*101^12-1286250*101^10*x^2-1286250*101^10*y^2-32025*101^8*x^4-64050*101^8*x^2*y^2-32025*101^8*y^4+93312*101^7*x^5-933120*101^7*x^3*y^2+466560*101^7*x*y^4-812*101^6*x^6-2436*101^6*x^4*y^2-2436*101^6*x^2*y^4-812*101^6*y^6-21*101^4*x^8-84*101^4*x^6*y^2-126*101^4*x^4*y^4-84*101^4*x^2*y^6-21*101^4*y^8-42*101^2*x^10-210*101^2*x^8*y^2-420*101^2*x^6*y^4-420*101^2*x^4*y^6-210*101^2*x^2*y^8-42*101^2*y^10+x^12+6*x^10*y^2+15*x^8*y^4+20*x^6*y^6+15*x^4*y^8+6*x^2*y^10+y^12",
         "degree": 12,
-        "milnor": [
-            2,
-            4,
-            4,
-            4,
-            4,
-            8,
-            8,
-            8,
-            8,
-            16,
-            16,
-            16,
-            16,
-            16,
-            16,
-            16,
-            16,
-            16,
-            16,
-            16,
-            16,
-            16,
-            16,
-            16,
-            16
-        ],
-        "tjurina": [
-            2,
-            4,
-            8,
-            16
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( 505, \\  0, \\  1\\right), \\  \\left( \\frac{1}{- \\frac{2}{3535} - \\frac{\\sqrt{- \\frac{44}{12496225} + \\frac{144}{6246225570025 \\sqrt[3]{- \\frac{351}{15610848024757131125} + \\frac{27 \\sqrt{7} i}{2230121146393875875}}} + 2 \\sqrt[3]{- \\frac{351}{15610848024757131125} + \\frac{27 \\sqrt{7} i}{2230121146393875875}}}}{2} - \\frac{\\sqrt{- \\frac{88}{12496225} - 2 \\sqrt[3]{- \\frac{351}{15610848024757131125} + \\frac{27 \\sqrt{7} i}{2230121146393875875}} + \\frac{8}{437367875 \\sqrt{- \\frac{44}{12496225} + \\frac{144}{6246225570025 \\sqrt[3]{- \\frac{351}{15610848024757131125} + \\frac{27 \\sqrt{7} i}{2230121146393875875}}} + 2 \\sqrt[3]{- \\frac{351}{15610848024757131125} + \\frac{27 \\sqrt{7} i}{2230121146393875875}}}} - \\frac{144}{6246225570025 \\sqrt[3]{- \\frac{351}{15610848024757131125} + \\frac{27 \\sqrt{7} i}{2230121146393875875}}}}}{2}}, \\  0, \\  1\\right), \\  \\left( \\frac{1}{- \\frac{2}{3535} + \\frac{\\sqrt{- \\frac{88}{12496225} - 2 \\sqrt[3]{- \\frac{351}{15610848024757131125} + \\frac{27 \\sqrt{7} i}{2230121146393875875}} + \\frac{8}{437367875 \\sqrt{- \\frac{44}{12496225} + \\frac{144}{6246225570025 \\sqrt[3]{- \\frac{351}{15610848024757131125} + \\frac{27 \\sqrt{7} i}{2230121146393875875}}} + 2 \\sqrt[3]{- \\frac{351}{15610848024757131125} + \\frac{27 \\sqrt{7} i}{2230121146393875875}}}} - \\frac{144}{6246225570025 \\sqrt[3]{- \\frac{351}{15610848024757131125} + \\frac{27 \\sqrt{7} i}{2230121146393875875}}}}}{2} - \\frac{\\sqrt{- \\frac{44}{12496225} + \\frac{144}{6246225570025 \\sqrt[3]{- \\frac{351}{15610848024757131125} + \\frac{27 \\sqrt{7} i}{2230121146393875875}}} + 2 \\sqrt[3]{- \\frac{351}{15610848024757131125} + \\frac{27 \\sqrt{7} i}{2230121146393875875}}}}{2}}, \\  0, \\  1\\right), \\  \\left( \\frac{1}{\\frac{1}{505} - \\frac{\\sqrt{5}}{505}}, \\  - \\frac{\\sqrt{5 - 2 \\sqrt{5}}}{\\frac{1}{505} - \\frac{\\sqrt{5}}{505}}, \\  1\\right), \\  \\left( \\frac{1}{\\frac{1}{505} - \\frac{\\sqrt{5}}{505}}, \\  \\frac{\\sqrt{5 - 2 \\sqrt{5}}}{\\frac{1}{505} - \\frac{\\sqrt{5}}{505}}, \\  1\\right), \\  \\left( \\frac{1}{\\frac{1}{505} + \\frac{\\sqrt{5}}{505}}, \\  - \\frac{\\sqrt{2 \\sqrt{5} + 5}}{\\frac{1}{505} + \\frac{\\sqrt{5}}{505}}, \\  1\\right), \\  \\left( \\frac{1}{\\frac{1}{505} + \\frac{\\sqrt{5}}{505}}, \\  \\frac{\\sqrt{2 \\sqrt{5} + 5}}{\\frac{1}{505} + \\frac{\\sqrt{5}}{505}}, \\  1\\right), \\  \\left( \\frac{\\sqrt{5 - \\sqrt{5}} \\left(- \\sqrt{10} + 5 \\sqrt{2}\\right)}{20 \\sqrt{\\frac{2}{255025} - \\frac{2 \\sqrt{5}}{1275125}}}, \\  \\frac{1}{\\sqrt{\\frac{2}{255025} - \\frac{2 \\sqrt{5}}{1275125}}}, \\  1\\right), \\  \\left( - \\frac{\\sqrt{5 - \\sqrt{5}} \\left(- 5 \\sqrt{2} + \\sqrt{10}\\right)}{20 \\sqrt{\\frac{2}{255025} - \\frac{2 \\sqrt{5}}{1275125}}}, \\  - \\frac{1}{\\sqrt{\\frac{2}{255025} - \\frac{2 \\sqrt{5}}{1275125}}}, \\  1\\right), \\  \\left( - \\frac{\\left(\\sqrt{10} + 5 \\sqrt{2}\\right) \\sqrt{\\sqrt{5} + 5}}{20 \\sqrt{\\frac{2 \\sqrt{5}}{1275125} + \\frac{2}{255025}}}, \\  \\frac{1}{\\sqrt{\\frac{2 \\sqrt{5}}{1275125} + \\frac{2}{255025}}}, \\  1\\right), \\  \\left( - \\frac{\\left(\\sqrt{10} + 5 \\sqrt{2}\\right) \\sqrt{\\sqrt{5} + 5}}{20 \\sqrt{\\frac{2 \\sqrt{5}}{1275125} + \\frac{2}{255025}}}, \\  - \\frac{1}{\\sqrt{\\frac{2 \\sqrt{5}}{1275125} + \\frac{2}{255025}}}, \\  1\\right), \\  \\left( - \\frac{505}{4} + \\frac{505 \\sqrt{5}}{4}, \\  \\frac{1}{\\sqrt{\\frac{2}{255025} - \\frac{2 \\sqrt{5}}{1275125}}}, \\  1\\right), \\  \\left( - \\frac{505}{4} + \\frac{505 \\sqrt{5}}{4}, \\  - \\frac{1}{\\sqrt{\\frac{2}{255025} - \\frac{2 \\sqrt{5}}{1275125}}}, \\  1\\right), \\  \\left( - \\frac{505 \\sqrt{5}}{4} - \\frac{505}{4}, \\  \\frac{1}{\\sqrt{\\frac{2 \\sqrt{5}}{1275125} + \\frac{2}{255025}}}, \\  1\\right), \\  \\left( - \\frac{505 \\sqrt{5}}{4} - \\frac{505}{4}, \\  - \\frac{1}{\\sqrt{\\frac{2 \\sqrt{5}}{1275125} + \\frac{2}{255025}}}, \\  1\\right), \\  \\left( -101 - \\frac{101 \\sqrt{-8 + \\frac{144}{\\sqrt[3]{-351 + 189 \\sqrt{7} i}} + 2 \\sqrt[3]{-351 + 189 \\sqrt{7} i}}}{2} - \\frac{101 \\sqrt{-16 - 2 \\sqrt[3]{-351 + 189 \\sqrt{7} i} + \\frac{56}{\\sqrt{-8 + \\frac{144}{\\sqrt[3]{-351 + 189 \\sqrt{7} i}} + 2 \\sqrt[3]{-351 + 189 \\sqrt{7} i}}} - \\frac{144}{\\sqrt[3]{-351 + 189 \\sqrt{7} i}}}}{2}, \\  0, \\  1\\right), \\  \\left( -101 + \\frac{101 \\sqrt{-16 - 2 \\sqrt[3]{-351 + 189 \\sqrt{7} i} + \\frac{56}{\\sqrt{-8 + \\frac{144}{\\sqrt[3]{-351 + 189 \\sqrt{7} i}} + 2 \\sqrt[3]{-351 + 189 \\sqrt{7} i}}} - \\frac{144}{\\sqrt[3]{-351 + 189 \\sqrt{7} i}}}}{2} - \\frac{101 \\sqrt{-8 + \\frac{144}{\\sqrt[3]{-351 + 189 \\sqrt{7} i}} + 2 \\sqrt[3]{-351 + 189 \\sqrt{7} i}}}{2}, \\  0, \\  1\\right), \\  \\left( - \\frac{505}{4} + \\frac{505 \\sqrt{5}}{4}, \\  - 505 \\sqrt{\\frac{\\sqrt{5}}{8} + \\frac{5}{8}}, \\  1\\right), \\  \\left( - \\frac{505}{4} + \\frac{505 \\sqrt{5}}{4}, \\  505 \\sqrt{\\frac{\\sqrt{5}}{8} + \\frac{5}{8}}, \\  1\\right), \\  \\left( - \\frac{505 \\sqrt{5}}{4} - \\frac{505}{4}, \\  - 505 \\sqrt{\\frac{5}{8} - \\frac{\\sqrt{5}}{8}}, \\  1\\right), \\  \\left( - \\frac{505 \\sqrt{5}}{4} - \\frac{505}{4}, \\  505 \\sqrt{\\frac{5}{8} - \\frac{\\sqrt{5}}{8}}, \\  1\\right)\\right]",
         "mults": [
             6,
@@ -1398,6 +1316,28 @@
             1,
             1,
             1
+        ],
+        "milnor": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            30,
+            30
+        ],
+        "tjurina": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            28,
+            28
         ],
         "arith_genus": 55,
         "delta": [
@@ -1426,69 +1366,33 @@
             0
         ],
         "geo_genus": 24,
-        "branching": [
-            29,
-            27,
-            -1,
-            -3,
-            -3,
-            -7,
-            -7,
-            -7,
-            -7,
-            -15,
-            -15,
-            -15,
-            -15,
-            -15,
-            -15,
-            -15,
-            -15,
-            -15,
-            -15,
-            -15,
-            -15,
-            -15,
-            -15
-        ]
+        "branching": -11
     },
     {
         "title": "Right Strophoid",
         "eqn": "x^3+x*y^2+101*y^2-101*x^2",
         "degree": 3,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2
+        ],
         "milnor": [
             1
         ],
         "tjurina": [
             1
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2
         ],
         "arith_genus": 1,
         "delta": [
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            2
-        ]
+        "branching": 2
     },
     {
         "title": "Scarabeaus",
         "eqn": "101^2*x^4+101^2*x^2*y^2+2*101*x^5+4*101*x^3*y^2+2*101*x*y^4-97^2*x^4+2*97^2*x^2*y^2-97^2*y^4+x^6+3*x^4*y^2+3*x^2*y^4+y^6",
         "degree": 6,
-        "milnor": [
-            9,
-            1,
-            1
-        ],
-        "tjurina": [
-            9,
-            1,
-            1
-        ],
         "sings_latex": "\\left[ \\left( i, \\  1, \\  0\\right), \\  \\left( - i, \\  1, \\  0\\right), \\  \\left( - \\frac{101}{2}, \\  - \\frac{101}{2}, \\  1\\right), \\  \\left( - \\frac{101}{2}, \\  \\frac{101}{2}, \\  1\\right), \\  \\left( 0, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
@@ -1496,6 +1400,20 @@
             2,
             2,
             4
+        ],
+        "milnor": [
+            9,
+            1,
+            1,
+            2,
+            2
+        ],
+        "tjurina": [
+            9,
+            1,
+            1,
+            2,
+            2
         ],
         "arith_genus": 10,
         "delta": [
@@ -1506,24 +1424,20 @@
             6
         ],
         "geo_genus": 0,
-        "branching": [
-            -6,
-            2,
-            2
-        ]
+        "branching": 6
     },
     {
         "title": "Semicubical Parabola",
         "eqn": "x^3-101*y^2",
         "degree": 3,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2
+        ],
         "milnor": [
             2
         ],
         "tjurina": [
-            2
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
             2
         ],
         "arith_genus": 1,
@@ -1531,37 +1445,38 @@
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            1
-        ]
+        "branching": 1
     },
     {
         "title": "Serpentine Curve",
         "eqn": "x^2*y+101^2*y-101*97*x",
         "degree": 3,
-        "milnor": [
-            0
-        ],
-        "tjurina": [
-            0
-        ],
         "sings_latex": "\\left[ \\left( 0, \\  1, \\  0\\right)\\right]",
         "mults": [
             2
+        ],
+        "milnor": [
+            1
+        ],
+        "tjurina": [
+            1
         ],
         "arith_genus": 1,
         "delta": [
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            3
-        ]
+        "branching": 2
     },
     {
         "title": "Stirrup Curve",
         "eqn": "y^5-x^4+2*y^4-13*y^3+2*x^2+10*y^2-1",
         "degree": 5,
+        "sings_latex": "\\left[ \\left( 1, \\  0, \\  1\\right), \\  \\left( -1, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2,
+            2
+        ],
         "milnor": [
             1,
             1
@@ -1569,11 +1484,6 @@
         "tjurina": [
             1,
             1
-        ],
-        "sings_latex": "\\left[ \\left( 1, \\  0, \\  1\\right), \\  \\left( -1, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2,
-            2
         ],
         "arith_genus": 6,
         "delta": [
@@ -1581,49 +1491,49 @@
             1
         ],
         "geo_genus": 4,
-        "branching": [
-            2,
-            2
-        ]
+        "branching": 3
     },
     {
         "title": "Swastika Curve",
         "eqn": "x^4+x*y-y^4",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2
+        ],
         "milnor": [
             1
         ],
         "tjurina": [
             1
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2
         ],
         "arith_genus": 3,
         "delta": [
             1
         ],
         "geo_genus": 2,
-        "branching": [
-            2
-        ]
+        "branching": 2
     },
     {
         "title": "Talbot's Curve",
         "eqn": "-16*101^8*97^4+8*101^8*97^2*x^2+16*101^8*97^2*y^2-101^8*x^4+32*101^6*97^6+8*101^6*97^4*x^2-32*101^6*97^4*y^2-8*101^6*97^2*x^4-20*101^6*97^2*x^2*y^2+101^6*x^6-16*101^4*97^8-32*101^4*97^6*x^2+8*101^2*97^6*y^2+8*101^4*97^4*x^4+38*101^4*97^4*x^2*y^2+8*101^4*97^4*y^4+3*101^4*97^2*x^4*y^2+16*101^2*97^8*x^2+8*101^2*97^8*y^2-20*101^2*97^6*x^2*y^2-8*101^2*97^6*y^4+3*101^2*97^4*x^2*y^4-97^8*y^4+97^6*y^6",
         "degree": 6,
-        "milnor": [
-            2,
-            2
-        ],
-        "tjurina": [
-            2
-        ],
         "sings_latex": "\\left[ \\left( \\frac{97 i}{101}, \\  1, \\  0\\right), \\  \\left( - \\frac{97 i}{101}, \\  1, \\  0\\right), \\  \\left( - \\frac{1164 \\sqrt{22}}{101}, \\  0, \\  1\\right), \\  \\left( \\frac{1164 \\sqrt{22}}{101}, \\  0, \\  1\\right)\\right]",
         "mults": [
             2,
             2,
+            2,
+            2
+        ],
+        "milnor": [
+            1,
+            1,
+            2,
+            2
+        ],
+        "tjurina": [
+            1,
+            1,
             2,
             2
         ],
@@ -1635,147 +1545,132 @@
             1
         ],
         "geo_genus": 6,
-        "branching": [
-            1,
-            1
-        ]
+        "branching": 3
     },
     {
         "title": "Trefoil Curve",
         "eqn": "x^4+x^2*y^2+y^4-x^3+x*y^2",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            3
+        ],
         "milnor": [
             4
         ],
         "tjurina": [
             4
         ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            3
-        ],
         "arith_genus": 3,
         "delta": [
             3
         ],
         "geo_genus": 0,
-        "branching": [
-            3
-        ]
+        "branching": 3
     },
     {
         "title": "Trident Curve",
         "eqn": "x^3-x*y-101^3",
         "degree": 3,
-        "milnor": [
-            0
-        ],
-        "tjurina": [
-            0
-        ],
         "sings_latex": "\\left[ \\left( 0, \\  1, \\  0\\right)\\right]",
         "mults": [
             2
+        ],
+        "milnor": [
+            1
+        ],
+        "tjurina": [
+            1
         ],
         "arith_genus": 1,
         "delta": [
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            3
-        ]
+        "branching": 2
     },
     {
         "title": "Trifolium",
         "eqn": "x^4+2*x^2*y^2+y^4+101*x^3-3*101*x*y^2",
         "degree": 4,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            3
+        ],
         "milnor": [
             4
         ],
         "tjurina": [
             4
-        ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            3
         ],
         "arith_genus": 3,
         "delta": [
             3
         ],
         "geo_genus": 0,
-        "branching": [
-            3
-        ]
+        "branching": 3
     },
     {
         "title": "Trisectrix of MacLaurin",
         "eqn": "x^3+x*y^2+3*101*x^2-101*y^2",
         "degree": 3,
+        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2
+        ],
         "milnor": [
             1
         ],
         "tjurina": [
             1
         ],
-        "sings_latex": "\\left[ \\left( 0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2
-        ],
         "arith_genus": 1,
         "delta": [
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            2
-        ]
+        "branching": 2
     },
     {
         "title": "Tschirnhausen Cubic",
         "eqn": "x^3+15*101*x^2+48*101^2*x-64*101^3+27*101*y^2",
         "degree": 3,
+        "sings_latex": "\\left[ \\left( -808, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2
+        ],
         "milnor": [
             1
         ],
         "tjurina": [
             1
         ],
-        "sings_latex": "\\left[ \\left( -808, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2
-        ],
         "arith_genus": 1,
         "delta": [
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            2
-        ]
+        "branching": 2
     },
     {
         "title": "Witch of Agnesi",
         "eqn": "y*x^2+4*101^2*y-8*101^3",
         "degree": 3,
-        "milnor": [
-            0
-        ],
-        "tjurina": [
-            0
-        ],
         "sings_latex": "\\left[ \\left( 0, \\  1, \\  0\\right)\\right]",
         "mults": [
             2
+        ],
+        "milnor": [
+            1
+        ],
+        "tjurina": [
+            1
         ],
         "arith_genus": 1,
         "delta": [
             1
         ],
         "geo_genus": 0,
-        "branching": [
-            3
-        ]
+        "branching": 2
     }
 ]
