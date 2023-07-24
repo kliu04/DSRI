@@ -1,0 +1,108 @@
+[
+    {
+        "title": "Fermat Cubic",
+        "eqn": "x^3 + y^3 + z^3 - 1",
+        "degree": 3,
+        "sings": "[]",
+        "sings_latex": "\\left[ \\right]",
+        "mults": [],
+        "milnor": [],
+        "tjurina": []
+    },
+    {
+        "title": "Cayley's Surface",
+        "eqn": "x^2+y^2+z^2+x^2*z-y^2*z-1",
+        "degree": 3,
+        "sings": "[(-1, sqrt(2), 0, 1), (-1, -sqrt(2), 0, 1), (1, 0, -sqrt(2), 1), (1, 0, sqrt(2), 1)]",
+        "sings_latex": "\\left[ \\left( -1, \\  \\sqrt{2}, \\  0, \\  1\\right), \\  \\left( -1, \\  - \\sqrt{2}, \\  0, \\  1\\right), \\  \\left( 1, \\  0, \\  - \\sqrt{2}, \\  1\\right), \\  \\left( 1, \\  0, \\  \\sqrt{2}, \\  1\\right)\\right]",
+        "mults": [
+            1,
+            1,
+            2,
+            2
+        ],
+        "milnor": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "tjurina": [
+            1,
+            1,
+            1,
+            1
+        ]
+    },
+    {
+        "title": "Whitney's Umbrella",
+        "eqn": "x^2-y^2*z",
+        "degree": 3,
+        "sings": "[(1.0, 0, 0, 1), (0, 0, 0, 1), (1, 0, 0, 0)]",
+        "sings_latex": "\\left[ \\left( 1.0, \\  0, \\  0, \\  1\\right), \\  \\left( 0, \\  0, \\  0, \\  1\\right), \\  \\left( 1, \\  0, \\  0, \\  0\\right)\\right]",
+        "mults": [
+            2,
+            2,
+            2
+        ],
+        "milnor": [
+            1,
+            2,
+            2
+        ],
+        "tjurina": [
+            1,
+            2,
+            2
+        ]
+    },
+    {
+        "title": "Eight Surface",
+        "eqn": "4*z^4+101^2*(x^2+y^2-4*z^2)",
+        "degree": 4,
+        "sings": "[(0, 1.0, 1, 0), (0, I, 1, 0), (0, -I, 1, 0), (1, 0, 0, 0)]",
+        "sings_latex": "\\left[ \\left( 0, \\  1.0, \\  1, \\  0\\right), \\  \\left( 0, \\  i, \\  1, \\  0\\right), \\  \\left( 0, \\  - i, \\  1, \\  0\\right), \\  \\left( 1, \\  0, \\  0, \\  0\\right)\\right]",
+        "mults": [
+            1,
+            1,
+            1,
+            2
+        ],
+        "milnor": [
+            1,
+            3
+        ],
+        "tjurina": [
+            1,
+            3
+        ]
+    },
+    {
+        "title": "Roman Surface",
+        "eqn": "x^2*y^2+y^2*z^2+z^2*x^2-101^2*x*y*z",
+        "degree": 4,
+        "sings": "[(1.0, 1, 0, 0), (2/10201, 1, 0, 0), (-2/10201, 1, 0, 0), (1.0, 0, 1, 0), (2/10201, 0, 1, 0), (-2/10201, 0, 1, 0), (1.0, 0, 0, 1), (2/10201, 0, 0, 1), (-2/10201, 0, 0, 1)]",
+        "sings_latex": "\\left[ \\left( 1.0, \\  1, \\  0, \\  0\\right), \\  \\left( \\frac{2}{10201}, \\  1, \\  0, \\  0\\right), \\  \\left( - \\frac{2}{10201}, \\  1, \\  0, \\  0\\right), \\  \\left( 1.0, \\  0, \\  1, \\  0\\right), \\  \\left( \\frac{2}{10201}, \\  0, \\  1, \\  0\\right), \\  \\left( - \\frac{2}{10201}, \\  0, \\  1, \\  0\\right), \\  \\left( 1.0, \\  0, \\  0, \\  1\\right), \\  \\left( \\frac{2}{10201}, \\  0, \\  0, \\  1\\right), \\  \\left( - \\frac{2}{10201}, \\  0, \\  0, \\  1\\right)\\right]",
+        "mults": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+        ],
+        "milnor": [
+            1,
+            1,
+            1
+        ],
+        "tjurina": [
+            1,
+            1,
+            1
+        ]
+    }
+]
