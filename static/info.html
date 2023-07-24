@@ -47,18 +47,32 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home</a>
+              <a class="nav-link active" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./help.html">Help</a>
+              <a class="nav-link" href="../static/help.html">Help</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./info.html">Info</a>
+              <a class="nav-link" href="../static/info.html">Info</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./custom_equation.html"
-                >Custom Equation</a
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                Type
+              </a>
+              <ul class="dropdown-menu bs-tertiary-color">
+                <li>
+                  <a class="dropdown-item" href="../2D/index.html">Curves</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../3D/index.html">Surfaces</a>
+                </li>
+              </ul>
             </li>
           </ul>
           <button class="btn btn-outline-success" id="btnSwitch">

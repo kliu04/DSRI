@@ -54,8 +54,8 @@ def main():
         with open("2D/scraper/parsed_data.json", "w") as f:
             json.dump(all_curves, f, indent=4)
     except:
+        print("Convert to serializeable!")
         all_curves = [{key: str(val) for key, val in dict.items()} for dict in list]
-        print("hello")
         with open("2D/scraper/parsed_data.json", "w") as f:
             json.dump(all_curves, f, indent=4)
 
