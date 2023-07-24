@@ -6,7 +6,7 @@ import parse
 
 
 def solve(eqn: str) -> dict:
-    """Solve for invariants of a 2D curve given as argument."""
+    """Solve for invariants of a 2D curve given equation as argument."""
     data = {}
     try:
         output = (
@@ -22,7 +22,6 @@ def solve(eqn: str) -> dict:
     except Exception as e:
         print("An error occurred when trying to run M2:", e)
         return data
-
     data["eqn"] = eqn
     data["degree"] = int(output[0])
     # No Milnor or Tjurina (returns vector []) => Milnor/Tjurina number is 0
@@ -40,8 +39,6 @@ def solve(eqn: str) -> dict:
     data["delta"] = solve_b.solve_delta(data["mults"])
     data["geo_genus"] = solve_b.solve_geo_genus(data["arith_genus"], data["delta"])
     data["branching"] = solve_b.solve_branching(data["milnor"], data["delta"])
-    # sings is not serializable
-    del data["sings"]
     return data
 
 

@@ -84,7 +84,13 @@
         <div class="row mb-3">
           <label for="equation" class="col-sm-2 col-form-label">Equation</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="equation" />
+            <input
+              type="text"
+              class="form-control"
+              id="equation"
+              name="equation"
+              required
+            />
             <div class="form-text">
               Enter either a 2D or 3D implicit equation, with ^ as the exponent
               operator.
@@ -100,6 +106,8 @@
                 type="radio"
                 name="type"
                 id="2D"
+                value="2D"
+                required
               />
               <label class="form-check-label" for="2D"> 2D </label>
             </div>
@@ -108,7 +116,9 @@
                 class="form-check-input"
                 type="radio"
                 name="type"
-                id="2D"
+                id="3D"
+                value="3D"
+                required
               />
               <label class="form-check-label" for="2D"> 3D </label>
             </div>

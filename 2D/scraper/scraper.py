@@ -15,7 +15,9 @@ import wrapper
 
 def run_solvers(data: dict) -> dict:
     eqn = data["eqn"]
-    return data | wrapper.solve(eqn)
+    data = data | wrapper.solve(eqn)
+    del data["sings"]
+    return data
 
 
 def parse_sublink(link: str) -> dict:

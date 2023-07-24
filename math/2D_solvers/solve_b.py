@@ -3,8 +3,8 @@ from sympy.abc import x, y, z, I
 from sympy.parsing.sympy_parser import parse_expr
 
 
-def solve_singularities(points: list) -> list:
-    """Given a list of points of the singular location, returns the cartesian co-ordinate of each point."""
+def solve_singularities(points: str) -> list:
+    """Given a string of points of the singular location, returns the cartesian co-ordinate of each point."""
     points = points.replace("^", "**")
     points = parse_expr(points)
     sols = []
@@ -36,7 +36,6 @@ def solve_singularities(points: list) -> list:
             # Sing is of form (x, 0, 0)
             v[x] = 1
 
-        # Have to change type to string to avoid issues with I or sqrt later
         sols[i] = (v[x], v[y], v[z])
     # remove duplicate solutions
     sols = list(dict.fromkeys(sols))
@@ -66,11 +65,40 @@ def solve_multiplicities(homogenized: str, points: list) -> list:
                 continue
 
             # Get new minimum
-            if term_degree < min_degree:
-                min_degree = term_degree
+            min_degree = min(min_degree, term_degree)
 
         mults.append(min_degree)
     return mults
+
+
+def solve_milnor(pd: str, sings: list) -> list:
+    pd = pd.replace("^", "**")
+    pd = parse_expr(pd)
+    degrees = pd[0]
+    pd = pd[1:]
+
+    # for i, ideal in enumerate(pd):
+    #     for sing in sings:
+    #         # print(ideal, sing)
+    #         X = sing[0]
+    #         Y = sing[1]
+    #         Z = sing[2]
+    #         # if len(ideal) == 1:
+    #         #     raise ValueError
+    #         flag = True
+    #         for part in ideal:
+    #             sub = part.subs([(x, X), (y, Y), (z, Z)])
+    #             if sub != 0:
+    #                 flag = False
+    #         if not flag:
+    #             continue
+
+    #         print(ideal, sing, degrees[i])
+    for i, ideal in enumerate(pd):
+        print(ideal)
+        # for sing in sings:
+        #     sol = ideal[0]
+        #     pass
 
 
 def solve_arith_genus(degree: int) -> int:
@@ -80,9 +108,7 @@ def solve_arith_genus(degree: int) -> int:
 
 def solve_delta(mults: list) -> list:
     """Calculate delta invariant for each multiplicity"""
-    delta = []
-    for m in mults:
-        delta.append(int(0.5 * m * (m - 1)))
+    delta = [int(0.5 * m * (m - 1)) for m in mults]
     return delta
 
 
@@ -96,8 +122,7 @@ def solve_branching(milnor: list, delta: list) -> list:
     """Using Milnor-Jung formula"""
     branching = []
     try:
-        for i in range(len(milnor)):
-            branching.append(2 * delta[i] + 1 - milnor[i])
+        branching = [2 * d + 1 - m for m, d in zip(milnor, delta)]
     except:
         # few issues as milnor is not fully done yet
         pass
