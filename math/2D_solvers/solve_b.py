@@ -71,11 +71,10 @@ def solve_multiplicities(homogenized: str, points: list) -> list:
     return mults
 
 
-def solve_milnor(pd: str, sings: list) -> list:
+def solve_milnor(pd: str, degs: str, sings: list) -> list:
     pd = pd.replace("^", "**")
     pd = parse_expr(pd)
-    degrees = pd[0]
-    pd = pd[1:]
+    degs = parse_expr(degs)
 
     # for i, ideal in enumerate(pd):
     #     for sing in sings:
@@ -95,10 +94,17 @@ def solve_milnor(pd: str, sings: list) -> list:
 
     #         print(ideal, sing, degrees[i])
     for i, ideal in enumerate(pd):
-        print(ideal)
-        # for sing in sings:
-        #     sol = ideal[0]
-        #     pass
+        sols = solve(ideal, dict=True)
+        for sol in sols:
+            if x not in sol:
+                sol[x] = 1
+            if y not in sol:
+                sol[y] = 1
+            if z not in sol:
+                sol[z] = 1
+            sol = (sol[x], sol[y], sol[z])
+            if sol in sings:
+                print(sol, degs[i] / len(sols), ideal)
 
 
 def solve_arith_genus(degree: int) -> int:

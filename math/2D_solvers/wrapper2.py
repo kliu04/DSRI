@@ -24,10 +24,13 @@ def solve(eqn: str) -> dict:
     except Exception as e:
         print("An error occurred when trying to run M2:", e)
         return data
-    data["sings"] = [(0, 1, 1), (0, -1, 1), (1, 0, 1), (-1, 0, 1)]
-    solve_b.solve_milnor(output[0], data["sings"])
-    solve_b.solve_milnor(output[2], data["sings"])
-    solve_b.solve_milnor(output[4], data["sings"])
+    # data["sings"] = [(0, 1, 1), (0, -1, 1), (1, 0, 1), (-1, 0, 1)]
+    # data["sings"] = [(0, 0, 1), (101, 0, 1), (I, 1, 0), (-I, 1, 0)]
+    # data["sings"] = [(0, 0, 1), (1, -1, 1), (1, 1, 1)]
+    # data["sings"] = [(0, 0, 1), (0, 1, 0)]
+    data["sings"] = [(0, 0, 1)]
+
+    solve_b.solve_milnor(output[1], output[0], data["sings"])
 
     return data
 

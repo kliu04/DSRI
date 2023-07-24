@@ -18,17 +18,24 @@ b = sub(b, z=> 1);
 
 pd = primaryDecomposition ideal (a, b);
 
-milnor = [new Array from pd/degree]
-for i in pd/radical do
-    milnor = append(L, toString new Array from i_*)
-
+degs_m = new Array from pd/degree
+milnor = []
+for i in pd do
+(
+    r = radical i;
+    milnor = append(milnor, toString new Array from r_*);
+)
 
 pd = primaryDecomposition ideal (a, b, sub(F, z=>1));
 
-tjurina = [new Array from pd/degree]
-for i in pd/radical do
-    tjurina = append(L, toString new Array from i_*)
-
+degs_t = new Array from pd/degree
+tjurina = []
+pd = primaryDecomposition ideal (a, b, sub(F, z=>1));
+for i in pd do
+(
+    r = radical i;
+    tjurina = append(tjurina, toString new Array from r_*);
+)
 
 
 
@@ -40,20 +47,28 @@ b = partials_(2, 0)
 b = sub(b, y=>1)
 
 pd = primaryDecomposition ideal (a, b)
-milnor = append(milnor#0, new Array from pd/degree)
-for i in pd/radical do
-    milnor = append(milnor, toString new Array from i_*)
 
+for i in pd do
+(
+    r = radical i;
+    if isSubset(ideal z, r) then (
+        milnor = append(milnor, toString new Array from r_*);
+        degs_m = append(degs_m, degree i);
+    )
+)
 
-print(L)
 pd = primaryDecomposition ideal (a, b, sub(F, y=>1));
+for i in pd do
+(
+    r = radical i;
+    if isSubset(ideal z, r) then (
+        tjurina = append(tjurina, toString new Array from r_*);
+        degs_t = append(degs_t, degree i);
 
-L = [new Array from pd/degree]
-for i in pd/radical do
-    L = append(L, toString new Array from i_*)
+    )
 
+)
 
-print(L)
 -- y, z
 a = partials_(1, 0)
 a = sub(a, x=>1)
@@ -62,17 +77,27 @@ b = partials_(2, 0)
 b = sub(b, x=>1)
 
 pd = primaryDecomposition ideal (a, b)
-L = [new Array from pd/degree]
-for i in pd/radical do
-    L = append(L, toString new Array from i_*)
 
+for i in pd do
+(
+    r = radical i;
+    if isSubset(ideal z, r) and isSubset(ideal y, r) then (
+        milnor = append(milnor, toString new Array from r_*);
+        degs_m = append(degs_m, degree i);
+    )
+)
 
-print(L)
-pd = primaryDecomposition ideal (a, b, sub(F, x=>1));
+for i in pd do
+(
+    r = radical i;
+    if isSubset(ideal z, r) and isSubset(ideal y, r) then (
+        tjurina = append(tjurina, toString new Array from r_*);
+        degs_t = append(degs_t, degree i);
+    )
 
-L = [new Array from pd/degree]
-for i in pd/radical do
-    L = append(L, toString new Array from i_*)
+)
+print(degs_m)
+print(milnor)
+print(degs_t)
+print(tjurina)
 
-
-print(L)
