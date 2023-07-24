@@ -24,17 +24,13 @@ def solve(eqn: str) -> dict:
         return data
     data["eqn"] = eqn
     data["degree"] = int(output[0])
-    # No Milnor or Tjurina (returns vector []) => Milnor/Tjurina number is 0
-    data["milnor"] = eval(output[1])
-    if data["milnor"] == []:
-        data["milnor"] = [0]
-    data["tjurina"] = eval(output[2])
-    if data["tjurina"] == []:
-        data["tjurina"] = [0]
-    homogenized = output[3]
-    singular_points = output[4]
+    homogenized = output[1]
+    singular_points = output[2]
     data["sings"], data["sings_latex"] = solve_b.solve_singularities(singular_points)
     data["mults"] = solve_b.solve_multiplicities(homogenized, data["sings"])
+    data["milnor"] = solve_b.solve_milnor(output[3], output[4], data["sings"])
+    data["tjurina"] = solve_b.solve_tjurina(output[5], output[6], data["sings"])
+
     data["arith_genus"] = solve_b.solve_arith_genus(data["degree"])
     data["delta"] = solve_b.solve_delta(data["mults"])
     data["geo_genus"] = solve_b.solve_geo_genus(data["arith_genus"], data["delta"])

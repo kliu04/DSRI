@@ -71,28 +71,11 @@ def solve_multiplicities(homogenized: str, points: list) -> list:
     return mults
 
 
-def solve_milnor(pd: str, degs: str, sings: list) -> list:
+def solve_milnor(degs: str, pd: str, sings: list) -> list:
     pd = pd.replace("^", "**")
     pd = parse_expr(pd)
     degs = parse_expr(degs)
-
-    # for i, ideal in enumerate(pd):
-    #     for sing in sings:
-    #         # print(ideal, sing)
-    #         X = sing[0]
-    #         Y = sing[1]
-    #         Z = sing[2]
-    #         # if len(ideal) == 1:
-    #         #     raise ValueError
-    #         flag = True
-    #         for part in ideal:
-    #             sub = part.subs([(x, X), (y, Y), (z, Z)])
-    #             if sub != 0:
-    #                 flag = False
-    #         if not flag:
-    #             continue
-
-    #         print(ideal, sing, degrees[i])
+    milnor = []
     for i, ideal in enumerate(pd):
         sols = solve(ideal, dict=True)
         for sol in sols:
@@ -104,7 +87,32 @@ def solve_milnor(pd: str, degs: str, sings: list) -> list:
                 sol[z] = 1
             sol = (sol[x], sol[y], sol[z])
             if sol in sings:
-                print(sol, degs[i] / len(sols), ideal)
+                # print(sol, degs[i] / len(sols), ideal)
+                # TODO : fix not all sols valid
+                milnor.append(degs[i] / len(sols))
+    return milnor
+
+
+def solve_tjurina(degs: str, pd: str, sings: list) -> list:
+    pd = pd.replace("^", "**")
+    pd = parse_expr(pd)
+    degs = parse_expr(degs)
+    tjurina = []
+    for i, ideal in enumerate(pd):
+        sols = solve(ideal, dict=True)
+        for sol in sols:
+            if x not in sol:
+                sol[x] = 1
+            if y not in sol:
+                sol[y] = 1
+            if z not in sol:
+                sol[z] = 1
+            sol = (sol[x], sol[y], sol[z])
+            if sol in sings:
+                # print(sol, degs[i] / len(sols), ideal)
+                # TODO : fix not all sols valid
+                tjurina.append(degs[i] / len(sols))
+    return tjurina
 
 
 def solve_arith_genus(degree: int) -> int:
@@ -128,7 +136,8 @@ def solve_branching(milnor: list, delta: list) -> list:
     """Using Milnor-Jung formula"""
     branching = []
     try:
-        branching = [2 * d + 1 - m for m, d in zip(milnor, delta)]
+        # branching = [2 * d + 1 - m for m, d in zip(milnor, delta)]
+        branching = 2 * sum(delta) + 1 - sum(milnor)
     except:
         # few issues as milnor is not fully done yet
         pass
