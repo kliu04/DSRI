@@ -104,8 +104,8 @@
             <li>Degree: \(4\)</li>
             <li>Milnor Number: \([1, 1, 1]\)</li>
             <li>Tjurina Number: \([1, 1, 1]\)</li>
-            <li>Singularities: \(\left[ \left( 1.0, \  1, \  0, \  0\right), \  \left( \frac{2}{10201}, \  1, \  0, \  0\right), \  \left( - \frac{2}{10201}, \  1, \  0, \  0\right), \  \left( 1.0, \  0, \  1, \  0\right), \  \left( \frac{2}{10201}, \  0, \  1, \  0\right), \  \left( - \frac{2}{10201}, \  0, \  1, \  0\right), \  \left( 1.0, \  0, \  0, \  1\right), \  \left( \frac{2}{10201}, \  0, \  0, \  1\right), \  \left( - \frac{2}{10201}, \  0, \  0, \  1\right)\right]\)</li>
-            <li>Multiplicities: \([2, 2, 2, 2, 2, 2, 2, 2, 2]\)</li>
+            <li>Singularities: \(\left[ \left( 1, \  1, \  0, \  0\right), \  \left( 0, \  1, \  0, \  0\right), \  \left( 1, \  0, \  1, \  0\right), \  \left( 0, \  0, \  1, \  0\right), \  \left( 1, \  0, \  0, \  1\right), \  \left( 0, \  0, \  0, \  1\right)\right]\)</li>
+            <li>Multiplicities: \([2, 2, 2, 2, 2, 2]\)</li>
           </ul>
           <h3>External Links:</h3>
           <ul class="list-group">
@@ -120,7 +120,12 @@
         ></div>
         <script>
           let uri = "https://c3d.libretexts.org/CalcPlot3D/index.html?type=";
-          uri += "implicit;equation=" + encodeURI(equation_input.value.replace("=", "~").replace("{", "").replace("}", "")) + ";cubes=16;visible=true;";
+          let eqn = "x^{2}y^{2}+y^{2}z^{2}+z^{2}x^{2}-101^{2}xyz";
+
+          eqn = eqn.replaceAll("{", "");
+          eqn = eqn.replaceAll("}", "");
+
+          uri += "implicit;equation=" + encodeURI(eqn + "~0") + ";cubes=16;visible=true;";
           let iframe = document.createElement("iframe");
           iframe.src = uri;
           document.getElementById("plot").appendChild(iframe);

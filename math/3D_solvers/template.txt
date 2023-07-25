@@ -120,7 +120,12 @@
         ></div>
         <script>
           let uri = "https://c3d.libretexts.org/CalcPlot3D/index.html?type=";
-          uri += "implicit;equation=" + encodeURI(equation_input.value.replace("=", "~").replace("{", "").replace("}", "")) + ";cubes=16;visible=true;";
+          let eqn = "[[ eqn ]]";
+
+          eqn = eqn.replaceAll("{", "");
+          eqn = eqn.replaceAll("}", "");
+
+          uri += "implicit;equation=" + encodeURI(eqn + "~0") + ";cubes=16;visible=true;";
           let iframe = document.createElement("iframe");
           iframe.src = uri;
           document.getElementById("plot").appendChild(iframe);

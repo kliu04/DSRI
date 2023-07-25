@@ -25,7 +25,6 @@ def solve_singularities(points: str) -> list:
             for j in range(len(sol)):
                 sol[j][var] = 1
                 sols.append(sol[j])
-
     for i, v in enumerate(sols):
         if v[z] != 0:
             v[w] /= v[z]
@@ -41,7 +40,22 @@ def solve_singularities(points: str) -> list:
             v[x] = 1
         else:
             v[w] = 1
-
+        try:
+            v[w] = int(v[w])
+        except:
+            pass
+        try:
+            v[x] = int(v[x])
+        except:
+            pass
+        try:
+            v[y] = int(v[y])
+        except:
+            pass
+        try:
+            v[z] = int(v[z])
+        except:
+            pass
         sols[i] = (v[w], v[x], v[y], v[z])
     # remove duplicate solutions
     sols = list(dict.fromkeys(sols))
@@ -83,6 +97,7 @@ def solve_milnor(degs: str, pd: str, sings: list) -> list:
     pd = parse_expr(pd)
     degs = parse_expr(degs)
     milnor = []
+    degrees = []
     for i, ideal in enumerate(pd):
         sols = solve(ideal, dict=True)
         for sol in sols:
@@ -94,17 +109,12 @@ def solve_milnor(degs: str, pd: str, sings: list) -> list:
                 sol[y] = 1
             if z not in sol:
                 sol[z] = 1
+
             sol = (sol[w], sol[x], sol[y], sol[z])
-            if sol in sings:
-                # print(sol, degs[i] / len(sols), ideal)
-                # TODO : fix not all sols valid
-                milnor.append(int(degs[i] / len(sols)))
-            sol = (-sol[0], -sol[1], -sol[2], -sol[3])
-            if sol in sings:
-                # print(sol, degs[i] / len(sols), ideal)
-                # TODO : fix not all sols valid
-                milnor.append(int(degs[i] / len(sols)))
-    return milnor
+            if sol in sings and sol not in milnor:
+                milnor.append(sol)
+                degrees.append(int(degs[i] / len(sols)))
+    return degrees
 
 
 def solve_tjurina(degs: str, pd: str, sings: list) -> list:
@@ -112,6 +122,7 @@ def solve_tjurina(degs: str, pd: str, sings: list) -> list:
     pd = parse_expr(pd)
     degs = parse_expr(degs)
     tjurina = []
+    degrees = []
     for i, ideal in enumerate(pd):
         sols = solve(ideal, dict=True)
         for sol in sols:
@@ -124,13 +135,7 @@ def solve_tjurina(degs: str, pd: str, sings: list) -> list:
             if z not in sol:
                 sol[z] = 1
             sol = (sol[w], sol[x], sol[y], sol[z])
-            if sol in sings:
-                # print(sol, degs[i] / len(sols), ideal)
-                # TODO : fix not all sols valid
-                tjurina.append(int(degs[i] / len(sols)))
-            sol = (-sol[0], -sol[1], -sol[2], -sol[3])
-            if sol in sings:
-                # print(sol, degs[i] / len(sols), ideal)
-                # TODO : fix not all sols valid
-                tjurina.append(int(degs[i] / len(sols)))
-    return tjurina
+            if sol in sings and sol not in tjurina:
+                tjurina.append(sol)
+                degrees.append(int(degs[i] / len(sols)))
+    return degrees
