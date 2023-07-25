@@ -40,22 +40,6 @@ def solve_singularities(points: str) -> list:
             v[x] = 1
         else:
             v[w] = 1
-        try:
-            v[w] = int(v[w])
-        except:
-            pass
-        try:
-            v[x] = int(v[x])
-        except:
-            pass
-        try:
-            v[y] = int(v[y])
-        except:
-            pass
-        try:
-            v[z] = int(v[z])
-        except:
-            pass
         sols[i] = (v[w], v[x], v[y], v[z])
     # remove duplicate solutions
     sols = list(dict.fromkeys(sols))
@@ -111,6 +95,7 @@ def solve_milnor(degs: str, pd: str, sings: list) -> list:
                 sol[z] = 1
 
             sol = (sol[w], sol[x], sol[y], sol[z])
+
             if sol in sings and sol not in milnor:
                 milnor.append(sol)
                 degrees.append(int(degs[i] / len(sols)))
