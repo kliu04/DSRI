@@ -4,13 +4,11 @@ from multiprocessing import Pool
 import sys
 import parse
 import json
+import wrapper
+
 
 URL = "https://people.math.carleton.ca/~cingalls/studentProjects/Katie's%20Site/html/All%20Curves.html"
 BASE = "https://people.math.carleton.ca/~cingalls/studentProjects/Katie's%20Site/html/"
-
-# Hacky solution
-sys.path.insert(0, "/home/wevie/DSRI/math/2D_solvers")
-import wrapper
 
 
 def run_solvers(data: dict) -> dict:
@@ -51,12 +49,12 @@ def main():
     # for it in map(parse_sublink, [BASE + sublink for sublink in links]):
     #     all_curves.append(it)
     try:
-        with open("2D/scraper/parsed_data.json", "w") as f:
+        with open("math/2D_solvers/parsed_data.json", "w") as f:
             json.dump(all_curves, f, indent=4)
     except:
         print("Convert to serializeable!")
         all_curves = [{key: str(val) for key, val in dict.items()} for dict in list]
-        with open("2D/scraper/parsed_data.json", "w") as f:
+        with open("math/2D_solvers/parsed_data.json", "w") as f:
             json.dump(all_curves, f, indent=4)
 
 

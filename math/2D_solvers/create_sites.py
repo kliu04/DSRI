@@ -45,9 +45,9 @@ def parse_for_latex(eqn: str) -> str:
 def main():
     curves = []
     template = ""
-    with open("2D/scraper/parsed_data.json", "r") as f:
+    with open("math/2D_solvers/parsed_data.json", "r") as f:
         curves = json.load(f)
-    with open("2D/scraper/template.txt", "r") as f:
+    with open("math/2D_solvers/template.txt", "r") as f:
         template = f.read()
 
     for curve in curves:
@@ -90,7 +90,7 @@ def main():
             print("Error!!!", curve, e)
 
     # make main index page
-    with open("2D/scraper/index_template.txt", "r") as f:
+    with open("math/2D_solvers/index_template.txt", "r") as f:
         template = f.readlines()
     for i, v in enumerate(template):
         if '<tbody class="table-group-divider">' in v:

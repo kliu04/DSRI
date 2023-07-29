@@ -75,7 +75,7 @@ def solve_milnor(degs: str, pd: str, sings: list) -> list:
     pd = pd.replace("^", "**")
     pd = parse_expr(pd)
     degs = parse_expr(degs)
-    milnor = []
+    milnor = [0 for _ in range(len(sings))]
     for i, ideal in enumerate(pd):
         sols = solve(ideal, dict=True)
         for sol in sols:
@@ -86,10 +86,9 @@ def solve_milnor(degs: str, pd: str, sings: list) -> list:
             if z not in sol:
                 sol[z] = 1
             sol = (sol[x], sol[y], sol[z])
-            if sol in sings:
-                # print(sol, degs[i] / len(sols), ideal)
-                # TODO : fix not all sols valid
-                milnor.append(int(degs[i] / len(sols)))
+            for j, sing in enumerate(sings):
+                if sol == sing:
+                    milnor[j] = int(degs[i] / len(sols))
     return milnor
 
 
@@ -136,8 +135,8 @@ def solve_branching(milnor: list, delta: list) -> list:
     """Using Milnor-Jung formula"""
     branching = []
     try:
-        # branching = [2 * d + 1 - m for m, d in zip(milnor, delta)]
-        branching = 2 * sum(delta) + 1 - sum(milnor)
+        branching = [2 * d + 1 - m for m, d in zip(milnor, delta)]
+        # branching = 2 * sum(delta) + 1 - sum(milnor)
     except:
         # few issues as milnor is not fully done yet
         pass
