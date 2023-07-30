@@ -6,12 +6,15 @@
 - The 3D folder contains all the static HTML for each 3D surface.
 - The math folder has 2 subdirectories:
   - The 2D_solvers folder contains the code to generate the invariants from every curve on [Katie's Website](https://people.math.carleton.ca/~cingalls/studentProjects/Katie's%20Site/html/All%20Curves.html).
+
     - `parse.py` takes an equation copied from Katie's website and formats it for `M2`.
     - `solve_a.m2` and `solve_b.py` calculate the invariants for a given curve.
     - `wrapper.py` takes an equation in `M2` format and returns a dict with all invariants calculated.
     - `scraper.py` scrapes Katie's Website, runs `wrapper.py` on each curve and creates a file `parsed_data.json` with all the data.
     - `create_sites.py` takes `parsed_data.json` and creates the webpage for each site, using find and replace on `template.txt`, and then creates the `index.html` file from `index_template.txt`, listing each curve in a table.
-      **Warning** Running this file will overwrite any custom changes to any `HTML` files.
+
+      **Warning!** Running this file will overwrite any custom changes to any `HTML` files.
+
   - The 3D_solvers folder contains the code to generate the invariants from curves in the `surfaces.json` file.
     - The overall structure is similar to 2D above, with a few notable differences.
     - `surfaces.json` contains at least all equations and titles for each surface.
