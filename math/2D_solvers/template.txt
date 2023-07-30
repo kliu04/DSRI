@@ -102,7 +102,7 @@
             <li>Degree: \([[ degree ]]\)</li>
             <li>Milnor Number: \([[ milnor ]]\)</li>
             <li>Tjurina Number: \([[ tjurina ]]\)</li>
-            <li style="overflow: auto">Singularities: \([[ sings_latex ]]\)</li>
+            <li>Singularities: <p style="overflow-x: auto"> \([[ sings_latex ]]\)</p></li>
             <li>Multiplicities: \([[ mults ]]\)</li>
             <li>Arithmetic Genus: \([[ arith_genus ]]\)</li>
             <li>Geometric Genus: \([[ geo_genus ]]\)</li>
