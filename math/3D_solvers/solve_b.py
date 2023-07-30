@@ -9,22 +9,19 @@ def solve_singularities(points: str) -> list:
     points = parse_expr(points)
     sols = []
     for item in points:
-        missing = {w, x, y, z}
-        for var in item:
-            if w in var.free_symbols:
-                missing.discard(w)
-            if x in var.free_symbols:
-                missing.discard(x)
-            if y in var.free_symbols:
-                missing.discard(y)
-            if z in var.free_symbols:
-                missing.discard(z)
         sol = solve(item, dict=True)
+        for subsol in sol:
+            # add missing vars
+            if w not in subsol:
+                subsol[w] = 1
+            if x not in subsol:
+                subsol[x] = 1
+            if y not in subsol:
+                subsol[y] = 1
+            if z not in subsol:
+                subsol[z] = 1
+            sols.append(subsol)
 
-        for var in missing:
-            for j in range(len(sol)):
-                sol[j][var] = 1
-                sols.append(sol[j])
     for i, v in enumerate(sols):
         if v[z] != 0:
             v[w] /= v[z]
@@ -40,6 +37,16 @@ def solve_singularities(points: str) -> list:
             v[x] = 1
         else:
             v[w] = 1
+
+        # fix roundoffs
+        if isinstance(v[w], float) and v[w].is_integer:
+            v[w] = int(v[w])
+        if isinstance(v[x], float) and v[x].is_integer:
+            v[x] = int(v[x])
+        if isinstance(v[y], float) and v[y].is_integer:
+            v[y] = int(v[y])
+        if isinstance(v[z], float) and v[z].is_integer:
+            v[z] = int(v[z])
         sols[i] = (v[w], v[x], v[y], v[z])
     # remove duplicate solutions
     sols = list(dict.fromkeys(sols))
@@ -83,7 +90,9 @@ def solve_milnor(degs: str, pd: str, sings: list) -> list:
     milnor = []
     degrees = []
     for i, ideal in enumerate(pd):
+        # solve ideal
         sols = solve(ideal, dict=True)
+        # add missing
         for sol in sols:
             if w not in sol:
                 sol[w] = 1
@@ -96,6 +105,7 @@ def solve_milnor(degs: str, pd: str, sings: list) -> list:
 
             sol = (sol[w], sol[x], sol[y], sol[z])
 
+            # check if that ideal is singular
             if sol in sings and sol not in milnor:
                 milnor.append(sol)
                 degrees.append(int(degs[i] / len(sols)))

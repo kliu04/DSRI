@@ -9,20 +9,15 @@ def solve_singularities(points: str) -> list:
     points = parse_expr(points)
     sols = []
     for item in points:
-        missing = {x, y, z}
-        for var in item:
-            if x in var.free_symbols:
-                missing.discard(x)
-            if y in var.free_symbols:
-                missing.discard(y)
-            if z in var.free_symbols:
-                missing.discard(z)
         sol = solve(item, dict=True)
-
-        for var in missing:
-            for j in range(len(sol)):
-                sol[j][var] = 1
-                sols.append(sol[j])
+        for subsol in sol:
+            if x not in subsol:
+                subsol[x] = 1
+            if y not in subsol:
+                subsol[y] = 1
+            if z not in subsol:
+                subsol[z] = 1
+            sols.append(subsol)
 
     for i, v in enumerate(sols):
         if v[z] != 0:

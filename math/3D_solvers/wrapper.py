@@ -23,7 +23,7 @@ def solve(eqn: str) -> dict:
         print("An error occurred when trying to run M2:", e)
         return data
     data["eqn"] = eqn
-    data["degree"] = int(output[0])
+    data["degree"] = output[0]
     homogenized = output[1]
     singular_points = output[2]
     data["sings"], data["sings_latex"] = solve_b.solve_singularities(singular_points)
@@ -40,7 +40,7 @@ def main():
         if "^" in eqn:
             print(solve(eqn))
         else:
-            # parse if from katie's site
+            # parse if plaintext
             print(solve(parse.parse(eqn)))
     except IndexError:
         print("Enter the equation to solve invariants for.")
