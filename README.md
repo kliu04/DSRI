@@ -5,6 +5,7 @@
 - The 2D folder contains all the static HTML for each 2D curve.
 - The 3D folder contains all the static HTML for each 3D surface.
 - The math folder has 2 subdirectories:
+
   - The 2D_solvers folder contains the code to generate the invariants from every curve on [Katie's Website](https://people.math.carleton.ca/~cingalls/studentProjects/Katie's%20Site/html/All%20Curves.html).
 
     - `parse.py` takes an equation copied from Katie's website and formats it for `M2`.
@@ -19,7 +20,7 @@
     - The overall structure is similar to 2D above, with a few notable differences.
     - `surfaces.json` contains at least all equations and titles for each surface.
     - `run_solvers.py` generates all invariants for each surface in `surfaces.json` and adds the data to that file.
-  - The static folder contains `JS` (light/dark mode, sorting tables using [sorttable](https://www.kryogenix.org/code/browser/sorttable/)) and `CSS` (overriding [Bootstrap 5.3](https://getbootstrap.com/), as well as the help and info files.
+  - The static folder contains `JS` (light/dark mode, sorting tables using [sorttable](https://www.kryogenix.org/code/browser/sorttable/)) and `CSS` (overriding [Bootstrap 5.3](https://getbootstrap.com/)), as well as the help and info files.
 
 ## Acknowledgements
 
