@@ -5,7 +5,9 @@
 - The 2D folder contains all the static HTML for each 2D curve.
 - The 3D folder contains all the static HTML for each 3D surface.
 - The math folder has 2 subdirectories:
-
+  
+  **Note!** All parameters are replaced with the fixed value $a=101$, $b=97$, and $c=103$.
+  
   - The 2D_solvers folder contains the code to generate the invariants from every curve on [Katie's Website](https://people.math.carleton.ca/~cingalls/studentProjects/Katie's%20Site/html/All%20Curves.html).
 
     - `parse.py` takes an equation copied from Katie's website and formats it for `M2`.
@@ -24,7 +26,7 @@
 
 ## Acknowledgements
 
-This project was made possible by the [Dean's Summer Research Internship](https://science.carleton.ca/students/undergraduate-resources/deans-summer-research-internships/) program at [Carleton University](https://carleton.ca/), [Dr. Colin Ingalls](https://people.math.carleton.ca/~cingalls/), [Dr. Nathan Grieve](https://sites.google.com/view/nathan-grieve), the [Desmos Calculator](https://www.desmos.com/calculator) for 2D images, and [CalcPlot3D](https://c3d.libretexts.org/CalcPlot3D/index.html) for 3D images, Katie Cunningham - which this site is built off of, and my partners Andrew Cameron and Dongxu Hu.
+This project was made possible by the [Dean's Summer Research Internship](https://science.carleton.ca/students/undergraduate-resources/deans-summer-research-internships/) program at [Carleton University](https://carleton.ca/), [Dr. Colin Ingalls](https://people.math.carleton.ca/~cingalls/), [Dr. Nathan Grieve](https://sites.google.com/view/nathan-grieve), the [Desmos Calculator](https://www.desmos.com/calculator) for 2D images, and [CalcPlot3D](https://c3d.libretexts.org/CalcPlot3D/index.html) for 3D images, [KaTeX](https://katex.org/) for TeX support, Katie Cunningham - who made the precursor to this site, and my partners Andrew Cameron and Dongxu Hu.
 
 ## Known Issues
 
@@ -32,3 +34,4 @@ Please get in touch or make a issue / pull request if you find any errors/want t
 
 - Incorrect computation of invariants for Ranunculoid.
 - A web framework like `Flask` or `Django` can improve the templates from just using search and replace.
+- Currently, the external links are hard-coded and reset every time `create_sites.py` is run. Should change to generating from a `json` file.
