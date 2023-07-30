@@ -16,7 +16,7 @@
     - The overall structure is similar to 2D above, with a few notable differences.
     - `surfaces.json` contains at least all equations and titles for each surface.
     - `run_solvers.py` generates all invariants for each surface in `surfaces.json` and adds the data to that file.
-  - The static folder contains `JS` (light/dark mode, sorting tables using [sorttable](https://www.kryogenix.org/code/browser/sorttable/)) and `CSS` (overriding Bootstrap 5.3), as well as the help and info files.
+  - The static folder contains `JS` (light/dark mode, sorting tables using [sorttable](https://www.kryogenix.org/code/browser/sorttable/)) and `CSS` (overriding [Bootstrap 5.3](https://getbootstrap.com/), as well as the help and info files.
 
 ## Acknowledgements
 
