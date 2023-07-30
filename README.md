@@ -31,3 +31,4 @@ This project was made possible by the [Dean's Summer Research Internship](https:
 Please get in touch or make a issue / pull request if you find any errors/want to improve the site!
 
 - Incorrect computation of invariants for Ranunculoid.
+- A web framework like `Flask` or `Django` can improve the templates from just using search and replace.
