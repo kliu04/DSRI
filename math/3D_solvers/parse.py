@@ -24,6 +24,7 @@ def parse(raw: str) -> str:
     # set constants
     formatted = formatted.replace("a", "101")
     formatted = formatted.replace("b", "97")
+    formatted = formatted.replace("c", "103")
 
     return formatted
 

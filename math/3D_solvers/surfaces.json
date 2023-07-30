@@ -122,43 +122,136 @@
         ]
     },
     {
-        "title": "test",
-        "eqn": "x^2*y^2+y^2*z^2+z^2*x^2-101^2*x*y*z",
-        "degree": 4,
-        "sings": "[(1.0, 1, 0, 0), (2/10201, 1, 0, 0), (-2/10201, 1, 0, 0), (1.0, 0, 1, 0), (2/10201, 0, 1, 0), (-2/10201, 0, 1, 0), (1.0, 0, 0, 1), (2/10201, 0, 0, 1), (-2/10201, 0, 0, 1)]",
-        "sings_latex": "\\left[ \\left( 1.0, \\  1, \\  0, \\  0\\right), \\  \\left( \\frac{2}{10201}, \\  1, \\  0, \\  0\\right), \\  \\left( - \\frac{2}{10201}, \\  1, \\  0, \\  0\\right), \\  \\left( 1.0, \\  0, \\  1, \\  0\\right), \\  \\left( \\frac{2}{10201}, \\  0, \\  1, \\  0\\right), \\  \\left( - \\frac{2}{10201}, \\  0, \\  1, \\  0\\right), \\  \\left( 1.0, \\  0, \\  0, \\  1\\right), \\  \\left( \\frac{2}{10201}, \\  0, \\  0, \\  1\\right), \\  \\left( - \\frac{2}{10201}, \\  0, \\  0, \\  1\\right)\\right]",
-        "mults": [
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2
-        ],
-        "milnor": [
-            1,
-            1,
-            1,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2
-        ],
-        "tjurina": [
-            1,
-            1,
-            1,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2
-        ]
+        "title": "Apple Surface",
+        "eqn": "a^4-2a^2 * (b^2 + x^2+y^2-z^2) + (-b^2+x^2+y^2+z^2)^2"
+    },
+    {
+        "title": "Ding Dong",
+        "eqn": "x^2+y^2+z^2*(z-1)"
+    },
+    {
+        "title": "Clebsch",
+        "eqn": "81*(x3+y3+z3)-189*(x2*(y+z)+y2*(x+z)+z2*(x+y))+54xyz+126*(xy+yx+xz)-9*(x2+y2+z2)-9*(x+y+z)+1"
+    },
+    {
+        "title": "Nodal",
+        "eqn": "y^3+z^3-6yz"
+    },
+    {
+        "title": "Witch of Agnesi",
+        "eqn": "a*(y-1) + (x^2+z^2)*y"
+    },
+    {
+        "title": "Goursat",
+        "eqn": "x^4+y^4+z^4+a*(x^2+y^2+z^2)^2+b*(x^2+y^2+z^2)+c"
+    },
+    {
+        "title": "Torricelli's Trumpet",
+        "eqn": "(x^2+y^2)*z^2-1"
+    },
+    {
+        "title": "Cassini",
+        "eqn": "((x-a)^2+y^2)*((x-a)^2+y^2)-z^4"
+    },
+    {
+        "title": "Gerono Lemniscate",
+        "eqn": "x^4-x^2+y^2+z^2"
+    },
+    {
+        "title": "Chair",
+        "eqn": "(x^2+y^2+z^2-ac^2)^2-b((z-c)^2-2x^2)*((z+c)^2-2y^2)"
+    },
+    {
+        "title": "Kummer",
+        "eqn": "x^4+y^4+z^4-x^2-y^2-z^2-x^2y^2-x^2z^2-y^2z^2+1"
+    },
+    {
+        "title": "Diabolo",
+        "eqn": "x^2-(y^2+z^2)^2"
+    },
+    {
+        "title": "Devil",
+        "eqn": "x^4+2*(xz)^2 - (6/10*x)^2 - y^4 + (1/2*y)^2+z^4"
+    },
+    {
+        "title": "Gumdrop",
+        "eqn": "4*(x^4+(y^2+z^2)^2)+17x^2*(y^2+z^2)-20*(x^2+y^2+z^2)+17"
+    },
+    {
+        "title": "Mitre",
+        "eqn": "4x2*(x2+y2+z2)-y2*(1-y2-z2)"
+    },
+    {
+        "title": "Piriform",
+        "eqn": "(x-1)*x3+y2+z2"
+    },
+    {
+        "title": "Kiss",
+        "eqn": "x2+y2+z4*(z-1)"
+    },    
+    {
+        "title": "Heart",
+        "eqn": "(2x2+y2+z2-1)^3-(1/10)*x2z3-y2z3"
+    },    
+    {
+        "title": "Hunt",
+        "eqn": "4*(x2+y2+z2-13)^3+27*(3x2+y2-4z2-12)^2"
+    },    
+    {
+        "title": "Zitrus",
+        "eqn": "a4*(x2+z2)+(y-1)*3y3"
+    },    
+    {
+        "title": "Kussner-Scmitt",
+        "eqn": "(x2+3)*(y2+3)*(z2+3)-32*(xyz+1)"
+    },    
+    {
+        "title": "Klein Bottle",
+        "eqn": "(x2+y2+z2+2y-1)*((x2+y2+z2-2y-1)^2-8z2)+16xz*(x2+y2+z2-2y-1)"
+    },
+    {
+        "title": "McMullen K3 Model",
+        "eqn": "(1+x2)*(1+y2)*(1+z2)+8xyz-2"
+    },
+    {
+        "title": "Pilz",
+        "eqn": "(((x2+y2-1)^2+(z-1)^2)(x2/a2+(z-b)^2-1)^2+y2)-1/10"
+    },
+    {
+        "title": "Bretzel (2 holes)",
+        "eqn": "(x2*(1-x2)-y2)^2+z2-1/100"
+    },
+    {
+        "title": "Decocube",
+        "eqn": "((x2+y2-(8/10)^2)^2+(z2-1)^2)((x2+z2-(8/10)^2)2+(y2-1)^2)((z2+y2-(8/10)^2)^2+(x2-1)^2)-1/100"
+    },
+    {
+        "title": "Horned Cube",
+        "eqn": "-3x8-3y8-2z8+5*(x2yz)^2+3*(xy2z)^2+1"
+    },
+    {
+        "title": "Linked Tori",
+        "eqn": "(((10x)^2+(10y-2)^2+10z^2+13)^2-53*((10x)^2+(10y-2)^2))*(((10z)^2+(10y+2)^2+10x^2+13)^2-53*((10z)^2+(10y+2)^2)) + 1000"
+    },
+    {
+        "title": "Orthocircle",
+        "eqn": "((x2+y2-1)^2+z2)*((y2+z2-1)^2+x2)*((z2+x2-1)^2+y2)-a2(1+b*(x2+y2+z2))"
+    },
+    {
+        "title": "Pretzel",
+        "eqn": "(((x-1)^2+y2-1)*((x+1)^2+y2-1))^2+z2-1/10"
+    },
+    {
+        "title": "Pseudo Cube",
+        "eqn": "x500+y500+z500-1"
+    },
+    {
+        "title": "Wiffle Cube",
+        "eqn": "1-(a2*(x2+y2+z2))^(-6)-(b8*(x8+y8+z8))^6"
+    },
+    {
+        "title": "Chmutov Surfaces (4th Degree)",
+        "eqn": "8x4-8x2-1 + 8y4-8y2-1 + 8z4-8z2-1"
     }
+
 ]
