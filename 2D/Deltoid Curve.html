@@ -102,7 +102,7 @@
             <li>Degree: \(4\)</li>
             <li>Milnor Number: \([2, 2, 2]\)</li>
             <li>Tjurina Number: \([2, 2, 2]\)</li>
-            <li>Singularities: \(\left[ \left( 303, \  0, \  1\right), \  \left( - \frac{303}{2}, \  \frac{303 \sqrt{3}}{2}, \  1\right), \  \left( - \frac{303}{2}, \  - \frac{303 \sqrt{3}}{2}, \  1\right)\right]\)</li>
+            <li style="overflow: auto">Singularities: \(\left[ \left( 303, \  0, \  1\right), \  \left( - \frac{303}{2}, \  \frac{303 \sqrt{3}}{2}, \  1\right), \  \left( - \frac{303}{2}, \  - \frac{303 \sqrt{3}}{2}, \  1\right)\right]\)</li>
             <li>Multiplicities: \([2, 2, 2]\)</li>
             <li>Arithmetic Genus: \(3\)</li>
             <li>Geometric Genus: \(0\)</li>
@@ -124,6 +124,8 @@
           var elt = document.getElementById("calculator");
           var calculator = Desmos.GraphingCalculator(elt, {
             // keypad: false,
+            // expressions: false,
+            expressionsCollapsed: true,
           });
           calculator.setExpression({
             latex: String.raw`x^{4}+2x^{2}y^{2}+y^{4}-8 \cdot 101x^{3}+24 \cdot 101xy^{2}+18 \cdot 101^{2}x^{2}+18 \cdot 101^{2}y^{2}-27 \cdot 101^{4} = 0`,

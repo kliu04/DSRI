@@ -102,7 +102,7 @@
             <li>Degree: \(4\)</li>
             <li>Milnor Number: \([]\)</li>
             <li>Tjurina Number: \([]\)</li>
-            <li>Singularities: \(\left[ \right]\)</li>
+            <li style="overflow: auto">Singularities: \(\left[ \right]\)</li>
             <li>Multiplicities: \([]\)</li>
             <li>Arithmetic Genus: \(3\)</li>
             <li>Geometric Genus: \(3\)</li>
@@ -124,6 +124,8 @@
           var elt = document.getElementById("calculator");
           var calculator = Desmos.GraphingCalculator(elt, {
             // keypad: false,
+            // expressions: false,
+            expressionsCollapsed: true,
           });
           calculator.setExpression({
             latex: String.raw`x^{3}y+y^{3}+x = 0`,

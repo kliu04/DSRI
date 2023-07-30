@@ -102,7 +102,7 @@
             <li>Degree: \([[ degree ]]\)</li>
             <li>Milnor Number: \([[ milnor ]]\)</li>
             <li>Tjurina Number: \([[ tjurina ]]\)</li>
-            <li>Singularities: \([[ sings_latex ]]\)</li>
+            <li style="overflow: auto">Singularities: \([[ sings_latex ]]\)</li>
             <li>Multiplicities: \([[ mults ]]\)</li>
             <li>Arithmetic Genus: \([[ arith_genus ]]\)</li>
             <li>Geometric Genus: \([[ geo_genus ]]\)</li>
@@ -124,6 +124,8 @@
           var elt = document.getElementById("calculator");
           var calculator = Desmos.GraphingCalculator(elt, {
             // keypad: false,
+            // expressions: false,
+            expressionsCollapsed: true,
           });
           calculator.setExpression({
             latex: String.raw`[[ eqn ]] = 0`,

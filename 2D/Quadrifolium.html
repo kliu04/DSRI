@@ -102,7 +102,7 @@
             <li>Degree: \(6\)</li>
             <li>Milnor Number: \([2, 2, 13]\)</li>
             <li>Tjurina Number: \([12, 2, 2]\)</li>
-            <li>Singularities: \(\left[ \left( i, \  1, \  0\right), \  \left( - i, \  1, \  0\right), \  \left( 0, \  0, \  1\right)\right]\)</li>
+            <li style="overflow: auto">Singularities: \(\left[ \left( i, \  1, \  0\right), \  \left( - i, \  1, \  0\right), \  \left( 0, \  0, \  1\right)\right]\)</li>
             <li>Multiplicities: \([2, 2, 4]\)</li>
             <li>Arithmetic Genus: \(10\)</li>
             <li>Geometric Genus: \(2\)</li>
@@ -124,6 +124,8 @@
           var elt = document.getElementById("calculator");
           var calculator = Desmos.GraphingCalculator(elt, {
             // keypad: false,
+            // expressions: false,
+            expressionsCollapsed: true,
           });
           calculator.setExpression({
             latex: String.raw`x^{6}+3x^{4}y^{2}+3x^{2}y^{4}+y^{6}-4 \cdot 101^{2}x^{2}y^{2} = 0`,

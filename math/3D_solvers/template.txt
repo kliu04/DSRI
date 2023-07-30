@@ -104,7 +104,7 @@
             <li>Degree: \([[ degree ]]\)</li>
             <li>Milnor Number: \([[ milnor ]]\)</li>
             <li>Tjurina Number: \([[ tjurina ]]\)</li>
-            <li>Singularities: \([[ sings_latex ]]\)</li>
+            <li style="overflow: auto">Singularities: \([[ sings_latex ]]\)</li>
             <li>Multiplicities: \([[ mults ]]\)</li>
           </ul>
           <h3>External Links:</h3>
