@@ -5,7 +5,7 @@
 - The 2D folder contains all the static HTML for each 2D curve.
 - The 3D folder contains all the static HTML for each 3D surface.
 - The math folder has 2 subdirectories:
-
+  *Note!* All parameters are replaced with the fixed value $a=101$ and $b=97$.
   - The 2D_solvers folder contains the code to generate the invariants from every curve on [Katie's Website](https://people.math.carleton.ca/~cingalls/studentProjects/Katie's%20Site/html/All%20Curves.html).
 
     - `parse.py` takes an equation copied from Katie's website and formats it for `M2`.
