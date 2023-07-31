@@ -1,0 +1,456 @@
+[
+    {
+        "title": "Ampersand Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/AmpersandCurve.html"
+        ]
+    },
+    {
+        "title": "Astroid",
+        "links" : [
+            "https://mathcurve.com/courbes2d.gb/astroid/astroid.shtml",
+            "https://en.wikipedia.org/wiki/Astroid"
+        ]
+    },
+    {
+        "title": "Bean Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/BeanCurve.html"
+        ]
+    },
+    {
+        "title": "Bicorn",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Bicorn",
+            "https://mathworld.wolfram.com/Bicorn.html",
+            "https://mathcurve.com/courbes2d.gb/bicorne/bicorne.shtml"
+        ]
+    },
+    {
+        "title": "Bicuspid Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/BicuspidCurve.html"
+        ]
+    },
+    {
+        "title": "Bifoliate",
+        "links" : [
+            "https://mathworld.wolfram.com/Bifoliate.html"
+        ]
+    },
+    {
+        "title": "Bifolium",
+        "links" : [
+            "https://mathworld.wolfram.com/Bifolium.html",
+            "https://mathcurve.com/courbes2d.gb/bifolium/bifolium.shtml",
+            "https://archive.lib.msu.edu/crcmath/math/math/b/b189.htm",
+            "https://en.wikipedia.org/wiki/Bifolium"
+        ]
+    },
+    {
+        "title": "Bitangent Rich Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/Bitangent.html"
+        ]
+    },
+    {
+        "title": "Bow Curve",
+        "links" : [
+            "https://www.statisticshowto.com/bow-curve/",
+            "https://mathworld.wolfram.com/Bow.html"
+        ]
+    },
+    {
+        "title": "Bullet Nose Curve",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Bullet-nose_curve",
+            "https://mathcurve.com/courbes2d.gb/puntiforme/puntiforme.shtml"
+        ]
+    },
+    {
+        "title": "Burnside Curve",
+        "links" : [
+            "https://www.wolframalpha.com/input/?i=Burnside+curve",
+            "https://mathworld.wolfram.com/BurnsideCurve.html"
+        ]
+    },
+    {
+        "title": "Butterfly Catastrophe Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/ButterflyCatastrophe.html"
+        ]
+    },
+    {
+        "title": "Butterfly Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/ButterflyCurve.html",
+            "https://en.wikipedia.org/wiki/Butterfly_curve_(algebraic)"
+        ]
+    },
+    {
+        "title": "Capricornoid",
+        "links" : [
+            "https://mathworld.wolfram.com/Capricornoid.html",
+            "https://johncarlosbaez.wordpress.com/2016/03/06/the-capricornoid/",
+            "https://www.geogebra.org/m/ZRNytPyJ"
+        ]
+    },
+    {
+        "title": "Cardioid",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Cardioid",
+            "https://mathworld.wolfram.com/Cardioid.html",
+            "https://encyclopediaofmath.org/wiki/Cardioid",
+            "https://mathcurve.com/courbes2d.gb/cardioid/cardioid.shtml"
+        ]
+    },    
+    {
+        "title": "Cassini Ovals",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Cassini_oval",
+            "https://mathworld.wolfram.com/CassiniOvals.html",
+            "https://mathcurve.com/courbes2d.gb/cassini/cassini.shtml",
+            "https://mse.redwoods.edu/darnold/math50c/CalcProj/sp07/ken/CalcPres.pdf"
+        ]
+    },    
+    {
+        "title": "Cayley's Sextic",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Cayley%27s_sextic",
+            "https://mathcurve.com/courbes2d.gb/cayleysextic/cayleysextic.shtml",
+            "https://mathworld.wolfram.com/CayleysSextic.html",
+            "https://mathshistory.st-andrews.ac.uk/Curves/Cayleys/",
+            "https://archive.lib.msu.edu/crcmath/math/math/c/c155.htm"
+        ]
+    },  
+    {
+        "title": "Cissoid of Diocles",
+        "links" : [
+            "https://mathworld.wolfram.com/CissoidofDiocles.html",
+            "https://en.wikipedia.org/wiki/Cissoid_of_Diocles",
+            "https://mathcurve.com/courbes2d.gb/cissoiddroite/cissoiddroite.shtml",
+            "http://xahlee.info/SpecialPlaneCurves_dir/CissoidOfDiocles_dir/cissoidOfDiocles.html"
+        ]
+    },  
+    {
+        "title": "Concoid of de Sluze",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Conchoid_of_de_Sluze",
+            "https://mathworld.wolfram.com/ConchoidofdeSluze.html",
+            "https://mathshistory.st-andrews.ac.uk/Curves/Conchoidsl/",
+            "https://mathcurve.com/courbes2d.gb/cubicsluze/cubicsluze.shtml",
+            "https://www.2dcurves.com/cubic/cubiccs.html"
+        ]
+    },  
+    {
+        "title": "Conchoid of Nicomedes",
+        "links" : [
+            "https://www.math.uni-bonn.de/people/karcher/VMMPlaneCurves/docs/Conchoid.pdf",
+            "https://mathworld.wolfram.com/ConchoidofNicomedes.html",
+            "https://en.wikipedia.org/wiki/Conchoid_(mathematics)",
+            "https://mathcurve.com/courbes2d.gb/conchoiddenicomede/conchoiddenicomede.shtml"
+        ]
+    },  
+    {
+        "title": "Cornoid",
+        "links" : [
+            "https://mathworld.wolfram.com/Cornoid.html",
+            "https://oeis.org/A141108",
+            "https://mathcurve.com/courbes2d.gb/cornoid/cornoid.shtml"
+        ]
+    },  
+    {
+        "title": "Cruciform Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/Cruciform.html",
+            "https://en.wikipedia.org/wiki/Quartic_plane_curve#Cruciform_curve"
+        ]
+    },  
+    {
+        "title": "Cycloid of Ceva",
+        "links" : [
+            "https://mathworld.wolfram.com/CycloidofCeva.html",
+            "https://demonstrations.wolfram.com/TrisectingAnAngleUsingTheCycloidOfCeva/",
+            "https://www.geogebra.org/m/VVtmXQW8"
+        ]
+    },  
+    {
+        "title": "Deltoid Curve",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Deltoid_curve",
+            "https://mathcurve.com/courbes2d.gb/deltoid/deltoid.shtml",
+            "https://mathworld.wolfram.com/Deltoid.html"
+        ]
+    },  
+    {
+        "title": "Devil's Curve",
+        "links" : [
+            "https://mathcurve.com/courbes2d.gb/diable/diable.shtml",
+            "https://mathworld.wolfram.com/DevilsCurve.html",
+            "https://en.wikipedia.org/wiki/Devil%27s_curve"
+        ]
+    },  
+    {
+        "title": "Dumbbell Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/DumbbellCurve.html",
+            "https://mathcurve.com/courbes2d.gb/doublegouttedeau/doublegouttedeau.shtml"
+        ]
+    },  
+    {
+        "title": "Durer's Conchoid",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Conchoid_of_D%C3%BCrer",
+            "https://mathworld.wolfram.com/DuerersConchoid.html",
+            "https://www.2dcurves.com/quartic/quarticdu.html"
+        ]
+    },  
+    {
+        "title": "Folium of Descartes",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Folium_of_Descartes",
+            "https://mathworld.wolfram.com/FoliumofDescartes.html",
+            "https://mathcurve.com/courbes2d.gb/foliumdedescartes/foliumdedescartes.shtml"
+        ]
+    },  
+    {
+        "title": "Folium",
+        "links" : [
+            "https://mathworld.wolfram.com/Folium.html"
+        ]
+    },  
+    {
+        "title": "Freeth's Nephroid",
+        "links" : [
+            "https://mathcurve.com/courbes2d.gb/freeth/nephroiddefreeth.shtml",
+            "https://mathworld.wolfram.com/FreethsNephroid.html",
+            "https://www.daviddarling.info/encyclopedia/N/nephroid.html"
+        ]
+    },  
+    {
+        "title": "Heart Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/HeartCurve.html"
+        ]
+    },  
+    {
+        "title": "Hippopede",
+        "links" : [
+            "https://mathworld.wolfram.com/Hippopede.html",
+            "https://en.wikipedia.org/wiki/Hippopede"
+        ]
+    },  
+    {
+        "title": "Kampyle of Eudoxus",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Kampyle_of_Eudoxus",
+            "https://mathcurve.com/courbes2d.gb/campyle/campyle.shtml",
+            "https://mathworld.wolfram.com/KampyleofEudoxus.html"
+        ]
+    },  
+    {
+        "title": "Kappa Curve",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Kappa_curve",
+            "https://mathworld.wolfram.com/KappaCurve.html",
+            "https://mathcurve.com/courbes2d.gb/kappa/kappa.shtml"
+        ]
+    },  
+    {
+        "title": "Keratoid Cusp",
+        "links" : [
+            "https://mathworld.wolfram.com/KeratoidCusp.html",
+            "https://www.daviddarling.info/encyclopedia/C/cusp.html"
+        ]
+    },  
+    {
+        "title": "Klein Quartic",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Klein_quartic",
+            "https://mathworld.wolfram.com/KleinQuartic.html",
+            "https://math.ucr.edu/home/baez/klein.html",
+            "https://sites.math.rutgers.edu/~sg1108/Mathematics/Klein_Quartic_Slides.pdf"
+        ]
+    },  
+    {
+        "title": "Knot Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/KnotCurve.html"
+        ]
+    },  
+    {
+        "title": "Lemniscate of Bernoulli",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Lemniscate_of_Bernoulli",
+            "https://mathworld.wolfram.com/Lemniscate.html",
+            "https://mathcurve.com/courbes2d.gb/lemniscate/lemniscate.shtml"
+        ]
+    },  
+    {
+        "title": "Lemniscate of Gerono_Eight Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/EightCurve.html",
+            "https://en.wikipedia.org/wiki/Lemniscate"
+        ]
+    },  
+    {
+        "title": "Limacon",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Lima%C3%A7on",
+            "https://mathworld.wolfram.com/Limacon.html",
+            "https://mathcurve.com/courbes2d.gb/limacon/limacon.shtml"
+        ]
+    },
+    {
+        "title" : "Link's Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/LinksCurve.html"
+        ]
+    },
+    {
+        "title" : "Nephroid",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Nephroid",
+            "https://mathworld.wolfram.com/Nephroid.html"
+        ]
+    },
+    {
+        "title" : "Oblique Strophoid",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Strophoid",
+            "https://www.2dcurves.com/cubic/cubico.html",
+            "https://mathworld.wolfram.com/Strophoid.html"
+        ]
+    },
+    {
+        "title" : "Pear Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/PearCurve.html"
+        ]
+    },
+    {
+        "title" : "Pear Shaped Quartic",
+        "links" : [
+            "https://mathcurve.com/courbes2d.gb/piriforme/piriforme.shtml",
+            "https://mathshistory.st-andrews.ac.uk/Curves/Pearshaped/"
+        ]
+    },
+    {
+        "title" : "Piriform Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/PiriformCurve.html"
+        ]
+    },
+    {
+        "title" : "Quadrifolium",
+        "links" : [
+            "https://mathcurve.com/courbes2d.gb/trefle/trefle.shtml",
+            "https://mathworld.wolfram.com/Quadrifolium.html",
+            "https://en.wikipedia.org/wiki/Quadrifolium"
+        ]
+    },
+    {
+        "title" : "Ranunculoid",
+        "links" : [
+            "https://mathworld.wolfram.com/Ranunculoid.html",
+            "https://www.geogebra.org/m/vuguy697",
+            "https://archive.lib.msu.edu/crcmath/math/math/r/r090.htm"
+        ]
+    },
+    {
+        "title" : "Right Strophoid",
+        "links" : [
+            "https://mathworld.wolfram.com/RightStrophoid.html",
+            "https://mathcurve.com/courbes2d.gb/strophoiddroite/strophoiddroite.shtml"
+        ]
+    },
+    {
+        "title" : "Scarabaeus",
+        "links" : [
+            "https://mathworld.wolfram.com/ScarabaeusCurve.html"
+        ]
+    },
+    {
+        "title" : "Semicubical Parabola",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Semicubical_parabola",
+            "https://mathworld.wolfram.com/SemicubicalParabola.html",
+            "https://mathcurve.com/courbes2d.gb/parabolesemicubic/parabolesemicubic.shtml"
+        ]
+    },
+    {
+        "title" : "Serpentine Curve",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Serpentine_curve",
+            "https://mathworld.wolfram.com/SerpentineCurve.html"
+        ]
+    },
+    {
+        "title" : "Stirrup Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/StirrupCurve.html"
+        ]
+    },
+    {
+        "title" : "Swastika Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/SwastikaCurve.html"
+        ]
+    },
+    {
+        "title" : "Talbot's Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/TalbotsCurve.html",
+            "https://mathcurve.com/courbes2d.gb/talbot/talbot.shtml"
+        ]
+    },
+    {
+        "title" : "Trefoil Curve",
+        "links" : [
+            "https://mathworld.wolfram.com/TrefoilCurve.html",
+            "https://mathcurve.com/courbes3d.gb/noeuds/noeuddetrefle.shtml"
+        ]
+    },
+    {
+        "title" : "Trident Curve",
+        "links" : [
+            "https://mathcurve.com/courbes2d.gb/trident/trident.shtml",
+            "https://en.wikipedia.org/wiki/Trident_curve"
+        ]
+    },
+    {
+        "title" : "Trifolium",
+        "links" : [
+            "https://mathworld.wolfram.com/Trifolium.html",
+            "https://mathcurve.com/courbes2d.gb/trifolium/trifolium.shtml"
+        ]
+    },
+    {
+        "title" : "Trisexrix of MacLaurin",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Trisectrix_of_Maclaurin",
+            "https://mathworld.wolfram.com/MaclaurinTrisectrix.html",
+            "https://mathcurve.com/courbes2d.gb/maclaurin/maclaurin.shtml"
+        ]
+    },
+    {
+        "title" : "Tschirnhausen Cubic",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Tschirnhausen_cubic",
+            "https://mathworld.wolfram.com/TschirnhausenCubic.html",
+            "http://math.colgate.edu/math111/dlantz/supps/x030601.html",
+            "https://mathcurve.com/courbes2d.gb/tschirnhausen/tschirnhausen.shtml"
+        ]
+    },
+    {
+        "title" : "Witch of Agnesi",
+        "links" : [
+            "https://www.uh.edu/engines/epi1741.htm",
+            "http://jwilson.coe.uga.edu/Texts.Folder/Agnesi/witch.html",
+            "https://mathworld.wolfram.com/WitchofAgnesi.html",
+            "https://blogs.scientificamerican.com/roots-of-unity/a-few-of-my-favorite-spaces-the-witch-of-agnesi/",
+            "https://en.wikipedia.org/wiki/Witch_of_Agnesi"
+        ]
+    }
+]
+      

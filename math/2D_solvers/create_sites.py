@@ -44,9 +44,12 @@ def parse_for_latex(eqn: str) -> str:
 
 def main():
     curves = []
+    links = []
     template = ""
     with open("math/2D_solvers/parsed_data.json", "r") as f:
         curves = json.load(f)
+    with open("math/2D_solvers/links.json", "r") as f:
+        links = json.load(f)
     with open("math/2D_solvers/template.txt", "r") as f:
         template = f.read()
 
@@ -81,14 +84,23 @@ def main():
                 if r == "title":
                     curve["title"] = curve["title"].replace("/ ", "_")
                 site = site.replace(field, data)
+            index = site.find('<ul class="list-group">')
+            index += len('<ul class="list-group">')
+            for item in links:
+                if item["title"] == curve["title"]:
+                    for link in item["links"]:
+                        site = (
+                            site[:index]
+                            + f'\n          <li class="list-group-item">\n            <a href="{link}">{link}</a></li>\n'
+                            + site[index:]
+                        )
             with open(rf"2D/{curve['title']}.html", "w") as f:
                 f.write(site)
-        # some curves may not have all invariants for whatever reason
+        # some curves may not have all invariants
         except KeyError:
             pass
         except Exception as e:
             print("Error!!!", curve, e)
-
     # make main index page
     with open("math/2D_solvers/index_template.txt", "r") as f:
         template = f.readlines()
@@ -112,7 +124,8 @@ def main():
                 "            <td>\(%s\)</td>\n" % v["eqn"],
             )
             template.insert(index + 5 * i + 4, "          </tr>\n")
-        except:
+        except Exception as e:
+            print(e)
             continue
     with open("2D/index.html", "w") as f:
         f.write("".join(template))

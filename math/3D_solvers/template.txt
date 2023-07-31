@@ -109,9 +109,6 @@
           </ul>
           <h3>External Links:</h3>
           <ul class="list-group">
-            <li class="list-group-item">
-              
-            </li>
           </ul>
         </div>
         <div

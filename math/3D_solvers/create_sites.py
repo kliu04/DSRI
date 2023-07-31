@@ -44,9 +44,12 @@ def parse_for_latex(eqn: str) -> str:
 
 def main():
     surfaces = []
+    links = []
     template = ""
     with open("math/3D_solvers/surfaces.json", "r") as f:
         surfaces = json.load(f)
+    with open("math/3D_solvers/links.json", "r") as f:
+        links = json.load(f)
     with open("math/3D_solvers/template.txt", "r") as f:
         template = f.read()
 
@@ -76,9 +79,19 @@ def main():
                 if r == "title":
                     surface["title"] = surface["title"].replace("/ ", "_")
                 site = site.replace(field, data)
+            index = site.find('<ul class="list-group">')
+            index += len('<ul class="list-group">')
+            for item in links:
+                if item["title"] == surface["title"]:
+                    for link in item["links"]:
+                        site = (
+                            site[:index]
+                            + f'\n          <li class="list-group-item">\n            <a href="{link}">{link}</a></li>\n'
+                            + site[index:]
+                        )
             with open(rf"3D/{surface['title']}.html", "w") as f:
                 f.write(site)
-        # some curves may not have all invariants for whatever reason
+        # some surfaces may not have all invariants
         except KeyError:
             pass
         except Exception as e:
@@ -96,7 +109,7 @@ def main():
         try:
             template.insert(index + 5 * i, "          <tr>\n")
             template.insert(
-                index + 5 * i + 1, "            <td>\(%d\)</td>\n" % v["degree"]
+                index + 5 * i + 1, "            <td>\(%s\)</td>\n" % v["degree"]
             )
             template.insert(
                 index + 5 * i + 2,
@@ -108,7 +121,7 @@ def main():
                 "            <td>\(%s\)</td>\n" % v["eqn"],
             )
             template.insert(index + 5 * i + 4, "          </tr>\n")
-        except:
+        except Exception as e:
             continue
     with open("3D/index.html", "w") as f:
         f.write("".join(template))

@@ -102,7 +102,7 @@
             <li>Degree: \(4\)</li>
             <li>Milnor Number: \([]\)</li>
             <li>Tjurina Number: \([]\)</li>
-            <li style="overflow: auto">Singularities: \(\left[ \right]\)</li>
+            <li>Singularities: <p style="overflow-x: auto"> \(\left[ \right]\)</p></li>
             <li>Multiplicities: \([]\)</li>
             <li>Arithmetic Genus: \(3\)</li>
             <li>Geometric Genus: \(3\)</li>
@@ -111,9 +111,19 @@
           </ul>
           <h3>External Links:</h3>
           <ul class="list-group">
-            <li class="list-group-item">
-              
-            </li>
+          <li class="list-group-item">
+            <a href="https://sites.math.rutgers.edu/~sg1108/Mathematics/Klein_Quartic_Slides.pdf">https://sites.math.rutgers.edu/~sg1108/Mathematics/Klein_Quartic_Slides.pdf</a></li>
+
+          <li class="list-group-item">
+            <a href="https://math.ucr.edu/home/baez/klein.html">https://math.ucr.edu/home/baez/klein.html</a></li>
+
+          <li class="list-group-item">
+            <a href="https://mathworld.wolfram.com/KleinQuartic.html">https://mathworld.wolfram.com/KleinQuartic.html</a></li>
+
+          <li class="list-group-item">
+            <a href="https://en.wikipedia.org/wiki/Klein_quartic">https://en.wikipedia.org/wiki/Klein_quartic</a></li>
+
+            
           </ul>
         </div>
         <div
@@ -130,6 +140,12 @@
           calculator.setExpression({
             latex: String.raw`x^{3}y+y^{3}+x = 0`,
           });
+          calculator.setMathBounds({
+          left: -100,
+          right: 100,
+          bottom: -100,
+          top: 100
+        });
         </script>
       </div>
     </div>

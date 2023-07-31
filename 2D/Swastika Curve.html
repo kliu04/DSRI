@@ -102,7 +102,7 @@
             <li>Degree: \(4\)</li>
             <li>Milnor Number: \([1]\)</li>
             <li>Tjurina Number: \([1]\)</li>
-            <li style="overflow: auto">Singularities: \(\left[ \left( 0, \  0, \  1\right)\right]\)</li>
+            <li>Singularities: <p style="overflow-x: auto"> \(\left[ \left( 0, \  0, \  1\right)\right]\)</p></li>
             <li>Multiplicities: \([2]\)</li>
             <li>Arithmetic Genus: \(3\)</li>
             <li>Geometric Genus: \(2\)</li>
@@ -111,9 +111,10 @@
           </ul>
           <h3>External Links:</h3>
           <ul class="list-group">
-            <li class="list-group-item">
-              
-            </li>
+          <li class="list-group-item">
+            <a href="https://mathworld.wolfram.com/SwastikaCurve.html">https://mathworld.wolfram.com/SwastikaCurve.html</a></li>
+
+            
           </ul>
         </div>
         <div
@@ -130,6 +131,12 @@
           calculator.setExpression({
             latex: String.raw`x^{4}+xy-y^{4} = 0`,
           });
+          calculator.setMathBounds({
+          left: -100,
+          right: 100,
+          bottom: -100,
+          top: 100
+        });
         </script>
       </div>
     </div>

@@ -30,7 +30,13 @@ def solve_singularities(points: str) -> list:
         else:
             # Sing is of form (x, 0, 0)
             v[x] = 1
-
+        # fix roundoffs
+        if isinstance(v[x], float) and v[x].is_integer:
+            v[x] = int(v[x])
+        if isinstance(v[y], float) and v[y].is_integer:
+            v[y] = int(v[y])
+        if isinstance(v[z], float) and v[z].is_integer:
+            v[z] = int(v[z])
         sols[i] = (v[x], v[y], v[z])
     # remove duplicate solutions
     sols = list(dict.fromkeys(sols))

@@ -102,7 +102,7 @@
             <li>Degree: \(6\)</li>
             <li>Milnor Number: \([6, 6, 1, 6]\)</li>
             <li>Tjurina Number: \([6, 1, 6, 6]\)</li>
-            <li style="overflow: auto">Singularities: \(\left[ \left( i, \  1, \  0\right), \  \left( - i, \  1, \  0\right), \  \left( - \frac{101}{2}, \  0, \  1\right), \  \left( 0, \  0, \  1\right)\right]\)</li>
+            <li>Singularities: <p style="overflow-x: auto"> \(\left[ \left( i, \  1, \  0\right), \  \left( - i, \  1, \  0\right), \  \left( - \frac{101}{2}, \  0, \  1\right), \  \left( 0, \  0, \  1\right)\right]\)</p></li>
             <li>Multiplicities: \([3, 3, 2, 3]\)</li>
             <li>Arithmetic Genus: \(10\)</li>
             <li>Geometric Genus: \(0\)</li>
@@ -111,9 +111,22 @@
           </ul>
           <h3>External Links:</h3>
           <ul class="list-group">
-            <li class="list-group-item">
-              
-            </li>
+          <li class="list-group-item">
+            <a href="https://archive.lib.msu.edu/crcmath/math/math/c/c155.htm">https://archive.lib.msu.edu/crcmath/math/math/c/c155.htm</a></li>
+
+          <li class="list-group-item">
+            <a href="https://mathshistory.st-andrews.ac.uk/Curves/Cayleys/">https://mathshistory.st-andrews.ac.uk/Curves/Cayleys/</a></li>
+
+          <li class="list-group-item">
+            <a href="https://mathworld.wolfram.com/CayleysSextic.html">https://mathworld.wolfram.com/CayleysSextic.html</a></li>
+
+          <li class="list-group-item">
+            <a href="https://mathcurve.com/courbes2d.gb/cayleysextic/cayleysextic.shtml">https://mathcurve.com/courbes2d.gb/cayleysextic/cayleysextic.shtml</a></li>
+
+          <li class="list-group-item">
+            <a href="https://en.wikipedia.org/wiki/Cayley%27s_sextic">https://en.wikipedia.org/wiki/Cayley%27s_sextic</a></li>
+
+            
           </ul>
         </div>
         <div
@@ -130,6 +143,12 @@
           calculator.setExpression({
             latex: String.raw`-4 \cdot 101^{3}x^{3}-15 \cdot 101^{2}x^{4}-42 \cdot 101^{2}x^{2}y^{2}-27 \cdot 101^{2}y^{4}-12 \cdot 101x^{5}-24 \cdot 101x^{3}y^{2}-12 \cdot 101xy^{4}+4x^{6}+12x^{4}y^{2}+12x^{2}y^{4}+4y^{6} = 0`,
           });
+          calculator.setMathBounds({
+          left: -100,
+          right: 100,
+          bottom: -100,
+          top: 100
+        });
         </script>
       </div>
     </div>

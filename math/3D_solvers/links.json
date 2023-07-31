@@ -1,0 +1,121 @@
+[
+    {
+        "title" : "Apple Surface",
+        "links" : [
+            "https://mathworld.wolfram.com/AppleSurface.html",
+            "https://mathcurve.com/surfaces.gb/cassini/cassini.shtml"
+        ]
+    },
+    {
+        "title" : "Cassini",
+        "links" : [
+            "https://mathworld.wolfram.com/CassiniSurface.html",
+            "https://mathcurve.com/surfaces.gb/cassini/cassini.shtml"
+        ]   
+
+    },
+    {
+        "title" : "Cayley's Surface",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Cayley%27s_nodal_cubic_surface",
+            "https://mathworld.wolfram.com/CayleyCubic.html"
+        ]
+    },
+    {
+        "title" : "Chmutov Surfaces (4th Degree)",
+        "links" : [
+            "https://mathworld.wolfram.com/ChmutovSurface.html"
+        ]
+    },
+    {
+        "title" : "Ding Dong",
+        "links" : [
+            "https://mathworld.wolfram.com/Ding-DongSurface.html"
+        ]
+    },
+    {
+        "title" : "Eight Surface",
+        "links" : [
+            "https://mathworld.wolfram.com/EightSurface.html"
+        ]
+    },
+    {
+        "title" : "Fermat Cubic",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Fermat_cubic"
+        ]
+    },
+    {
+        "title" : "Goursat",
+        "links" : [
+            "https://mathworld.wolfram.com/GoursatsSurface.html",
+            "https://mathcurve.com/surfaces.gb/goursat/goursat.shtml",
+            "https://www.msri.org/publications/sgp/jim/geom/level/library/chub/main.html"
+        ]
+    },
+    {
+        "title" : "Hunt",
+        "links" : [
+            "https://mathworld.wolfram.com/HuntsSurface.html"
+        ]
+    },
+    {
+        "title" : "Kiss",
+        "links" : [
+            "https://mathworld.wolfram.com/KissSurface.html"
+        ]
+    },
+    {
+        "title" : "Kummer",
+        "links" : [
+            "https://mathworld.wolfram.com/KummerSurface.html",
+            "https://en.wikipedia.org/wiki/Kummer_surface",
+            "https://www.maths.ox.ac.uk/about-us/history/models-geometric-surfaces/quartic-surfaces/kummer-surfaces"
+        ]
+    },
+    {
+        "title" : "McMullen K3 Model",
+        "links" : [
+            "http://paulbourke.net/geometry/mullen/"
+        ]
+    },
+    {
+        "title" : "Mitre",
+        "links" : [
+            "https://mathworld.wolfram.com/MiterSurface.html"
+        ]
+    },
+    {
+        "title" : "Piriform",
+        "links" : [
+            "https://mathworld.wolfram.com/PiriformSurface.html"
+        ]
+    },
+    {
+        "title" : "Roman Surface",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Roman_surface"
+        ]
+    },
+    {
+        "title" : "Torricelli's Trumpet",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Gabriel%27s_horn",
+            "https://www.uh.edu/engines/epi2856.htm"
+        ]
+    },
+    {
+        "title" : "Whitney's Umbrella",
+        "links" : [
+            "https://en.wikipedia.org/wiki/Whitney_umbrella",
+            "https://mathworld.wolfram.com/WhitneyUmbrella.html",
+            "https://mathcurve.com/surfaces.gb/whitney/whitney.shtml   "
+        ]
+    },
+    {
+        "title" : "Zitrus",
+        "links" : [
+            "https://mathworld.wolfram.com/LemonSurface.html"
+        ]
+    }
+]

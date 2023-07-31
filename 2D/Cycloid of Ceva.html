@@ -102,7 +102,7 @@
             <li>Degree: \(6\)</li>
             <li>Milnor Number: \([2, 2, 13]\)</li>
             <li>Tjurina Number: \([12, 2, 2]\)</li>
-            <li style="overflow: auto">Singularities: \(\left[ \left( i, \  1, \  0\right), \  \left( - i, \  1, \  0\right), \  \left( 0, \  0, \  1\right)\right]\)</li>
+            <li>Singularities: <p style="overflow-x: auto"> \(\left[ \left( i, \  1, \  0\right), \  \left( - i, \  1, \  0\right), \  \left( 0, \  0, \  1\right)\right]\)</p></li>
             <li>Multiplicities: \([2, 2, 4]\)</li>
             <li>Arithmetic Genus: \(10\)</li>
             <li>Geometric Genus: \(2\)</li>
@@ -111,9 +111,16 @@
           </ul>
           <h3>External Links:</h3>
           <ul class="list-group">
-            <li class="list-group-item">
-              
-            </li>
+          <li class="list-group-item">
+            <a href="https://www.geogebra.org/m/VVtmXQW8">https://www.geogebra.org/m/VVtmXQW8</a></li>
+
+          <li class="list-group-item">
+            <a href="https://demonstrations.wolfram.com/TrisectingAnAngleUsingTheCycloidOfCeva/">https://demonstrations.wolfram.com/TrisectingAnAngleUsingTheCycloidOfCeva/</a></li>
+
+          <li class="list-group-item">
+            <a href="https://mathworld.wolfram.com/CycloidofCeva.html">https://mathworld.wolfram.com/CycloidofCeva.html</a></li>
+
+            
           </ul>
         </div>
         <div
@@ -130,6 +137,12 @@
           calculator.setExpression({
             latex: String.raw`x^{6}+3x^{4}y^{2}+3x^{2}y^{4}+y^{6}-9x^{4}-y^{4}+6x^{2}y^{2} = 0`,
           });
+          calculator.setMathBounds({
+          left: -100,
+          right: 100,
+          bottom: -100,
+          top: 100
+        });
         </script>
       </div>
     </div>

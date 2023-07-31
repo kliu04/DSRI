@@ -16,20 +16,8 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="override.css" />
-    <script>
-      MathJax = {
-        chtml: { displayAlign: "left" },
-      };
-    </script>
-    <link href="../favicon.ico" rel="icon" type="image/x-icon" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg sticky-top bg-body-secondary">
@@ -84,7 +72,8 @@
       <h3>Website Navigation</h3>
       <p>
         To switch between Curves and Surfaces, use the Type dropdown in the
-        navbar.
+        navbar. You may have to manually zoom in or zoom out of the image to see
+        the curve.
       </p>
       <h3>Github</h3>
       <p>
@@ -92,6 +81,12 @@
         <a href="https://github.com/Wevie0/DSRI">GitHub Repository</a> for this
         project for additional information about implementation and
         acknowledgements.
+      </p>
+      <h3>Math</h3>
+      <p>
+        There may be some errata especially wrt Delta Invariant and Branching
+        Number. As well, we use constants a = 101, b = 97, and c = 103 in place
+        of parameters.
       </p>
     </div>
   </body>

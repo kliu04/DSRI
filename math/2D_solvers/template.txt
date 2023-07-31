@@ -111,9 +111,7 @@
           </ul>
           <h3>External Links:</h3>
           <ul class="list-group">
-            <li class="list-group-item">
-              
-            </li>
+            
           </ul>
         </div>
         <div
@@ -130,6 +128,12 @@
           calculator.setExpression({
             latex: String.raw`[[ eqn ]] = 0`,
           });
+          calculator.setMathBounds({
+          left: -100,
+          right: 100,
+          bottom: -100,
+          top: 100
+        });
         </script>
       </div>
     </div>

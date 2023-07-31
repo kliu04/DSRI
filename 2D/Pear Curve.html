@@ -102,7 +102,7 @@
             <li>Degree: \(8\)</li>
             <li>Milnor Number: \([9, 9]\)</li>
             <li>Tjurina Number: \([9, 9]\)</li>
-            <li style="overflow: auto">Singularities: \(\left[ \left( i, \  1, \  0\right), \  \left( - i, \  1, \  0\right)\right]\)</li>
+            <li>Singularities: <p style="overflow-x: auto"> \(\left[ \left( i, \  1, \  0\right), \  \left( - i, \  1, \  0\right)\right]\)</p></li>
             <li>Multiplicities: \([4, 4]\)</li>
             <li>Arithmetic Genus: \(21\)</li>
             <li>Geometric Genus: \(9\)</li>
@@ -111,9 +111,10 @@
           </ul>
           <h3>External Links:</h3>
           <ul class="list-group">
-            <li class="list-group-item">
-              
-            </li>
+          <li class="list-group-item">
+            <a href="https://mathworld.wolfram.com/PearCurve.html">https://mathworld.wolfram.com/PearCurve.html</a></li>
+
+            
           </ul>
         </div>
         <div
@@ -130,6 +131,12 @@
           calculator.setExpression({
             latex: String.raw`x^{8}+4x^{7}+4x^{6}y^{2}+6x^{6}+12x^{5}y^{2}+6x^{5}+6x^{4}y^{4}+14x^{4}y^{2}+5x^{4}+12x^{3}y^{4}+4x^{3}y^{2}+2x^{3}+4x^{2}y^{6}+10x^{2}y^{4}+2x^{2}y^{2}+x^{2}+4xy^{6}-2xy^{4}+2xy^{2}+y^{8}+2y^{6}-3y^{4}+y^{2}-101^{2} = 0`,
           });
+          calculator.setMathBounds({
+          left: -100,
+          right: 100,
+          bottom: -100,
+          top: 100
+        });
         </script>
       </div>
     </div>
