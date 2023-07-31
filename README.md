@@ -26,7 +26,7 @@
 
 ## Acknowledgements
 
-This project was made possible by the [Dean's Summer Research Internship](https://science.carleton.ca/students/undergraduate-resources/deans-summer-research-internships/) program at [Carleton University](https://carleton.ca/), [Dr. Colin Ingalls](https://people.math.carleton.ca/~cingalls/), [Dr. Nathan Grieve](https://sites.google.com/view/nathan-grieve), the [Desmos Calculator](https://www.desmos.com/calculator) for 2D images, and [CalcPlot3D](https://c3d.libretexts.org/CalcPlot3D/index.html) for 3D images, [KaTeX](https://katex.org/) for TeX support, Katie Cunningham - who made the precursor to this site, and my partners Andrew Cameron and Dongxu Hu.
+This project was made possible by the [Dean's Summer Research Internship](https://science.carleton.ca/students/undergraduate-resources/deans-summer-research-internships/) program at [Carleton University](https://carleton.ca/), [Dr. Colin Ingalls](https://people.math.carleton.ca/~cingalls/), [Dr. Nathan Grieve](https://sites.google.com/view/nathan-grieve), the [Desmos Calculator](https://www.desmos.com/calculator) for 2D images, and [CalcPlot3D](https://c3d.libretexts.org/CalcPlot3D/index.html) for 3D images, [KaTeX](https://katex.org/) for TeX support, [Macaulay2](http://www2.macaulay2.com/Macaulay2/), [SymPy](https://www.sympy.org/en/index.html), Katie Cunningham - who made the precursor to this site, and my partners Andrew Cameron and Dongxu Hu.
 
 ## Known Issues
 
